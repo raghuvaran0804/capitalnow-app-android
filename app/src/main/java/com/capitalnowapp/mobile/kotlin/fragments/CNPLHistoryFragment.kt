@@ -23,7 +23,7 @@ class CNPLHistoryFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-//new commit
+//new commit change
         // Inflate the layout for this fragment
         binding = FragmentCNPLHistoryBinding.inflate(layoutInflater,container,false)
         activity = getActivity()
