@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_16"
+    android:layout_marginEnd="@dimen/margin_16"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/single_rounded_square"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_32"
+        android:src="@drawable/happy_face"
+        tools:ignore="ContentDescription" />
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:text="Welcome Back!"
+        android:layout_marginTop="@dimen/margin_8"
+        android:textSize="@dimen/payu_dimen_20sp"
+        android:textColor="@color/Primary2"/>
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/margin_40"
+        android:layout_marginEnd="@dimen/margin_40"
+        android:text="Your account deletion request has been revoked."
+        android:layout_marginTop="@dimen/margin_16"
+        android:textSize="@dimen/payu_dimen_16sp"
+        android:textColor="@color/black"/>
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/margin_40"
+        android:layout_marginEnd="@dimen/margin_40"
+        android:background="@drawable/button_border"
+        android:backgroundTint="@color/green"
+        android:padding="@dimen/margin_8"
+        android:textStyle="bold"
+        android:text="You can continue to use \n your account uninterrupted."
+        android:layout_marginTop="@dimen/margin_16"
+        android:textSize="@dimen/payu_dimen_16sp"
+        android:textColor="@color/green"/>
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvOkay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_30"
+        android:background="@drawable/rounded_corner_gradient"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/margin_32"
+        android:paddingStart="@dimen/margin_30"
+        android:paddingTop="@dimen/margin_10"
+        android:paddingEnd="@dimen/margin_30"
+        android:paddingBottom="@dimen/margin_10"
+        android:text="OKAY"
+        android:textAppearance="@style/MediumText"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

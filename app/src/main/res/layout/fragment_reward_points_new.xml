@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".kotlin.fragments.RewardPointsNewFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/rewards_bg"
+        android:paddingTop="@dimen/margin_8"
+        android:paddingBottom="@dimen/margin_8">
+
+        <ImageView
+            android:id="@+id/ivMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_20"
+            android:src="@drawable/ic_baseline_dehaze_24"
+            app:tint="@color/black" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="Reward Points"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/llData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_corner_gradient_rp_bg"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_48"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_rp_top"
+                android:nestedScrollingEnabled="false"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/margin_8"
+                android:paddingBottom="@dimen/margin_16" />
+
+            <com.rd.PageIndicatorView
+                android:id="@+id/pageIndicatorView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rvData"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="-20dp"
+                android:layout_marginBottom="@dimen/margin_15"
+                app:piv_animationType="worm"
+                app:piv_dynamicCount="true"
+                app:piv_interactiveAnimation="true"
+                app:piv_selectedColor="@color/Primary2"
+                app:piv_unselectedColor="@color/colorGrey"
+                app:piv_viewPager="@id/viewPager" />
+        </RelativeLayout>
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="@dimen/margin_16"
+            android:paddingBottom="@dimen/margin_16"
+            android:text="@string/check_redemption_history"
+            android:textColor="@color/Primary2"
+            android:textSize="@dimen/payu_dimen_16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:orientation="vertical">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/rounded_corner_gradient_rp_tab_bg"
+                app:tabGravity="fill"
+                android:layout_marginTop="@dimen/margin_8"
+                app:tabIndicator="@drawable/rounded_corner_primary1"
+                app:tabIndicatorColor="@android:color/transparent"
+                app:tabIndicatorGravity="stretch"
+                app:tabIndicatorHeight="0dp"
+                app:tabMode="auto"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextColor="@color/black" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_8"
+                android:nestedScrollingEnabled="true"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llNoLoan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="250dp"
+            android:src="@drawable/no_rewards_new"/>
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_32"
+            android:text="No Reward Points \nFound"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>

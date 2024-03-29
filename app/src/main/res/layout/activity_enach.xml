@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2fa"
+    android:orientation="vertical"
+    tools:context=".kotlin.activities.ENachActivity">
+
+    <FrameLayout
+        android:id="@+id/flMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/rounded_corner_stroke_5"
+                android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_8"
+                tools:ignore="MissingConstraints">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvBack"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/Primary2"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:rotation="180"
+                    android:drawableTint="@color/Primary2"
+                    android:drawableStart="@drawable/ic_baseline_arrow_forward_24"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="9"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_5"
+                    android:src="@drawable/ic_e_nach" />
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:background="@drawable/rounded_corner_stroke_6"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:layout_marginBottom="@dimen/margin_10"
+                        android:background="@drawable/rounded_corner_stroke_6"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/margin_60"
+                            android:padding="@dimen/margin_5"
+                            android:src="@drawable/bak" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5"
+                            android:layout_marginEnd="@dimen/margin_10"
+                            android:layout_marginBottom="@dimen/margin_5"
+                            android:background="@drawable/rounded_corner_stroke_6"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvBankName"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/margin_10"
+                                android:maxLines="1"
+                                android:text="State Bank of India"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/payu_dimen_16sp" />
+
+                            <TextView
+                                android:id="@+id/tvAccountNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="@dimen/margin_10"
+                                android:text="xxxxxxxxxxxxxxx567"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/payu_dimen_16sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <WebView
+                    android:id="@+id/wvNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:layout_marginEnd="@dimen/margin_20"
+                    android:visibility="visible"
+                    tools:ignore="InvalidId,WebViewLayout" />
+
+                <LinearLayout
+                    android:id="@+id/llSuccess"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:background="@drawable/rounded_corner_stroke_green"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvSuccessTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:drawableLeft="@drawable/ic_green_tick"
+                        android:drawablePadding="@dimen/margin_5"
+                        android:text=""
+                        android:textColor="@color/green"
+                        android:textSize="@dimen/payu_dimen_14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvSuccessText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:layout_marginBottom="@dimen/margin_5"
+                        android:lineHeight="@dimen/payu_dimen_18sp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/payu_dimen_14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llFailure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:background="@drawable/rounded_corner_stroke_red"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvFailureTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:drawableLeft="@drawable/ic_red_tick"
+                        android:drawablePadding="@dimen/margin_5"
+                        android:text=""
+                        android:textColor="@color/cb_errorRed"
+                        android:textSize="@dimen/payu_dimen_14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvFailureText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:layout_marginBottom="@dimen/margin_5"
+                        android:lineHeight="@dimen/payu_dimen_18sp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/payu_dimen_14sp" />
+                </LinearLayout>
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvContinue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:layout_marginEnd="@dimen/margin_20"
+                    android:layout_marginBottom="@dimen/margin_15"
+                    android:background="@drawable/rounded_corner_gradient"
+                    android:drawableTint="@color/white"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="@string/next_continue"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/SmallText"
+                    android:textColor="@color/white"
+                    tools:ignore="UnusedAttribute" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical">
+
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvOk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/margin_50"
+            android:layout_marginTop="300dp"
+            android:layout_marginEnd="@dimen/margin_50"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:background="@drawable/rounded_corner_gradient"
+            android:drawableTint="@color/white"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/payu_gpay_ok"
+            android:textAllCaps="true"
+            android:textAppearance="@style/SmallText"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            tools:ignore="UnusedAttribute" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvRetry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/margin_50"
+            android:layout_marginTop="300dp"
+            android:layout_marginEnd="@dimen/margin_50"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:background="@drawable/rounded_corner_gradient"
+            android:backgroundTint="@color/cb_errorRed"
+            android:drawableTint="@color/white"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/failure_retry"
+            android:textAllCaps="true"
+            android:textAppearance="@style/SmallText"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            tools:ignore="UnusedAttribute" />
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/wvNach"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:ignore="WebViewLayout" />
+</LinearLayout>

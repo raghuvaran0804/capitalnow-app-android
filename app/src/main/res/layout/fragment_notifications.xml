@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/login_page_background"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNotifications"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible" />
+
+
+    <ImageView
+        android:id="@+id/ivNoNotification"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_no_notification_new"
+        android:visibility="gone" />
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvNoNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_10"
+        android:text="@string/no_data_found_msg"
+        android:textAppearance="@style/SmallText"
+        android:textColor="@color/dark_gray"
+        android:textStyle="normal"
+        android:visibility="gone" />
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/btProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_30"
+        android:adjustViewBounds="true"
+        android:background="@drawable/rounded_corner_gradient"
+        android:gravity="center|bottom"
+        android:padding="@dimen/padding_10"
+        android:text="GO TO PROFILE"
+        android:textAppearance="@style/SmallText"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+
+
+</LinearLayout>

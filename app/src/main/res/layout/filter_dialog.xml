@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_corner"
+    android:backgroundTint="@color/white"
+    android:paddingTop="@dimen/padding_15">
+    <com.capitalnowapp.mobile.customviews.CNEditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_15"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/backScreen_color"
+        android:hint="@string/search_bank"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:padding="@dimen/margin_10"
+        android:paddingStart="@dimen/margin_10"
+        android:textAppearance="@style/VerySmallText"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvEnterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20"
+        android:textColor="@color/orange_alert"
+        android:textSize="12sp"
+        android:text="Start typing to search"
+        android:visibility="visible"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_10">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvCustom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:visibility="gone"
+        android:textAppearance="@style/SmallText"
+        android:textColor="@color/black" />
+
+</LinearLayout>

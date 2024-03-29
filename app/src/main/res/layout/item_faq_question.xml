@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llQuestion"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_10"
+        android:gravity="center"
+        android:padding="@dimen/margin_10">
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/ivArrow"
+            android:gravity="center|start"
+            android:textAppearance="@style/VerySmallText"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/ivArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:src="@drawable/ic_keyboard_arrow_down_black_24dp" />
+    </RelativeLayout>
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_30"
+        android:padding="@dimen/margin_10"
+        android:textAppearance="@style/VerySmallText"
+        android:textColor="@color/intro_page_body_color"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/colorGrey" />
+
+</LinearLayout>

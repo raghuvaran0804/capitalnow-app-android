@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_withbg"
+    tools:context="com.capitalnowapp.mobile.activities.SplashScreen">
+
+    <ImageView
+        android:id="@+id/ivSplash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_100"
+        android:layout_marginEnd="@dimen/margin_100"
+        android:layout_gravity="center" />
+
+
+    <!--<ImageView
+        android:id="@+id/ivBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginStart="@dimen/margin_100"
+        android:src="@drawable/splash_bg_back"
+        tools:ignore="RtlHardcoded" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:src="@drawable/ic_member_of_splash" />
+
+    <com.capitalnow.mobile.customviews.CNTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="@dimen/margin_15"
+        android:text="@string/copyright_capitalnow_in_all_rights_reserved"
+        android:textAppearance="@style/MicroText"
+        android:textColor="@color/white" />-->
+
+</FrameLayout>

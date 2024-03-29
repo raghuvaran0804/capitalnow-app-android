@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_corner"
+    android:backgroundTint="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_20"
+            android:src="@drawable/ic_payment_popup" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_30"
+            android:layout_marginEnd="@dimen/margin_30"
+            android:gravity="center"
+            android:textAppearance="@style/VerySmallText"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:id="@+id/llUPI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_15"
+                android:src="@drawable/bank_details_upi" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvUPI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llBank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_15"
+                android:src="@drawable/bank_details" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvAccountTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/VerySmallText"
+                    android:textColor="@color/black" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvBank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="true" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_30"
+            android:textAppearance="@style/VerySmallText"
+            android:textColor="@color/black" />
+
+
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/btnPay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="16dp"
+            android:background="@drawable/rounded_corner_gradient"
+            android:gravity="center"
+            android:padding="17dp"
+            android:text="@string/continue_to_pay"
+            android:textAllCaps="true"
+            android:textAppearance="@style/SmallText"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

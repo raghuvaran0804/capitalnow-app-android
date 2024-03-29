@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/single_rounded_square"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_32"
+        android:src="@drawable/star_success"
+        tools:ignore="ContentDescription" />
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvCoupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineHeight="@dimen/margin_25"
+        android:padding="@dimen/margin_8"
+        android:text=""
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvDiscountText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineHeight="@dimen/margin_25"
+        android:lineSpacingExtra="@dimen/margin_20"
+        android:text=""
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:lineHeight="@dimen/margin_25"
+        android:lineSpacingExtra="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_8"
+        android:text="with this coupon code"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginStart="@dimen/margin_2"
+        android:layout_marginEnd="@dimen/margin_2"
+        android:background="@color/light_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/payu_dimen_8dp"
+        android:orientation="horizontal">
+
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingStart="@dimen/payu_dimen_16dp"
+            android:paddingEnd="@dimen/payu_dimen_16dp"
+            android:layout_marginTop="4dp"
+            android:paddingTop="@dimen/margin_8"
+            android:paddingBottom="@dimen/margin_8"
+            android:text="Woohoo! Thanks"
+            android:textStyle="bold"
+            android:textAppearance="@style/MediumText"
+            android:textColor="@color/Primary2" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

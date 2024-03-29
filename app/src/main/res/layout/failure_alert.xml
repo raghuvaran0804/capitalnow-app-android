@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/single_rounded_square"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_10">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/failure_new"
+        android:layout_marginTop="@dimen/margin_20"/>
+
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="@dimen/margin_25"
+        android:gravity="center"
+        android:textAppearance="@style/MediumText"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_20"
+        android:paddingStart="@dimen/margin_20"
+        android:paddingEnd="@dimen/margin_20"
+        android:gravity="center"
+        android:textAppearance="@style/SmallText"
+        android:textColor="@color/intro_page_body_color" />
+
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvOk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/margin_70"
+        android:layout_marginEnd="@dimen/margin_70"
+        android:layout_marginBottom="@dimen/payu_dimen_20dp"
+        android:background="@drawable/rounded_corner_gradient"
+        android:gravity="center"
+        android:padding="17dp"
+        android:text="OK"
+        android:textAllCaps="true"
+        android:textAppearance="@style/SmallText"
+        android:textColor="@color/white"
+        android:visibility="visible" />
+
+</LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/rounded_background_white"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/margin_32"
+        android:text="Oops! "
+        tools:ignore="MissingConstraints" />
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:text="Cant connect right now"
+        tools:ignore="MissingConstraints" />
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textAlignment="textStart"
+        android:layout_marginStart="@dimen/margin_32"
+        android:lineHeight="@dimen/margin_24"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/margin_32"
+        android:text="What you can do" />
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textAlignment="textStart"
+        android:lineHeight="@dimen/payu_dimen_26dp"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginEnd="20dp"
+        android:paddingStart="@dimen/margin_16"
+        android:paddingEnd="@dimen/margin_16"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/margin_8"
+        android:text="- Check your location settings and ensure you are in India.\n- Verify your internet connection.\n- Wait a few minutes and try again." />
+
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvEmailText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textAlignment="textStart"
+        android:lineHeight="@dimen/margin_24"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginStart="@dimen/margin_32"
+        android:layout_marginEnd="@dimen/margin_32"
+        android:textColor="@color/black"
+        android:text="@string/need_help_email_us" />
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/btnOk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tilMobile"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/rounded_corner_gradient"
+        android:gravity="center"
+        android:padding="8dp"
+        android:layout_marginBottom="@dimen/margin_16"
+        android:text="OK"
+        android:textAppearance="@style/MediumText"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:visibility="visible"/>
+
+</LinearLayout>

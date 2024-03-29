@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/margin_10"
+    android:layout_marginTop="@dimen/margin_10"
+    android:layout_marginEnd="@dimen/margin_10"
+    android:layout_marginBottom="@dimen/margin_10"
+    android:padding="@dimen/margin_5"
+    android:orientation="vertical"
+    app:cardUseCompatPadding="true"
+    tools:context=".kotlin.activities.TwlEmiDetailsActivity">
+
+    <FrameLayout
+        android:id="@+id/cvEmi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_5"
+        android:layout_marginEnd="@dimen/margin_5"
+        android:layout_marginTop="@dimen/margin_5"
+        app:cardCornerRadius="@dimen/margin_10">
+        <ImageView
+            android:id="@+id/ivPaid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_paid"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_close_loan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/margin_10"
+            android:paddingTop="@dimen/margin_10"
+            android:paddingEnd="@dimen/margin_10"
+            android:paddingBottom="@dimen/margin_5">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_2">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvDueDateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="@dimen/margin_5"
+                    android:text="1st EMI Due Date"
+                    android:textColor="@color/Accent1"
+                    android:textSize="14sp" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvEmiDueDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text=""
+                    android:textColor="@color/dark_gray"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rvPaidDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_2"
+                android:layout_marginTop="@dimen/margin_10">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvPaidDateTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="@dimen/margin_5"
+                    android:text="Paid On"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="14sp" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvPaidDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text=""
+                    android:textColor="@color/dark_gray"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/llStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_2"
+                android:layout_marginTop="@dimen/margin_10">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvStatusText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="@dimen/margin_5"
+                    android:text="Status"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="14sp" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text=""
+                    android:textColor="@color/dark_gray"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:padding="@dimen/margin_2">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="@dimen/margin_5"
+                    android:text="Amount"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="14sp"/>
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text=""
+                    android:textColor="@color/dark_gray"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/llEnach"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:padding="@dimen/margin_2"
+                android:gravity="center"
+                android:background="#EDEBEB">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvEnach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_nach_small"
+                android:textAlignment="center"
+                android:text="Via HDFC Bank A/C"
+                android:textColor="@color/black"
+                android:textStyle="italic"
+                android:visibility="visible"
+                android:textSize="@dimen/payu_dimen_12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

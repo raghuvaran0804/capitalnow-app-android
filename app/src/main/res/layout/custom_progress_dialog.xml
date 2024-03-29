@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_gravity="center">
+
+    <ImageView
+        android:id="@+id/ivBg"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content" />
+
+    <!--<ImageView
+        android:id="@+id/iv2"
+        android:layout_width="match_parent"
+        android:src="@drawable/app_loader"
+        android:layout_height="match_parent"/>-->
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/iv2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/payu_dimen_20dp"
+        android:src="@drawable/new_app_loader" />
+
+</FrameLayout>

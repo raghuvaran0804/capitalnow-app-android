@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_dialog"
+    android:gravity="center|top"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_10">
+
+    <View
+        android:layout_width="@dimen/margin_40"
+        android:layout_height="5dp"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_10"
+        android:background="@drawable/rounder_grey_border"
+        android:backgroundTint="@color/colorGrey" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvLoanId"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_10"
+        android:textAppearance="@style/ExtraLargeTextWithBold"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivViewPolicy"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="0.1"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:padding="@dimen/margin_3"
+            android:src="@drawable/ic_insurance"/>
+    </LinearLayout>
+
+    <!--<LinearLayout
+        android:id="@+id/llInsurance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:layout_marginTop="@dimen/margin_8"
+        android:background="@drawable/rectangle_border_rounded">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_insurance"
+            android:padding="@dimen/margin_16"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:orientation="vertical">
+
+        <com.capitalnow.mobile.customviews.CNTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Insurance Policy Details"
+            android:textSize="@dimen/margin_16"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.capitalnow.mobile.customviews.CNTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Policy Number :"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"/>
+
+                <com.capitalnow.mobile.customviews.CNTextView
+                    android:id="@+id/tvPolicyNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text=""
+                    android:layout_marginStart="-10dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <com.capitalnow.mobile.customviews.CNTextView
+                android:id="@+id/tvViewPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View Policy"
+                android:layout_marginTop="@dimen/margin_8"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/Primary1"/>
+        </LinearLayout>
+
+    </LinearLayout>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvIns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_10" />
+
+</LinearLayout>

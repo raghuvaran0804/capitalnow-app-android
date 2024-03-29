@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".kotlin.activities.CheckCouponActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:background="@color/white" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.75"
+            android:background="@color/colorGrey_1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar_basic_rewards"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/margin_30" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_10"
+                android:gravity="center"
+                android:text="Your code is ready to be used."
+                android:textAppearance="@style/VerySmallText"
+                android:textColor="@color/black"
+                android:visibility="visible" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvToolbarTitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:gravity="center"
+                android:textAppearance="@style/VerySmallText"
+                android:textColor="@color/white"
+                android:visibility="visible" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvRedeemNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/margin_5"
+                android:background="@drawable/just_corners_blue"
+                android:gravity="center"
+                android:paddingStart="@dimen/margin_10"
+                android:paddingTop="@dimen/margin_5"
+                android:paddingEnd="@dimen/margin_10"
+                android:paddingBottom="@dimen/margin_5"
+                android:text="Redeem Now"
+                android:textAppearance="@style/MicroText"
+                android:textColor="@color/colorRedeemBlue"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/margin_20"
+            android:layout_weight="0.75">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@drawable/dashed_bg_grey"
+                    android:backgroundTint="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_10"
+                        android:paddingEnd="@dimen/margin_10"
+                        android:paddingBottom="@dimen/margin_10">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_5"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.capitalnowapp.mobile.customviews.CNTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center|start"
+                                android:text="Coupon Code:"
+                                android:textAppearance="@style/SmallText"
+                                android:textColor="@color/black"
+                                android:visibility="visible" />
+
+                            <com.capitalnowapp.mobile.customviews.CNTextView
+                                android:id="@+id/tvCode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_10"
+                                android:gravity="center|start"
+                                android:text="xxxxxx"
+                                android:textAppearance="@style/ExtraLargeTextWithBold"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:visibility="visible" />
+
+                            <com.capitalnowapp.mobile.customviews.CNTextView
+                                android:id="@+id/tvRedeemPoints"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/rounded_corner"
+                                android:backgroundTint="@color/colorGrey_1"
+                                android:gravity="center"
+                                android:paddingStart="@dimen/margin_10"
+                                android:paddingEnd="@dimen/margin_10"
+                                android:text="Redeemed 500 Points"
+                                android:textAppearance="@style/MicroText"
+                                android:textColor="@color/black"
+                                android:visibility="visible" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="end|center"
+                            android:orientation="vertical"
+                            android:paddingStart="@dimen/margin_10"
+                            android:paddingTop="@dimen/margin_10"
+                            android:paddingEnd="@dimen/margin_10">
+
+                            <com.capitalnowapp.mobile.customviews.CNTextView
+                                android:id="@+id/tvCopy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/rounded_corner"
+                                android:backgroundTint="@color/colorGrey_1"
+                                android:gravity="center"
+                                android:paddingStart="@dimen/margin_15"
+                                android:paddingTop="@dimen/margin_5"
+                                android:paddingEnd="@dimen/margin_15"
+                                android:paddingBottom="@dimen/margin_5"
+                                android:text="Copy"
+                                android:textAppearance="@style/SmallText"
+                                android:textColor="@color/black"
+                                android:visibility="visible" />
+
+                            <com.capitalnowapp.mobile.customviews.CNTextView
+                                android:id="@+id/tvExpireDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="bottom|end"
+                                android:gravity="center|bottom"
+                                android:text="asdsdsdsdsd"
+                                android:textAppearance="@style/MicroText"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorGrey_1" />
+
+                    <ImageView
+                        android:id="@+id/ivBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:layout_marginBottom="@dimen/margin_20"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/rewards_star" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_3"
+                        android:layout_marginBottom="@dimen/margin_15"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="8"
+                            android:orientation="horizontal">
+
+                            <com.capitalnowapp.mobile.customviews.CNTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/margin_20"
+                                android:gravity="center"
+                                android:text="Website Link:"
+                                android:textAppearance="@style/MediumText"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                            <com.capitalnowapp.mobile.customviews.CNTextView
+                                android:id="@+id/tvTermsLink"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/margin_10"
+                                android:gravity="center"
+                                android:text="Terms:"
+                                android:textAppearance="@style/VerySmallText"
+                                android:textColor="@color/colorSky_1"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <com.capitalnowapp.mobile.customviews.CNTextView
+                            android:id="@+id/tvDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|top"
+                            android:layout_marginEnd="@dimen/margin_15"
+                            android:background="@drawable/just_corners_10"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/margin_15"
+                            android:paddingTop="@dimen/margin_5"
+                            android:paddingEnd="@dimen/margin_15"
+                            android:paddingBottom="@dimen/margin_5"
+                            android:text="Terms"
+                            android:textAppearance="@style/VerySmallText"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:background="@drawable/dashed_bg_grey"
+                    android:backgroundTint="@color/white"
+                    android:orientation="vertical">
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_20"
+                        android:layout_marginTop="@dimen/margin_25"
+                        android:gravity="center"
+                        android:text="You want this coupon in Mail?"
+                        android:textAppearance="@style/MediumText"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <com.capitalnowapp.mobile.customviews.CNEditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:background="@drawable/just_corners"
+                        android:gravity="center"
+                        android:hint="Enter Email"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:padding="@dimen/margin_10"
+                        android:textAppearance="@style/MediumText"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvSend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_margin="@dimen/margin_10"
+                        android:background="@drawable/rounded_corner_gradient"
+                        android:gravity="center"
+                        android:padding="17dp"
+                        android:text="Send Mail"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/MediumText"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

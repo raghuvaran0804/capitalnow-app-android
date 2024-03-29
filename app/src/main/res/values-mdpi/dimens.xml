@@ -1,0 +1,12 @@
+<!-- Compatible to 3.2” 320x480 mdpi devices -->
+
+<resources>
+
+    <dimen name="text_large">16sp</dimen>
+    <dimen name="text_medium">13sp</dimen>
+    <dimen name="text_small">11sp</dimen>
+    <dimen name="text_very_small">11sp</dimen>
+    <dimen name="text_micro">8sp</dimen>
+    <dimen name="text_extra_large">18sp</dimen>
+
+</resources>

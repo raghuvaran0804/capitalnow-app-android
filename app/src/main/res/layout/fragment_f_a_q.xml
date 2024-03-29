@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".kotlin.fragments.FAQFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/et_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:background="@null"
+            android:padding="@dimen/margin_15"
+            android:text="Top Questions"
+            android:textAppearance="@style/MediumText"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_search_black_24dp" />
+    </LinearLayout>
+
+    <com.capitalnowapp.mobile.customviews.CNEditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_15"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/backScreen_color"
+        android:drawableEnd="@drawable/ic_cancel_grey_24dp"
+        android:hint="Search"
+        android:padding="@dimen/margin_5"
+        android:paddingStart="@dimen/margin_10"
+        android:textAppearance="@style/VerySmallText"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTopics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvQuestions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_15" />
+
+    <LinearLayout
+        android:id="@+id/llNotFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Search Not Found"
+            android:textAppearance="@style/MediumText"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

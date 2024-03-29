@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/single_rounded_square"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_32"
+        android:src="@drawable/lock_file"/>
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textColor="@color/cb_errorRed"
+        android:textStyle="bold"
+        android:text="Active Loan Alert"/>
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvmessage1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:textAlignment="textStart"
+        android:padding="@dimen/margin_8"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:text=""/>
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvmessage2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:textAlignment="textStart"
+        android:padding="@dimen/margin_8"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text=""/>
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvmessage3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:padding="@dimen/margin_8"
+        android:textAlignment="textStart"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:text=""/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_32"
+        android:orientation="horizontal">
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvNotNow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/margin_30"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:background="@drawable/rounded_corner_gradient"
+            android:backgroundTint="@color/light_gray"
+            android:gravity="center"
+            android:paddingTop="@dimen/margin_8"
+            android:paddingBottom="@dimen/margin_8"
+            android:layout_marginStart="@dimen/margin_30"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:text="Not Now"
+            android:textAllCaps="true"
+            android:textAppearance="@style/MediumText"
+            android:textColor="@color/black" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvPayNow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30"
+            android:layout_marginEnd="@dimen/margin_30"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner_gradient"
+            android:gravity="center"
+            android:paddingTop="@dimen/margin_8"
+            android:paddingBottom="@dimen/margin_8"
+            android:text="PAY NOW"
+            android:textAppearance="@style/MediumText"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

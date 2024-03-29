@@ -1,0 +1,632 @@
+<resources>
+    <string name="app_name">CapitalNow</string>
+    <string name="app_schema">CapitalNow.in</string>
+    <string name="error_no_internet_title">No Network</string>
+    <string name="error_no_internet">Please check your network connection</string>
+    <string name="error_failure">Sorry..! Something went wrong at our end. Please try again after some time.</string>
+    <string name="eligible_message">Currently your profile cannot be processed as it does not meet our eligibility criteria.</string>
+    <string name="app_hold_message">Your membership has been put under default as you have not adhered to the loan repayment terms/schedule.</string>
+    <string name="save_Signature">Please save the Signature</string>
+    <string name="error_request_timeout">Connection timeout</string>
+    <string name="title_error">Error</string>
+    <string name="title_alert">Alert!</string>
+    <string name="pan_success_alert">Yay! Thank you for verifying your PAN. Your credit eligibility is now unlocked!</string>
+    <string name="bank_success_alert">Yay! Your Bank statement is uploaded successfully.</string>
+    <string name="pan_failure_alert">PAN Card verification failed.</string>
+    <string name="bank_failure_alert">Bank statement uploaded failed</string>
+    <string name="success_continue">CONTINUE</string>
+    <string name="failure_retry">RETRY</string>
+
+    <string name="back_button_exit">Do you want to exit the App?</string>
+    <string name="back_button_double_click_exit">Press back button once again to exit App</string>
+    <string name="prompt_mobile">Mobile Number</string>
+    <string name="action_log_in">LOGIN</string>
+    <string name="error_invalid_mobile_no">Please enter valid mobile number</string>
+    <string name="error_pdf_format">*We accept only pdf format</string>
+    <string name="error_jpg_format">*We accept only JPEG,PNG and Pdf format</string>
+    <string name="doc_concent">*Please provide full and accurate documents for immediate loan transfer. The loan disbursal is subject to the availability of clear and proper documents.</string>
+    <string name="facebook_app_id">1026269544602423</string>
+    <string name="fb_login_protocol_scheme">fb1026269544602423</string>
+    <string name="update_linkedin_app_title">Download/Update LinkedIn App</string>
+    <string name="update_linkedin_app_message">To connect with LinkedIn you need to download/update LinkedIn App. Would you like to do it?</string>
+    <string name="update_linkedin_app_download">Download</string>
+    <string name="update_linkedin_app_cancel">Cancel</string>
+    <string name="apply_loan">Apply Loan</string>
+    <string name="apply_now">Apply Now</string>
+    <string name="my_loans">My Loans</string>
+    <string name="active_loans">Active Personal Loans</string>
+    <string name="twl_active_loans">Active Two Wheeler Loan</string>
+    <string name="cleared_loans">Cleared Loans</string>
+    <string name="upload_documents">Upload Documents</string>
+    <string name="loan_partners">Loan Partners</string>
+    <string name="our_partners">Our Partners</string>
+    <string name="latest_documents">Latest Documents</string>
+    <string name="menu_item_kyc">Verify KYC</string>
+    <string name="notifications">Notifications</string>
+    <string name="refer_and_earn">Refer &amp; Earn</string>
+    <string name="profile">Profile</string>
+    <string name="pan_verification">PanVerification</string>
+    <string name="home">Home</string>
+    <string name="aadhar_otp">Aadhar Verification</string>
+    <string name="request_bank_change_text1">As per your request, you are being directed to the bank account details upgradation page wherein you are required to provide accurate details of your new active bank account to be synced and updated to your existing account so that you enjoy a seamless and hassle-free experience with us.</string>
+    <string name="request_bank_change_text2">This is the maximum amount we can deduct over the course of your e-NACH tenure. It includes your principle along with accrued interests and handling charges.</string>
+    <string name="add_references">Add References</string>
+    <string name="add_latest_references">Add Latest References</string>
+    <string name="no_support_for_storage">Sorry..! Your device does not support storage.</string>
+    <string name="documents_uploading_failed">Documents uploading Failed. Please try again..!</string>
+    <string name="need_location_permission"><b>CapitalNow</b> requires Location Permission.</string>
+    <string name="rate_us_dialog_title">Rate this app</string>
+    <string name="rate_us_dialog_message"><b>We\'re glad you\'re enjoying\nCapitalNow.</b>\n\nYour feedback is valuable.\nHelps us improve the app.</string>
+    <string name="rate_us_dialog_ok">Rate now</string>
+    <string name="rate_us_dialog_cancel">Later</string>
+    <string name="rate_us_dialog_no">No Thanks</string>
+    <string name="app_update_message">We have updated our CapitalNow Android Mobile App. Please install the latest version from the Play Store to avail Instant Loans.</string>
+    <string name="default_notification_channel_id" translatable="false">capitalnow_default_channel</string>
+    <string name="apply_loan_processing_fee_title">*Processing Fees of %d + GST is applicable.</string>
+    <string name="apply_loan_processing_fee_sub_title">*Processing Fee of %d is applicable for Loan Amounts up to 5000 and Processing Fee of %d is applicable for Loan Amounts more than 5000</string>
+    <string name="apply_loan_confirmation">Are you sure you want to apply for loan?</string>
+    <string name="cancel_pay_confirmation">Do you really want to cancel the payment. Are you sure?</string>
+    <string name="redeem_confirmation">Are you sure you want to redeem?</string>
+    <string name="title_history">History</string>
+    <string name="google_play_services_not_available">Sorry..! Google Play Services are not available on this device.</string>
+
+    <!-- Server Client ID. This should be a valid Web OAuth 2.0 Client ID displayed next to Web client (Auto-created for ic_federal_google Sign-in) obtained from https://console.developers.google.com/ -->
+    <string name="google_oauth_2_0_client_id">4471361792-dgnbl01okgl7p2kf5gsrhleoi4baqj1g.apps.googleusercontent.com</string>
+    <string name="terms_checkbox_alert_msg"><![CDATA[Please agree to CapitalNow\'s Terms & Conditions and Privacy Policy and authorize CapitalNow]]></string>
+    <string name="skip">Skip</string>
+    <string name="location">Location</string>
+    <string name="storage">Storage</string>
+    <string name="contacts">Contacts</string>
+    <string name="location_permission_content">Our app collects and monitors the information about the location of your device to check serviceability of your loan application, prevent fraudulent activity and also provide customized loan offers.</string>
+    <string name="storage_permission_content">Our app require storage Permission so that you can easily upload the right KYC related documents for quick submission of loan application. This will help us enhance your experience on our App.</string>
+    <string name="sms_permission_content">We don’t collect or store your personal SMS from your inbox. We only access your transactional SMS which helps us perform a credit risk assessment to determine your risk profile and to provide you with the appropriate credit analysis.</string>
+    <string name="calendar_permission_content">To better understand your credit profile, we request permission to access your calendar events.</string>
+    <string name="apps_permission_content">We access your list of the installed applications’ metadata information to better understand your credit worthiness.</string>
+    <string name="permission_deny_page_title">For processing your instant loan application, please provide the required permissions</string>
+    <string name="permission_deny_page_content1">Please go back and agree to provide the permissions as requested after clicking I Agree.</string>
+    <string name="permission_deny_page_content2">If you deny any of the permissions and select ‘Never Ask Again’, then you will need to go to your Phone Settings to provide permissions.</string>
+    <string name="permissions_heading">We seek these permissions to provide accurate credit details and seamless loan disbursement process.</string>
+
+    <string name="get_started_title1">PaperLess Registration</string>
+    <string name="get_started_content1">Our application is completely online from start to finish. Complete a simple one-time registration process to become an approved borrower.</string>
+
+    <string name="get_started_title2">Swift Verification</string>
+    <string name="get_started_content2">We evaluate you by considering your Personal &amp; Professional Credibility along with your Social Credibility.</string>
+
+    <string name="get_started_title3">Instant Fund Transfer</string>
+    <string name="get_started_content3">Upon Membership approval, you can avail Personal Loan instantly with one click 24*7 without any physical verification.</string>
+
+    <string name="federal_registration_title"><font color='#ffffff'>We will simplify your</font> <font color='#178BFF'>Registration</font><font color='#ffffff'> Process.</font> </string>
+    <string name="not_you_logout"> <font color='#FCB9C0'><u>Logout</u></font><font color='#ffffff'></font> </string>
+    <string name="skip_this"> <font color='#2300DA'><u>Skip for this step</u></font><font color='#ffffff'></font> </string>
+
+    <string name="title_basic_details">Basic Details</string>
+    <string name="title_already_have_dealer">Already have a dealer</string>
+    <string name="title_details_of_purchase">Confirm your details</string>
+    <string name="title_choose_dealer">Choose a dealer</string>
+    <string name="title_missing_details">Missing Details</string>
+    <string name="title_professional_details">Professional Details</string>
+    <string name="title_emi_details">EMI Details</string>
+    <string name="validate">VALIDATE</string>
+    <string name="view_agree">view &amp; agree</string>
+    <string name="title_pan_verification">PAN Verification</string>
+    <string name="select_bank_eNach">Select Bank for e-Nach Mandate</string>
+    <string name="title_aadhaar_verification">Aadhar Verification</string>
+    <string name="title_two_wheeler_loan">Two Wheeler Loan</string>
+    <string name="title_docs">Upload below documents</string>
+    <string name="title_Signature">Signature Consent*</string>
+    <string name="applynow_eligibility_text">Heads’ Up! We are analysing multiple data points to bring you the eligibility right now, it might be different from the Bureau.</string>
+    <string name="enter_bank_details">Provide updated bank details which will be used for loan disbursal</string>
+    <string name="signature_text">Signature should be same as PAN card</string>
+    <string name="signature_info">*(Applicant valid signature on a plain white paper with blue or black ink only)</string>
+    <string name="enter_aadhaar_number">Enter Aadhaar Number</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="we_will_send_otp">We will send OTP to the number which is linked with Aadhar Card.</string>
+    <string name="upload_pan">Upload PAN Card</string>
+    <string name="upload_pan_Hint">(PNG, JPEG,JPG etc)</string>
+    <string name="upload_bank_statement"><u>Upload Bank Statement</u></string>
+    <string name="upload_bank_statement1">Upload Bank Statement</string>
+
+    <string name="login_internet_banking">Login to Internet Banking</string>
+    <string name="missing_details_text">We couldn’t find your IFSC/Account Details. Please mention those to proceed</string>
+    <string name="bank_statement_using">Bank Statement Using</string>
+    <string name="upload_pay_slip">Upload Pay Slip</string>
+    <string name="upload_signature">Upload Signature</string>
+    <string name="upload_aadhaar">Upload Aadhar Card</string>
+    <string name="aadhaar_front">Aadhar Front side</string>
+    <string name="aadhaar_back">Aadhar Back side</string>
+    <string name="title_additional_details">Additional Details</string>
+    <string name="title_submit">SUBMIT</string>
+    <string name="title_confirm">CONFIRM</string>
+    <string name="title_gotit">Got it</string>
+    <string name="complete_your_registration_process_to_get_your_loan_instantly">Complete The Registration Process \n To Get Your Loan Approved Instantly.</string>
+    <string name="pan_confirmation">I hereby declare that I am Indian National.\n I confirm that the PAN Number shared belongs to me and I authorize to pull my record from NSDL and run credit bureau checks on my behalf to obtain my credit report.</string>
+    <string name="signature_confirmation">I confirm the above signature is correct and belong to me</string>
+    <string name="aadhaar_confirmation">I authorise Capital Now to verify my Aadhar Details for processing my loan. I also confirm that the Aadhar details provided by me is correct.</string>
+    <string name="bank_confirmation">I authorise Capital Now to analyse my Bank Statement and to verify my Bank Account for further processing of my loan application.</string>
+    <string name="facematch_discription">Hey there! we need your facial profile to establish a credit history kindly follow the instructions mentioned below to do KYC check.</string>
+    <string name="facematch_info">Please follow on-screen instructions that you would receive on the next page</string>
+    <string name="facematch_note">Please don’t put on any accessories like a hat, jewellery, or glasses because it will hamper our verification process.</string>
+    <string name="facematch_success_info">Video KYC Completed successfully.</string>
+    <string name="facematch_failure_info">Video KYC failed please reinitiate the process</string>
+    <string name="bank_upload_salary">*Please upload only the Salary Account Details for seamless disbursement!</string>
+    <string name="frequently_used_title">Frequently Used Apps</string>
+    <string name="first_name">First Name (Same as PAN card)</string>
+    <string name="middle_name">Middle Name (Optional)</string>
+    <string name="last_name">Last Name (Same as PAN card)</string>
+    <string name="holder_name">Account Holder Name</string>
+    <string name="date_of_birth">DOB</string>
+    <string name="gender">Gender</string>
+    <string name="alter_email">Alternate Email</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="alter_mobile">Alternate Mobile No</string>
+    <string name="select_native_city">Current Location</string>
+    <string name="select_bank">Select Bank</string>
+    <string name="capital_now">How do you know about CN</string>
+    <string name="personal_details">Professional Details</string>
+    <string name="talk_us">Talk to Us</string>
+    <string name="pan_hard_pull">Pan Hard Pull</string>
+    <string name="help">FAQs</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="logout">Logout</string>
+    <string name="congratulations">Congratulations</string>
+    <string name="you_are_eligible_for_applying_loan">Eligible Limit 20,000</string>
+    <string name="company_name">Company Name</string>
+    <string name="employee_type">Employee Type</string>
+    <string name="department">Department</string>
+    <string name="designation">Designation</string>
+    <string name="monthly_salary">Monthly Net Salary</string>
+    <string name="mode_pay">Mode Of Salary</string>
+    <string name="prodessional_city">Professional City</string>
+    <string name="experience_month">Experience in Months</string>
+    <string name="pan_card">PAN Card Number</string>
+    <string name="year_graduation">Last College Graduation Year</string>
+    <string name="college_name">College Name</string>
+    <string name="married">Married</string>
+    <string name="unmarried">Single</string>
+    <string name="residence_type">Residence Type</string>
+    <string name="industry_type">Industry Type</string>
+    <string name="credit_card">Credit Card Type</string>
+    <string name="purpose_of_loan">Purpose of Loan</string>
+    <string name="title_finish">Finish</string>
+    <string name="pan_ex">Enter PAN Number</string>
+    <string name="choose_dealer">Choose Dealer</string>
+    <string name="search_dealer">Search Your Dealer</string>
+    <string name="choose_city"> Search City</string>
+    <string name="choose_area">Search Area</string>
+    <string name="choose_varient">Choose Variant</string>
+    <string name="thanks_payment">Thank you for Payment!</string>
+    <string name="relax_text">Your loan is available for disbursal, \nsit back and relax! We will let you know \nwhen dealer receives the amount</string>
+    <string name="do_not_refresh">Please do not refresh or press the \nback button until the payment is confirmed.\nYou will be redirected automatically.</string>
+    <string name="down_payment_info">Your limit has been updated post credit assessments,you may incur downpayment for bikes with prices higher than your eligibility limit.</string>
+    <string name="choose_color">Choose Color</string>
+    <string name="search_two_wheeler">Search for two wheeler</string>
+    <string name="search_for_dealer">Search for dealer</string>
+    <string name="search_brand">Search Brand</string>
+    <string name="info_processing">Your loan is ready to be disbursed! please pay your processing fee to receive instant disbursement. Please note that you may incur additional downpayment depending on the bike price and your eligibility.</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="logout_text">Are you sure you want to logout?</string>
+    <string name="account_name">Account Holder Name</string>
+    <string name="account_number">Account Number</string>
+    <string name="bank_account_number">Bank Account Number</string>
+    <string name="re_enter_account_no">Re-Enter Account Number</string>
+    <string name="ifsc_code">IFSC Code</string>
+    <string name="branch_name">Branch Name</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="upload_doc">Upload Bank Statement</string>
+    <string name="bank_statement">Bank Statement</string>
+    <string name="face_match_title">Video KYC</string>
+    <string name="secure_details">Your data is secure with us.</string>
+    <string name="pfd_format">*Pdf Format Only</string>
+    <string name="first_terms">I agree that the above mentioned bank account is mine and I hereby authorize Capital Now to update my bank account for further loan disbursals.</string>
+    <string name="second_terms">*Please provide accurate bank account details for successful updation.</string>
+
+    <string name="upload_initial_docs_title">Please Upload Pending Documents For Immediate Loan Transfer</string>
+    <string name="request_bank_chnage">Request Bank Change</string>
+    <string name="cnpl_history">CNPL History</string>
+
+
+    <string name="referral_code">Have a referral code?</string>
+    <string name="copy_code">Copy Code</string>
+
+    <string name="title_activity_history_refer">HistoryReferActivity</string>
+    <string name="balance">Balance</string>
+    <string name="reward_points">Reward Points</string>
+    <string name="pending_Docs">Pending Documents</string>
+    <string name="try_again">Try Again</string>
+    <string name="no_internet">No Internet Connection</string>
+    <string name="check_internet">Please check your internet connection \n and try again</string>
+    <string name="mark_read">Mark as read</string>
+    <string name="clear">Closed</string>
+    <string name="add_more_contact">Need to add three \n References</string>
+    <string name="payment">Payment</string>
+
+    <string name="upload_docs_warning_msg">*Please provide full and accurate documents for immediate loan transfer. The loan disbursal is subject to the availability of clear and proper documents.\n\n*If you are unable to upload documents, please mail us on documents@capitalnow.in</string>
+    <string name="latest_docs_warning_msg">*We would review your profile and accordingly upgrade your membership. Please provide full and accurate documents for faster processing.</string>
+
+    <!-- Profile Validations -->
+    <string name="first_name_validation_msg">First Name requires minimum 2 characters</string>
+    <string name="middle_name_validation_msg">Middle Name requires minimum 2 characters</string>
+    <string name="last_name_validation_msg">Last Name requires minimum 2 characters</string>
+    <string name="pin_code_validation_msg">Pin code requires maximum 6 characters</string>
+    <string name="dob_validation_msg">Enter valid Date of Birth</string>
+    <string name="gender_validation_msg">Select Gender</string>
+    <string name="alt_email_validation_msg">Enter valid Alternate Email</string>
+    <string name="alt_mobile_validation_msg">Enter valid Alternate Mobile No</string>
+    <string name="promotion_validation_msg">Select How do you know about CapitalNow</string>
+    <string name="location_validation_msg">Enter Current Location</string>
+
+    <string name="employement_type_validation_msg">Select Employment Type</string>
+    <string name="company_validation_msg">Company Name requires minimum 2 characters</string>
+    <string name="department_validation_msg">Department requires minimum 2 characters</string>
+    <string name="designation_validation_msg">Designation requires minimum 2 characters</string>
+    <string name="salary_validation_msg">Enter valid salary</string>
+    <string name="salary_mode_validation_msg">Select Mode of Salary</string>
+    <string name="city_validation_msg">Select City</string>
+    <string name="experience_validation_msg">Select Experience</string>
+    <string name="industry_validation_msg">Select Industry Type</string>
+
+    <string name="unique_validation_msg">Please fill all the fields to move forward</string>
+
+    <string name="marital_status_validation_msg">Select Marital Status</string>
+    <string name="pan_validation_msg">Enter valid PAN Card No</string>
+    <string name="graduation_year_validation_msg">Select Last College Graduation Year</string>
+    <string name="college_validation_msg">Select College Name</string>
+    <string name="residence_validation_msg">Select Residence Type</string>
+    <string name="loan_purpose_validation_msg">Select Purpose of Loan</string>
+    <string name="loan_purpose_custom_validation_msg">Enter Purpose of Loan</string>
+
+
+    <string name="references_warning_msg">*Please provide five references to complete your Loan Application. We need at least two references from your family.</string>
+    <string name="references_warning_msg_new">We might use these references for verification purpose at the time of Disbursement and also incase of Non-connectivity.</string>
+    <string name="add_two_more_references">Two more \n references need to be added</string>
+    <string name="add_one_more_reference">One more \n reference needs to be added</string>
+    <string name="add_relations_for_contacts_msg">Please specify your relation with the uploaded references. We need at least two references from your family</string>
+
+
+    <string name="upload_docs_validation_msg_1">Please upload required documents to proceed.</string>
+    <string name="upload_docs_format_validation_msg">Please select JPG/JPEG, PNG OR PDF format file only.</string>
+
+
+    <!-- Date Util -->
+    <string name="date_util_term_a">a</string>
+    <string name="date_util_term_an">an</string>
+
+    <string name="date_util_unit_minute">minute</string>
+    <string name="date_util_unit_minutes">minutes</string>
+    <string name="date_util_unit_hour">hour</string>
+    <string name="date_util_unit_hours">hours</string>
+    <string name="date_util_unit_day">day</string>
+    <string name="date_util_unit_days">days</string>
+    <string name="date_util_unit_month">month</string>
+    <string name="date_util_unit_months">months</string>
+    <string name="date_util_unit_year">year</string>
+    <string name="date_util_unit_years">years</string>
+
+    <string name="date_util_prefix_over">over</string>
+    <string name="date_util_prefix_almost">almost</string>
+    <string name="date_util_suffix">ago</string>
+
+    <string name="reward_balance_info">Total Balance</string>
+    <string name="reward_points_info">Total Points</string>
+    <string name="note_currently_we_are_supporting_msg">Note: Currently we are supporting jpg/jpeg, png and pdf formats only.</string>
+
+    <!--These amount and days in below two msgs will append programmatically-->
+
+    <string name="how_long_you_need">HOW LONG DO YOU NEED?</string>
+    <string name="loan_amount_needed">HOW MUCH MONEY DO YOU NEED?</string>
+    <string name="loan_verification_process">Your Eligibility is subject to further verification process, \nit may vary from the current limit.</string>
+    <string name="tenure_needed">SELECT TENURE</string>
+    <string name="emi_date">PREFERRED EMI DATE</string>
+
+    <string name="upload_docs_proof_of_id_title">Proof of ID</string>
+    <string name="upload_docs_signature_title">E Signature<font color='#FA7300'>*</font></string>
+    <string name="upload_docs_proof_of_id_hint">(PAN Card)</string>
+
+    <string name="upload_docs_proof_of_address_title">Proof of Address</string>
+    <string name="upload_docs_present_address_title">Present Address Proof</string>
+    <string name="upload_docs_proof_of_address_hint">(Aadhar front and back / Valid Passport)</string>
+    <string name="upload_docs_proof_of_address_hint_1">(Aadhar front and back / Valid Passport / Latest Utility Bill / Bank Statement)</string>
+    <string name="upload_docs_proof_of_address_password"><font size="15">Address Proof password, if any</font></string>
+
+    <string name="upload_docs_salary_slip_title">Latest Salary Slip</string>
+    <string name="upload_docs_salary_slip_password"><font size="15">Salary Slip password, if any</font></string>
+
+    <string name="upload_docs_bank_statement_title">Bank Account Statement</string>
+    <string name="upload_docs_salary_slip_select">(Recent 1 month payslip)</string>
+    <string name="upload_docs_bank_statement_select">(Last 3 months Bank statement for your Salary Account)</string>
+    <string name="upload_docs_bank_statement_select_two">Select Bank Account Statement 2</string>
+    <string name="upload_docs_bank_statement_select_three">Select Bank Account Statement 3</string>
+
+    <!--Because of diff UI we are maintaining two variables with diff font size temporary-->
+    <string name="upload_docs_bank_statement_password">Bank Statement password, if any</string>
+    <string name="upload_docs_bank_statement_password_doc"><font size="15">Bank Statement password, if any</font></string>
+
+    <string name="add_references_title">Please Provide Five References For Immediate Loan Transfer</string>
+    <string name="copyright_capitalnow_in_all_rights_reserved">©Copyright-CapitalNow.in-All Rights Reserved</string>
+
+    <string name="no_data_found_msg">No data found</string>
+
+    <string name="select_salary_slip">Please select Salary Slip</string>
+    <string name="select_bank_statement">Please select atleast one Bank Account Statement</string>
+    <string name="opt_set_msg">OTP successfully sent to your mobile number</string>
+    <string name="please_enter_account_holder_name_as_per_bank_statement">*Please enter Account Holder\'s Name as per bank statement</string>
+
+
+    <!--        AdGyde Key & Values         -->
+    <string name="refer_earn_key">ReferAndEarn</string>
+    <string name="refer_earn_value_others">Others</string>
+    <string name="refer_earn_value_sms">SMS</string>
+    <string name="refer_earn_value_wp">WhatsApp</string>
+
+    <string name="contact_us_key">ContactUs</string>
+
+    <string name="upload_document_key">UploadedDocuments</string>
+    <string name="upload_document_first_time_user">First Time User</string>
+    <string name="upload_document_existing_user">Existing User 180 days</string>
+
+    <!--Mixpanel Events-->
+    <string name="interaction_type">InteractionType</string>
+    <string name="user_applied_loan">FirstTimeAppliedLoan</string>
+    <string name="references_updated">ReferencesUploaded</string>
+    <string name="app_open_first_time">OpenedAfterInstallation</string>
+    <string name="mobile_number_entered">MobileNumberEntered</string>
+    <string name="otp_entered">OTPEntered</string>
+    <string name="user_sign_in">UserSignIn</string>
+    <string name="otp_submitted">OTPSubmitted</string>
+    <string name="get_otp_clicked">GetOTPClicked</string>
+    <string name="resend_otp_clicked">ResendOTPClicked</string>
+    <string name="get_OTP_via_call_clicked">GetOTPViaCallClicked</string>
+    <string name="social_login_landed">SocialLoginLanded</string>
+    <string name="registration_dashboard_landed">RegistrationDashboardPageLanded</string>
+    <string name="registration_dashboard_interacted">RegistrationDashboardPageInteracted</string>
+    <string name="user_approved">UserMembershipApproved</string>
+    <string name="social_login_interacted">SocialLoginInteracted</string>
+    <string name="basic_details_landed">BasicDetailsPageLanded</string>
+    <string name="basic_details_page_submitted">BasicDetailsPageSubmitted</string>
+    <string name="alternate_email_verification_OTP_submitted">AlternateEmailVerificationOTPSubmitted</string>
+    <string name="alternate_email_verification_OTP_server_event">AlternateEmailVerificationOTPServerEvent</string>
+    <string name="current_location_page_interacted">CurrentLocationPageInteracted</string>
+    <string name="edit_address_page_submitted">EditAddressPageSubmitted</string>
+    <string name="professional_details_page_landed">ProfessionalDetailsPageLanded</string>
+    <string name="professional_details_page_submitted">ProfessionalDetailsPageSubmitted</string>
+    <string name="user_registered">UserRegistered</string>
+    <string name="permissions_page_landed">PermissionsPageLanded</string>
+    <string name="permissions_page_interacted">PermissionsPageInteracted</string>
+    <string name="pan_verification_page_landed">PANVerificationPageLanded</string>
+    <string name="pan_card_number_entered">PANCardNumberEntered</string>
+    <string name="pan_verification_page_interacted">PANVerificationPageInteracted</string>
+    <string name="pan_upload_clicked">PANUploadClicked</string>
+    <string name="pan_approval_server_event">PANApprovalServerEvent</string>
+    <string name="side_nav_bar_interacted">SideNavBarInteracted</string>
+    <string name="home_page_landed">HomePageLanded</string>
+    <string name="home_page_interacted">HomePageInteracted</string>
+    <string name="select_bank_page_landed">SelectBankPageLanded</string>
+    <string name="select_bank_page_interacted">SelectBankPageInteracted</string>
+    <string name="bank_details_taken_server_event">BankDetailsTakenServerEvent</string>
+    <string name="credit_eligibility_revision_server_event">CreditEligibilityRevisionServerEvent</string>
+    <string name="aadhar_verification_page_landed">AadharVerificationPageLanded</string>
+    <string name="aadhar_verification_page_interacted">AadharVerificationPageInteracted</string>
+    <string name="aadhar_manual_upload_page_interacted">AadharManualUploadPageInteracted</string>
+    <string name="aadhar_OTP_entered">AadharOTPEntered</string>
+    <string name="aadhar_OT_validation_page_interacted">AadharOTPValidationPageInteracted</string>
+    <string name="aadhar_verification_success_server_event">AadharVerificationSuccessServerEvent</string>
+    <string name="video_KYC_page_landed">VideoKYCPageLanded</string>
+    <string name="video_KYC_page_interacted">VideoKYCPageInteracted</string>
+    <string name="video_KYC_success_page_interacted">VideoKYCSuccessPageInteracted</string>
+    <string name="video_KYC_failure_page_interacted">VideoKYCFailurePageInteracted</string>
+    <string name="upload_documents_page_landed">UploadDocumentsPageLanded</string>
+    <string name="upload_documents_page_interacted">UploadDocumentsPageInteracted</string>
+    <string name="add_signature_page_landed">AddSignaturePageLanded</string>
+    <string name="add_signature_page_interacted">AddSignaturrePageInteracted</string>
+    <string name="references_page_landed">ReferencesPageLanded</string>
+    <string name="references_page_interacted">ReferencesPageInteracted</string>
+    <string name="borrower_agreement_consent_page_landed">BorrowerAgreementConsentPageLanded</string>
+    <string name="borrower_agreement_consent_page_interacted">BorrowerAgreementConsentPageInteracted</string>
+    <string name="borrower_agreement_consent_validation_page_landed">BorrowerAgreementConsentValidationPageLanded</string>
+    <string name="borrower_agreement_consent_validation_page_interacted">BorrowerAgreementConsentValidationPageInteracted</string>
+    <string name="eNach_mandate_page_landed">eNachMandatePageLanded</string>
+    <string name="eNach_mandate_page_interacted">eNachMandatePageInteracted</string>
+    <string name="eNach_mandate_success_page_interacted">eNachMandateSuccessPageInteracted</string>
+    <string name="eNach_mandate_failure_page_interacted">eNachMandateFailurePageInteracted</string>
+    <string name="active_personal_loans_page_landed">ActivePersonalLoansPageLanded</string>
+    <string name="active_personal_loans_page_interacted">ActivePersonalLoansPageInteracted</string>
+    <string name="logout_popup_interacted">LogoutPopupInteracted</string>
+    <string name="contact_us_page_landed">ContactUsPageLanded</string>
+    <string name="contact_us_query_submitted">ContactUsQuerySubmitted</string>
+    <string name="request_bank_page_landed">RequestBankPageLanded</string>
+    <string name="request_bank_page_interacted">RequestBankPageInteracted</string>
+    <string name="personal_loan_apply_now_page_landed">PersonalLoanApplyNowPageLanded</string>
+    <string name="promo_code_apply_clicked">PromoCodeApplyClicked</string>
+    <string name="personal_loan_apply_now_clicked">PersonalLoanApplyNowClicked</string>
+    <string name="personal_Loan_payment_server_Event">PersonalLoanPaymentServerEvent</string>
+    <string name="additional_documents_page_landed">AdditionalDocumentsPageLanded</string>
+    <string name="additional_documents_page_interacted">AdditionalDocumentsPageInteracted</string>
+    <string name="pending_documents_page_landed">PendingDocumentsPageLanded</string>
+    <string name="pending_documents_page_interacted">PendingDocumentsPageInteracted</string>
+    <string name="refer_N_earn_page_landed">ReferNEarnPageLanded</string>
+    <string name="refer_N_earn_page_interacted">ReferNEarnPageInteracted</string>
+    <string name="profile_page_landed">ProfilePageLanded</string>
+
+
+    <string name="registration_key">UserRegistration</string>
+    <string name="user_registration_in_progress">Registration InProgress</string>
+    <string name="user_registration_completed">Registration Completed</string>
+    <string name="search_city">Search City</string>
+    <string name="search_bank">Search Bank</string>
+    <string name="search_contact">Search Contact</string>
+
+    <string name="take_photo">Take Photo</string>
+    <string name="chooseFromGallery">Choose From Gallery</string>
+    <string name="cancel">Cancel</string>
+
+    <!--    RATE US DIALOG      -->
+    <string name="rate_us_title">Rate Us</string>
+    <string name="rate_us_msg1">Your opinion matters to us!</string>
+    <string name="rate_us_msg2">We strive extremely hard to make CapitalNow better for you, and would love to know how did you enjoy our app?</string>
+    <string name="rate_us_now_btn_text">RATE NOW</string>
+    <string name="rate_us_no_thanks_btn_text">NO, THANKS</string>
+    <string name="rate_us_later_btn_text">MAYBE LATER</string>
+
+    <string name="update_app_alert_ok_text">Update</string>
+    <string name="update_app_alert_skip_text">Skip</string>
+    <string name="upload_now">Upload Now</string>
+    <string name="no_contacts_found">No Contacts Found</string>
+    <string name="max_contact_reached_limit">You have reached max reference limit.</string>
+
+
+    <string name="amount_will_be_credited">Amount will be credited</string>
+
+    <string name="enter_mobile">Enter Mobile</string>
+    <string name="verify">Verified</string>
+    <string name="verify_underline"><u>Verify</u></string>
+    <string name="verify1">Verify</string>
+
+    <string name="amazon_terms_select_validation">Please accept Amazon Terms and Conditions</string>
+    <string name="select_loan_transfer_type">Please Select the Transfer Type</string>
+    <string name="verifying_amazon_number">Verifying AmazonPay Number Please Wait…</string>
+    <string name="price_break">Price Breakup</string>
+    <string name="borrow_amount">Borrow Amount</string>
+    <string name="interest">Interest</string>
+    <string name="fee">Fees</string>
+    <string name="total">Total</string>
+    <string name="continue_to_pay">CONTINUE TO PAY</string>
+    <string name="next_continue">CONTINUE</string>
+    <string name="internet_banking">INTERNET BANKING</string>
+    <string name="next_save">SAVE</string>
+    <string name="clear_signature">CLEAR</string>
+    <string name="preview_signature">PREVIEW</string>
+    <string name="total_payable_amount">Total Payable Amount: Rs %d</string>
+
+
+    <!--    payU    -->
+    <string name="some_error_occurred">Some error occurred…</string>
+    <string name="transaction_cancelled_by_user">Transaction cancelled by user</string>
+    <string name="transaction_timed_out">Transaction timed out</string>
+    <string name="payment_initiation_failed">Payment initiation failed</string>
+
+
+    <string name="select_tenure">Select Tenure</string>
+    <string name="i_wish_to_pay">I wish to pay</string>
+    <string name="number_of_days">Number of days</string>
+    <string name="indian_currency">Rs </string>
+    <string name="social_login_title">Social Login</string>
+    <string name="manager_details">Manager Details</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="transactions">Transactions</string>
+    <string name="data_deletion">Delete Your Account</string>
+    <string name="spend_analyzer">spendZ</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="upload_docs_guidelines">Upload Docs Guidelines > ></string>
+    <string name="upload_docs_guidelines_title">Upload Docs Guidelines</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="personal_title">User Personal Information</string>
+    <string name="personal_permission_content">Our app collects user accounts data which includes email address, name and mobile number. This information is part of registration process and to communicate with you for the loan application process.</string>
+    <string name="social_media">Social Media</string>
+    <string name="sms">SMS</string>
+    <string name="calendar">Calendar</string>
+    <string name="app_data">App Data</string>
+    <string name="social_media_permission_content">Our app collects your public profile data depending on the social media or networking platform used like, Facebook/LinkedIn to login to our app. The information collected from your social media networking account shall be clearly displayed to you at the time of login to our app.</string>
+    <string name="device_info">Device Information</string>
+    <string name="device_permission_content">Our app collects the Unique Device identifiers like Serial numbers to uniquely identify the device to ensure that unauthorized devices are not able to act on your behalf and to mitigate the fraud.</string>
+    <string name="same_as_proof_of_address">Same as Proof of Address</string>
+    <string name="consent_title">"E Sign Consent"</string>
+    <string name="sign_hint">(Applicant\'s valid signature on a plain white paper with blue or black ink only)</string>
+    <string name="nbfc_text">Capital Now is a platform facilitating the loan transactions between the borrowers and the NBFCs. All loan applications are approved and sanctioned by NBFCs registered with RBI.</string>
+    <string name="consent_text">By continuing, I agree to have read and understood the <a href="https://api.capitalnow.in/mpage/terms-and-conditions"><b><font color='black'>Terms &amp; Conditions</font></b></a> and the <a href="https://api.capitalnow.in/mpage/privacy-and-security-policy"><b><font color='black'>Privacy Policy</font></b></a> of Capital Now.</string>
+    <string name="mlink"> to go to Google<![CDATA[ <a href="http://google.com">click here</a>]]>and <![CDATA[<a href="http://yahoo.com">this</a>]]> moves you to yahoo!</string>
+    <string name="made_in_india">Made in India</string>
+    <string name="add_new">Add New</string>
+    <string name="remove">Remove</string>
+    <string name="borrower_agreement_consent">Borrower Agreement Consent</string>
+    <string name="access_code">Access Code</string>
+    <string name="view">View</string>
+    <string name="enter_access_code">Enter Access Code</string>
+    <string name="give_access">Give Access</string>
+    <string name="star"><font color='#FA7300'>*</font></string>
+    <string name="action_required"><font color='#FA7300' size="10">(Action Required)</font></string>
+    <string name="get_otp_via_call">Get OTP via Call</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Reference Page Events-->
+    <string name="contacts_prems_granted">prems_granted</string>
+    <string name="contacts_prems_not_granted">prems_not_granted</string>
+    <string name="asking_contacts_prems">asking_prems</string>
+    <string name="contacts_prems_granted_now">prems_granted_now</string>
+    <string name="contacts_reading_start">contacts_read_start</string>
+    <string name="contacts_reading_exception">contacts_read_excep</string>
+    <string name="contacts_reading_finished">contacts_read_finish</string>
+    <string name="contacts_upload_started">contacts_upload_start</string>
+    <string name="contacts_location_upload_success">contacts_location_upload_success</string>
+    <string name="contacts_location_upload_fail">contacts_location_upload_fail</string>
+    <string name="contacts_location_upload_exception">contacts_location_upload_excep</string>
+    <string name="references_screen_load_finish">ref_screen_load_fin</string>
+    <string name="references_screen_load_exception">ref_screen_load_excep</string>
+
+    <!--Chat Page-->
+    <string name="How_can_we_Help">Welcome to Capitalnow. How can we Help you today?</string>
+    <string name="how_can_i_help_you">How Can I help you?</string>
+    <string name="email_support">Email Support</string>
+    <string name="loan_status">Loan Status</string>
+    <string name="rewards">Rewards</string>
+    <string name="cb_hello">\nWhat do you want to know about?</string>
+    <string name="proceed_request_bank_change">Proceed to Request Bank Change</string>
+    <string name="proceed_rewards">Proceed to Rewards</string>
+    <string name="cb_request_bank_change_msg"><![CDATA[You can go to Menu->Request Bank Change We will verify your Bank Account and will approve it. You will receive an email shortly.]]></string>
+    <string name="cb_rewards_msg"><![CDATA[You can go to Menu->Rewards We will verify your Reward Points. You will receive an email shortly.]]></string>
+    <string name="outstanding">What is my outstanding?</string>
+    <string name="cb_apply_loan_msg">You have exceeded the limit.</string>
+    <string name="proceed_contactus">Contact Us</string>
+    <string name="proceed_upload_doc">Upload Documents</string>
+    <string name="proceed_email_support">Email Support</string>
+    <string name="cb_loan_status_msg">You don’t any pending loans.</string>
+    <string name="cb_upload_doc_msg">Upload Documents is pending</string>
+    <string name="proceed_active_loans">Active Loans</string>
+    <string name="complete_reg_text">Complete The Registration Process To Get Your Loan Instantly.</string>
+    <string name="rupees">Rupees</string>
+    <string name="trouble_logging_in">Trouble Logging in?</string>
+    <string name="menu_bank_statement">Upload Documents</string>
+    <string name="menu_bank_statement_upload">Upload Documents</string>
+    <string name="add_signature">Signature Consent</string>
+    <string name="failed">Failed</string>
+    <string name="save_signature">Save</string>
+    <string name="progress_text">Please wait... \n while we verify your details.</string>
+    <string name="agree_and_continue"><![CDATA[Agree & Continue]]></string>
+    <string name="pick_from_map"><u>Pick from Map</u></string>
+    <string name="why_down_payment"><u>Why downpayment?</u></string>
+    <string name="why_down_payment_text">We collect the down-payment to offer a seamless disbursement process to you. If your choice of bike is pricier than your eligibility, you will incur the remaining price as your down-payment. For more clarifications, write to us @ customersupport@capitalnow.in</string>
+    <string name="activate_nach_text">Please complete a one time process \nof e-Nach mandate registration \nto avail loans.</string>
+    <string name="why_necessary">Why is this necessary? These parameters helps us in evaluating your profile Better. What does this help ? These helps in getting a Quick Approval, Higher Limits and the Right Offers for you.</string>
+    <string name="title_activity_registration_pan">RegistrationPanActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_registration_personal">RegistrationPersonalActivity</string>
+    <string name="help_email"><u>Support@capitalnow.in</u></string>
+    <string name="check_redemption_history"><u>Check Redemption History</u></string>
+    <string name="terms_and_conditions"><u>Terms &amp; Conditions</u></string>
+    <string name="limit_enhancement_title">Limit Enhancement</string>
+    <string name="limit_enhancement_text">You could be eligible for a higher Credit Limit. In order to avail, please click on Proceed &amp; provide the consent.</string>
+    <string name="contactus_note_text">NOTE:- We currently support only PNG,JPG and \n PDF formats; the maximum file size limits is 2MB</string>
+    <string name="note_text">We accept jpg/jpeg/png/pdf only.\nThe Image should  be clear.\nThe Image should not be blurred.\nThe Image size should not more than 4MB.</string>
+    <string name="mixpanel_live_id">7cb71e1bee9407fccf103de8a4c802bd</string>
+    <string name="mixpanel_dev_id">a07f52d220df0f288edddd39dd5752f9</string>
+    <string name="reg1_consent">By continuing the application process, I hereby agree/authorize the following:\n1. Capital Now <a href="https://api.capitalnow.in/mpage/terms-and-conditions"><b><font>Terms &amp; Conditions</font></b></a>\n2. I am an Indian citizen and the PAN card number shared above belongs to me.\n3. I allow CAPITAL NOW and its lending partners to access my credit information.</string>
+    <string name="data_deletion_text">1. You will be unable to monitor your prior loans, redeem rewards, and access the app using the same account.\n\n2. All personal and financial data associated with your Capital Now account will be expunged from our systems. This process is irreversible and cannot be undone.\n\n3. To meet regulatory and legal requirements, Capital Now may retain certain information for record-keeping purposes. However, this retained data will not be used for any other purpose than compliance with applicable laws.\n\n4. Your account deletion will take 15 days and incase you change your mind and login in again with the same credentials your account will be reinstated</string>
+    <string name="close_active_loan_todelete">1. Close your active loan.\n2.Once your loan(s) have been successfully closed, return to this page to request account deletion.\n\nFor help or questions, contact your Relationship Manager.</string>
+    <string name="api_error_msg"><b>What you can do</b>\n- Check your location settings and ensure you are in India.\n- Verify your internet connection.\n- Wait a few minutes and try again.\nNeed help? Email us at support@capitalnow.com</string>
+    <string name="need_help_email_us">Need help? Email us at <a href="mailto:support@capitalnow.com">support@capitalnow.com</a></string>
+    <string name="aadhaar_retry_text"><b>Possible Reasons:</b>1. Incorrect Details or OTP \n2. Network connectivity issue with UIDAI \n3. Session timed-out \n4. Other technical issue</string>
+    <string name="credit_line">Credit Line</string>
+
+
+</resources>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_5"
+    app:cardCornerRadius="@dimen/margin_5"
+    app:cardMaxElevation="@dimen/margin_3"
+    app:cardUseCompatPadding="true"
+    tools:context=".kotlin.fragments.ActiveLoansFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_close_loan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvQcCloseLoanId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/Accent1"
+                android:textStyle="bold" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tx_rupees_loan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="RS 5520"
+                android:textAppearance="@style/LargeTextWithBold"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvIssueDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:text="12jan2020 - 18Jan2020"
+                android:textAppearance="@style/MicroText"
+                android:textColor="@color/intro_page_body_color"
+                android:textStyle="bold" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:padding="@dimen/margin_5"
+                android:text="@string/price_break"
+                android:textColor="@color/color_primary"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:background="@color/colorGrey" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivRewardIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:visibility="visible"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                app:tint="@color/black"
+                android:adjustViewBounds="true"
+                android:src="@drawable/rewards_star" />
+
+            <LinearLayout
+                android:id="@+id/llRewards"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/margin_3"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:layout_toEndOf="@id/ivRewardIcon"
+                android:orientation="vertical">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tx_reward_points"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="300"
+                    android:textAppearance="@style/VerySmallText"
+                    android:textColor="@color/black" />
+
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Reward Points"
+                    android:layout_marginTop="-5dp"
+                    android:textAppearance="@style/MicroText"
+                    android:textColor="@color/intro_page_body_color"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivTenure"
+                android:layout_width="@dimen/margin_30"
+                android:layout_height="@dimen/margin_30"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_toEndOf="@id/llRewards"
+                android:adjustViewBounds="true"
+                android:paddingTop="@dimen/margin_3"
+                android:src="@drawable/ic_clock_time" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/margin_3"
+                android:layout_toEndOf="@id/ivTenure"
+                android:orientation="vertical">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tx_tenure_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="xDays"
+                    android:textAppearance="@style/VerySmallText"
+                    android:textColor="@color/Primary1" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tenure"
+                    android:layout_marginTop="-5dp"
+                    android:textAppearance="@style/MicroText"
+                    android:textColor="@color/intro_page_body_color"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:text="@string/clear"
+                android:textAppearance="@style/VerySmallText"
+                android:textColor="@color/orange_alert" />
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

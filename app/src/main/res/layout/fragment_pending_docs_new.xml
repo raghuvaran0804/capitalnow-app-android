@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".kotlin.fragments.PendingDocsNewFrag">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_8"
+        android:paddingBottom="@dimen/margin_8">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_20"
+            android:rotation="180"
+            android:src="@drawable/ic_baseline_arrow_forward_24"
+            app:tint="@color/Primary2" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="Pending Documents"
+            android:textColor="@color/Primary2"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:orientation="vertical">
+
+            <!--Present Address Proof -->
+
+            <LinearLayout
+                android:id="@+id/llPresentAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints"
+                android:visibility="gone">
+
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvPresentAddressTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/upload_docs_present_address_title"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvPresentAddressText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="Aadhar Card/ Electricity Bill/ Gas Bill/ Telephone Bill/ Internet Bill/ Credit Card Bill/ HR Letter/ PG Invoice"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:orientation="horizontal"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/ivFirst"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="@dimen/margin_5"
+                        android:background="@drawable/ic_upload_doc_up_new"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/ivSecond"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/ic_upload_doc_up_new" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="@dimen/margin_32"
+                    android:background="@color/light_gray" />
+            </LinearLayout>
+
+            <!--Latest Salary Slip-->
+
+            <LinearLayout
+                android:id="@+id/llLatestSalarySlip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_15"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:ignore="MissingConstraints">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvLatestSalarySlip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:text="Latest Salary Slip"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:orientation="vertical"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/ivSalSlip"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="@dimen/margin_5"
+                        android:background="@drawable/ic_upload_doc_up_new"
+                        tools:ignore="ContentDescription" />
+
+
+                    <com.capitalnowapp.mobile.customviews.CNEditText
+                        android:id="@+id/etSlipPwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:layout_marginEnd="@dimen/margin_64"
+                        android:layout_marginBottom="@dimen/margin_10"
+                        android:background="@drawable/login_page_text_view_background"
+                        android:hint="Password if any"
+                        android:inputType="textPassword"
+                        android:maxLength="30"
+                        android:padding="10dp"
+                        android:textAppearance="@style/MicroText"
+                        android:textColor="@color/intro_page_body_color"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:background="@color/light_gray" />
+
+            </LinearLayout>
+
+            <!--Proof of ID-->
+
+            <LinearLayout
+                android:id="@+id/llProofOfId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_15"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints"
+                android:visibility="gone">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvProofOfId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:text="Proof Of ID"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvProofOfIdText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="PAN Card"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:orientation="vertical"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/ivProofOfId"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="@dimen/margin_5"
+                        android:background="@drawable/ic_upload_doc_up_new"
+                        tools:ignore="ContentDescription" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:background="@color/light_gray" />
+            </LinearLayout>
+
+            <!--Proof of Present Address-->
+
+            <LinearLayout
+                android:id="@+id/llProofOfPAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_15"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints"
+                android:visibility="gone">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvProofOfPAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:text="Proof Of Present Address"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvProofOfPAddressText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="Aadhar Card/ Bank Statement/ Passbook 1st Page/ Passport"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:orientation="horizontal"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/ivProofOfPAddress1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="@dimen/margin_5"
+                        android:background="@drawable/ic_upload_doc_up_new"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/ivProofOfPAddress2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="@dimen/margin_5"
+                        android:background="@drawable/ic_upload_doc_up_new"
+                        tools:ignore="ContentDescription" />
+
+                </LinearLayout>
+
+                <com.capitalnowapp.mobile.customviews.CNEditText
+                    android:id="@+id/etProofOfPAddress1Pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginEnd="@dimen/margin_64"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:background="@drawable/login_page_text_view_background"
+                    android:hint="Password if any"
+                    android:inputType="textPassword"
+                    android:maxLength="30"
+                    android:padding="10dp"
+                    android:textAppearance="@style/MicroText"
+                    android:textColor="@color/intro_page_body_color"
+                    android:textSize="14sp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:background="@color/light_gray" />
+
+            </LinearLayout>
+
+            <!--Proof of Employment-->
+
+            <LinearLayout
+                android:id="@+id/llProofOfEmployment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_15"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints"
+                android:visibility="gone">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvProofOfEmployment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:text="Proof Of Employment"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvProofOfEmploymentText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="Employee ID card / Latest Salary Slip"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:orientation="horizontal"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/ivProofOfEmployment1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="@dimen/margin_5"
+                        android:background="@drawable/ic_upload_doc_up_new"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/ivProofOfEmployment2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="@dimen/margin_5"
+                        android:background="@drawable/ic_upload_doc_up_new"
+                        tools:ignore="ContentDescription" />
+
+                </LinearLayout>
+
+                <com.capitalnowapp.mobile.customviews.CNEditText
+                    android:id="@+id/etProofOfEmploymentPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginEnd="@dimen/margin_64"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:background="@drawable/login_page_text_view_background"
+                    android:hint="Password if any"
+                    android:inputType="textPassword"
+                    android:maxLength="30"
+                    android:padding="10dp"
+                    android:textAppearance="@style/MicroText"
+                    android:textColor="@color/intro_page_body_color"
+                    android:textSize="14sp"
+                    android:visibility="gone"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:background="@color/light_gray" />
+
+            </LinearLayout>
+
+            <!--Bounce Clearance Proof-->
+
+            <LinearLayout
+                android:id="@+id/llBCProof"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_15"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints"
+                android:visibility="gone">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvBCProof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:text="Bounce Clearance Proof"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:orientation="horizontal"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/ivBCProof1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="@dimen/margin_5"
+                        android:background="@drawable/ic_upload_doc_up_new"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/ivBCProof2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="@dimen/margin_5"
+                        android:background="@drawable/ic_upload_doc_up_new"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/ivBCProof3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="@dimen/margin_5"
+                        android:background="@drawable/ic_upload_doc_up_new"
+                        tools:ignore="ContentDescription" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:orientation="horizontal"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/ivBCProof4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="@dimen/margin_5"
+                        android:background="@drawable/ic_upload_doc_up_new"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/ivBCProof5"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="@dimen/margin_5"
+                        android:background="@drawable/ic_upload_doc_up_new"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/ivBCProof6"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="@dimen/margin_5"
+                        android:background="@drawable/ic_upload_doc_up_new"
+                        tools:ignore="ContentDescription" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:background="@color/light_gray" />
+
+            </LinearLayout>
+
+            <!--Loan Noc-->
+
+            <LinearLayout
+                android:id="@+id/llLoanNoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_15"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints"
+                android:visibility="gone">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvLoanNoc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:text="Loan NOC"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:orientation="horizontal"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/ivLoanNoc1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="@dimen/margin_5"
+                        android:background="@drawable/ic_upload_doc_up_new"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/ivLoanNoc2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="@dimen/margin_5"
+                        android:background="@drawable/ic_upload_doc_up_new"
+                        tools:ignore="ContentDescription" />
+
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:background="@color/light_gray" />
+
+            </LinearLayout>
+
+
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvNote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:text="Note:"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:textStyle="bold" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvNoteText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:text="@string/note_text"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/llReComplete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:ignore="MissingConstraints">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvReComplete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:text="Steps to be Re-complete "
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvMandatory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:text="(all are mandatory)"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvBankStatement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin_15"
+                android:background="@drawable/rounded_corner_gradient"
+                android:backgroundTint="@color/Primary1"
+                android:padding="17dp"
+                android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+                android:drawableTint="@color/white"
+                android:text="Bank Account Statement"
+                android:textAppearance="@style/MediumText"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                tools:ignore="UnusedAttribute" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvBankStatementSuccess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/margin_15"
+                android:background="@drawable/rounded_corner_gradient"
+                android:backgroundTint="@color/colorAlertDialog"
+                android:padding="17dp"
+                android:drawableEnd="@drawable/ic_green_tick"
+                android:drawableTint="@color/white"
+                android:text="Bank Account Statement"
+                android:textAppearance="@style/MediumText"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                tools:ignore="UnusedAttribute" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvSignature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/margin_15"
+                android:background="@drawable/rounded_corner_gradient"
+                android:backgroundTint="@color/Primary1"
+                android:padding="17dp"
+                android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+                android:drawableTint="@color/white"
+                android:text="Customer Signature"
+                android:textAppearance="@style/MediumText"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                tools:ignore="UnusedAttribute" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvSignatureSuccess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/margin_15"
+                android:background="@drawable/rounded_corner_gradient"
+                android:backgroundTint="@color/colorAlertDialog"
+                android:padding="17dp"
+                android:drawableEnd="@drawable/ic_green_tick"
+                android:drawableTint="@color/white"
+                android:text="Customer Signature"
+                android:textAppearance="@style/MediumText"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                tools:ignore="UnusedAttribute" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvVideoKYC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/margin_15"
+                android:background="@drawable/rounded_corner_gradient"
+                android:backgroundTint="@color/Primary1"
+                android:padding="17dp"
+                android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+                android:drawableTint="@color/white"
+                android:text="Video KYC"
+                android:visibility="gone"
+                android:textAppearance="@style/MediumText"
+                android:textColor="@color/white"
+                tools:ignore="UnusedAttribute" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvVideoKYCSuccess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/margin_15"
+                android:background="@drawable/rounded_corner_gradient"
+                android:backgroundTint="@color/colorAlertDialog"
+                android:padding="17dp"
+                android:drawableEnd="@drawable/ic_green_tick"
+                android:drawableTint="@color/white"
+                android:text="Video KYC"
+                android:visibility="gone"
+                android:textAppearance="@style/MediumText"
+                android:textColor="@color/white"
+                tools:ignore="UnusedAttribute" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvAddReferences"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/margin_15"
+                android:background="@drawable/rounded_corner_gradient"
+                android:backgroundTint="@color/Primary1"
+                android:padding="17dp"
+                android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+                android:drawableTint="@color/white"
+                android:text="Add References"
+                android:textAppearance="@style/MediumText"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                tools:ignore="UnusedAttribute" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvAddReferencesSuccess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/margin_15"
+                android:background="@drawable/rounded_corner_gradient"
+                android:backgroundTint="@color/colorAlertDialog"
+                android:padding="17dp"
+                android:drawableEnd="@drawable/ic_green_tick"
+                android:drawableTint="@color/white"
+                android:text="Add References"
+                android:textAppearance="@style/MediumText"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                tools:ignore="UnusedAttribute" />
+        </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_weight="0">
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvUploadPendingDocs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:background="@drawable/rounded_corner_gradient"
+            android:gravity="center"
+            android:padding="17dp"
+            android:text="Upload"
+            android:textAllCaps="true"
+            android:textAppearance="@style/SmallText"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            tools:ignore="UnusedAttribute" />
+    </RelativeLayout>
+
+</LinearLayout>

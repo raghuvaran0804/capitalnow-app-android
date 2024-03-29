@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/profile_gradient"
+    android:paddingBottom="@dimen/margin_20">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:background="@color/Secondary2" />
+
+    <ImageView
+        android:id="@+id/ivBasic"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_below="@id/view"
+        android:layout_marginStart="@dimen/margin_10" />
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:layout_marginStart="@dimen/margin_10"
+        android:layout_toStartOf="@id/ivDrop"
+        android:layout_toEndOf="@id/ivBasic"
+        android:gravity="start|center"
+        android:textColor="@color/black"
+        android:textAppearance="@style/MediumText"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ivDrop"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_below="@id/view"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/margin_20" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_marginEnd="@dimen/margin_15"
+        android:layout_toEndOf="@id/ivBasic" />
+</RelativeLayout>

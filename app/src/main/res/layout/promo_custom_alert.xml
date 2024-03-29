@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/single_rounded_square"
+    android:gravity="center"
+    android:layout_marginStart="@dimen/margin_20"
+    android:layout_marginEnd="@dimen/margin_20"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_10">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/anim"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:lottie_autoPlay="true"
+        android:src="@drawable/promocode"
+        app:lottie_loop="true" />
+
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="@dimen/margin_40"
+        android:gravity="center"
+        android:text="Congratulations!"
+        android:textAppearance="@style/MediumText"
+        android:textColor="@color/Primary1"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="@dimen/payu_dimen_40dp"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:background="@drawable/dotted_border_darkblue"
+        android:gravity="center"
+        android:lineHeight="@dimen/margin_25"
+        android:padding="@dimen/margin_20"
+        android:paddingStart="@dimen/margin_10"
+        android:paddingEnd="@dimen/margin_10"
+        android:textAppearance="@style/SmallText"
+        android:textColor="@color/Accent1"
+        android:textSize="@dimen/payu_dimen_16sp"
+        android:textStyle="bold" />
+
+
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvGotIt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:background="@drawable/rounded_corner_gradient"
+        android:gravity="center"
+        android:paddingStart="@dimen/margin_30"
+        android:paddingTop="@dimen/margin_10"
+        android:paddingEnd="@dimen/margin_30"
+        android:paddingBottom="@dimen/margin_10"
+        android:text="Got it, Thanks"
+        android:textAppearance="@style/MediumText"
+        android:textColor="@color/white" />
+
+
+</FrameLayout>

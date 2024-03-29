@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".kotlin.fragments.ActiveLoansFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_3"
+        android:layout_marginEnd="@dimen/margin_3"
+        android:orientation="vertical"
+        app:cardCornerRadius="@dimen/margin_10"
+        app:cardMaxElevation="@dimen/margin_3"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:id="@+id/llCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llData"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.2"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_5"
+                    android:orientation="horizontal">
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvExpireDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/margin_3"
+                        android:layout_weight="4"
+                        android:padding="@dimen/margin_5"
+                        android:text=""
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/payu_dimen_12sp" />
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvPoints"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corner_rp_history_coin"
+                        android:drawableStart="@drawable/reward_coin"
+                        android:drawablePadding="@dimen/margin_3"
+                        android:padding="@dimen/margin_5"
+                        android:text="509"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/payu_dimen_14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivCouponImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/rp_placeholder2"
+                    tools:ignore="NestedWeights" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_8"
+                android:background="@color/Secondary1"
+                android:orientation="vertical">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvWorth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/margin_16"
+                    android:paddingBottom="@dimen/margin_16"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/payu_dimen_14sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

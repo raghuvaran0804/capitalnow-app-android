@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_prof_back"
+            android:layout_width="@dimen/margin_30"
+            android:layout_height="@dimen/margin_30"
+            android:rotation="180"
+            android:tint="@color/Primary2"
+            app:srcCompat="@drawable/ic_baseline_arrow_forward_24"
+            tools:ignore="UseAppTint" />
+
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/qc_tv_personal_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/title_professional_details"
+            android:textAppearance="@style/LargeTextWithBold"
+            android:textColor="@color/Primary2"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            tools:context=".kotlin.activities.ProfessionalDetailsActivity">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEmpType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/Primary2"
+                app:hintTextColor="@color/Primary2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:ignore="MissingConstraints">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmpType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    android:focusable="false"
+                    android:hint="@string/employee_type"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="0dp"
+                    android:paddingTop="@dimen/margin_25"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="@dimen/margin_5"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textCursorDrawable="@null"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tilEmpType"
+                    tools:ignore="MissingConstraints" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_company_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/Primary2"
+                app:hintTextColor="@color/Primary2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilEmpType"
+                tools:ignore="MissingConstraints">
+
+                <AutoCompleteTextView
+                    android:id="@+id/tx_et_company_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:hint="@string/company_name"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="0dp"
+                    android:paddingTop="@dimen/margin_25"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="@dimen/margin_5"
+                    android:textAppearance="@style/SmallText"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textCursorDrawable="@null"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tilEmpType"
+                    tools:ignore="MissingConstraints" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:id="@+id/tvSearching"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_15"
+                android:gravity="center|end"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/til_company_name">
+
+                <ProgressBar
+                    android:id="@+id/pb"
+                    android:layout_width="@dimen/margin_20"
+                    android:layout_height="@dimen/margin_20"
+                    android:layout_gravity="center"
+                    android:layout_toStartOf="@id/tvS"
+                    android:visibility="visible" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center|end"
+                    android:text="Searching.."
+                    android:textAppearance="@style/VerySmallText"
+                    android:textColor="@color/black"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_dept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/Primary2"
+                app:hintTextColor="@color/Primary2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSearching"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tx_dept"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/department"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="0dp"
+                    android:paddingTop="@dimen/margin_25"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="@dimen/margin_5"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textCursorDrawable="@null"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/til_company_name"
+                    tools:ignore="MissingConstraints" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_designation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/Primary2"
+                app:hintTextColor="@color/Primary2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_dept"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tx_et_designation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/designation"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="0dp"
+                    android:paddingTop="@dimen/margin_25"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="@dimen/margin_5"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textCursorDrawable="@null"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/til_dept"
+                    tools:ignore="MissingConstraints" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_monthly_salary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/Primary2"
+                app:hintTextColor="@color/Primary2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_designation"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tx_et_monthly_salary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/monthly_salary"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:maxLines="1"
+                    android:paddingStart="0dp"
+                    android:paddingTop="@dimen/margin_25"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="@dimen/margin_5"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textCursorDrawable="@null"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/til_designation"
+                    tools:ignore="MissingConstraints" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvCurrency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:textColor="@color/black"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/til_monthly_salary" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_mode_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/Primary2"
+                app:hintTextColor="@color/Primary2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCurrency"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tx_et_mode_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    android:focusable="false"
+                    android:hint="@string/mode_pay"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="0dp"
+                    android:paddingTop="@dimen/margin_25"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="@dimen/margin_5"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textCursorDrawable="@null"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCurrency"
+                    tools:ignore="MissingConstraints" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/Primary2"
+                app:hintTextColor="@color/Primary2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_mode_pay"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tx_et_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/prodessional_city"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="0dp"
+                    android:paddingTop="@dimen/margin_25"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="@dimen/margin_5"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textCursorDrawable="@null"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/til_mode_pay"
+                    tools:ignore="MissingConstraints" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--<LinearLayout
+                android:id="@+id/llSameCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/til_city">
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/cbSameCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <com.capitalnow.mobile.customviews.CNTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="100dp"
+                    android:gravity="start|center"
+                    android:text="Same As Native City"
+                    android:textAppearance="@style/VerySmallText"
+                    android:textColor="@color/intro_page_body_color" />
+
+            </LinearLayout>-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_experience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/Primary2"
+                app:hintTextColor="@color/Primary2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_city"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tx_et_experience"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    android:focusable="false"
+                    android:hint="@string/experience_month"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="0dp"
+                    android:paddingTop="@dimen/margin_25"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="@dimen/margin_5"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textCursorDrawable="@null"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cbSameCity"
+                    tools:ignore="MissingConstraints" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilIndustry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/Primary2"
+                app:hintTextColor="@color/Primary2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_experience"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etIndustry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    android:focusable="false"
+                    android:hint="@string/industry_type"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="0dp"
+                    android:paddingTop="@dimen/margin_25"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="@dimen/margin_5"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textCursorDrawable="@null"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/til_experience"
+                    tools:ignore="MissingConstraints" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:alpha="0.2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/til_experience"
+                app:srcCompat="@drawable/ic_undraw_mobile_login"
+                tools:ignore="MissingConstraints" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvFinish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/margin_15"
+                android:background="@drawable/rounded_corner_gradient"
+                android:drawableTint="@color/white"
+                android:gravity="center"
+                android:padding="17dp"
+                android:text="@string/title_finish"
+                android:textAllCaps="true"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tilIndustry"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

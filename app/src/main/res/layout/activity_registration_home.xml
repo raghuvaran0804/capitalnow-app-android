@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Accent1"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/margin_20"
+    tools:context=".kotlin.activities.RegistrationHomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15"
+        android:orientation="horizontal">
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginStart="@dimen/margin_32"
+            android:layout_marginEnd="@dimen/margin_128"
+            android:gravity="right"
+            android:lineSpacingExtra="@dimen/margin_5"
+            android:rotation="180"
+            android:drawableLeft="@drawable/ic_baseline_arrow_forward_24"
+            android:drawableTint="@color/white"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_40"
+            android:orientation="horizontal">
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/etnotYou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:gravity="right"
+            android:lineSpacingExtra="@dimen/margin_5"
+            android:text="Not you?"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvLogoutRegHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_2"
+            android:layout_marginTop="@dimen/margin_20"
+            android:gravity="right"
+            android:lineSpacingExtra="@dimen/margin_5"
+            android:text="@string/not_you_logout"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/payu_dimen_50dp"
+        android:src="@drawable/ic_reg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/margin_40"
+        android:layout_marginTop="@dimen/margin_60"
+        android:layout_marginEnd="@dimen/margin_40"
+        android:background="@drawable/rounded_background_white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llBasic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_40"
+            android:layout_marginTop="@dimen/margin_30"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_basic" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_10"
+                android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"
+                android:gravity="center|start"
+                android:text=" Basic Details"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:background="@color/dark_gray"
+            tools:ignore="ObsoleteLayoutParam" />
+
+        <LinearLayout
+            android:id="@+id/llProfessional"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_40"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_professional" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_10"
+                android:drawableEnd="@drawable/ic_keyboard_arrow_right_black_24dp"
+                android:gravity="center|start"
+                android:text=" Professional Details"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_35"
+            android:layout_marginEnd="@dimen/margin_35"
+            android:layout_marginBottom="@dimen/margin_30"
+            android:gravity="bottom"
+            android:lineSpacingExtra="@dimen/margin_5"
+            android:text="@string/complete_reg_text"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/payu_dimen_16sp"
+            tools:ignore="RtlCompat" />
+    </RelativeLayout>
+
+
+</LinearLayout>

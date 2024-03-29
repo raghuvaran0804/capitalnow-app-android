@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".kotlin.activities.DealerLocationActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="220dp">
+
+        <fragment
+            android:id="@+id/google_map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="FragmentTagUsage" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/icon_location" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/google_map"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:src="@drawable/mapaddress" />
+
+
+                <TextView
+                    android:id="@+id/tvArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_50"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginEnd="120dp"
+                    android:hint="Area"
+                    android:maxLines="1"
+                    android:textColor="@color/Primary2"
+                    android:textSize="@dimen/margin_20"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_50"
+                    android:layout_marginTop="@dimen/margin_40"
+                    android:layout_marginEnd="@dimen/margin_40"
+                    android:layout_marginBottom="@dimen/margin_20"
+                    android:hint="City"
+                    android:maxLines="1"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_50"
+                    android:layout_marginTop="@dimen/margin_60"
+                    android:visibility="gone"
+                    android:layout_marginEnd="@dimen/margin_40"
+                    android:layout_marginBottom="@dimen/margin_20"
+                    android:enabled="false"
+                    android:text="drag the marker to set desired 'Area'."
+                    android:textColor="@color/orange_alert"
+                    android:textSize="@dimen/payu_dimen_12sp" />
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="135dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="@dimen/margin_20"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectangle_border"
+                    android:drawableTint="@color/white"
+                    android:gravity="center"
+                    android:padding="17dp"
+                    android:text="CANCEL"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/SmallText"
+                    android:textColor="@color/black"
+                    tools:ignore="MissingConstraints" />
+
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvConfirm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="135dp"
+                    android:layout_marginBottom="@dimen/margin_20"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_corner_gradient"
+                    android:drawableTint="@color/white"
+                    android:gravity="center"
+                    android:padding="17dp"
+                    android:text="CONFIRM"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/SmallText"
+                    android:textColor="@color/white"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

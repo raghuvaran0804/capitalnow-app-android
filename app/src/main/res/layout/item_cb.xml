@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llBotMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center|start"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_10">
+
+        <ImageView
+            android:id="@+id/ivCap"
+            android:layout_width="@dimen/margin_40"
+            android:layout_height="@dimen/margin_40"
+            android:layout_margin="@dimen/margin_15"
+            android:src="@drawable/chat_logo" />
+
+        <TextView
+            android:id="@+id/tvBotMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:background="@drawable/receive_round_box"
+            android:backgroundTint="#F5F6FA"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_20">
+
+        <ImageView
+            android:layout_width="@dimen/margin_40"
+            android:layout_height="@dimen/margin_40"
+            android:layout_margin="@dimen/margin_15"
+            android:src="@drawable/chat_logo" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/Accent2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvQuestionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/margin_10"
+                android:paddingTop="@dimen/margin_10"
+                android:paddingEnd="@dimen/margin_10"
+                android:text="@string/how_can_i_help_you"
+                android:textAppearance="@style/LargeTextWithBold"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvQuestions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llUserMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_10"
+        android:gravity="center|end"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvUserMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/send_round_box"
+            android:backgroundTint="#AED8F4"
+            android:padding="10dp"
+            android:text="This is a sample message "
+            android:textAlignment="textEnd"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/margin_15"
+            android:textStyle="bold"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="#AED8F4"
+            android:padding="@dimen/margin_5"
+            android:text="RV" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvOption1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:background="@drawable/rounded_corner"
+            android:paddingStart="@dimen/margin_10"
+            android:paddingTop="@dimen/margin_5"
+            android:visibility="gone"
+            android:paddingEnd="@dimen/margin_10"
+            android:paddingBottom="@dimen/margin_5" />
+
+        <TextView
+            android:id="@+id/tvOption2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:background="@drawable/rounded_corner"
+            android:paddingStart="@dimen/margin_10"
+            android:paddingTop="@dimen/margin_5"
+            android:paddingEnd="@dimen/margin_10"
+            android:visibility="gone"
+            android:paddingBottom="@dimen/margin_5" />
+
+        <TextView
+            android:id="@+id/tvOption3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:background="@drawable/rounded_corner"
+            android:paddingStart="@dimen/margin_10"
+            android:visibility="gone"
+            android:paddingTop="@dimen/margin_5"
+            android:paddingEnd="@dimen/margin_10"
+            android:paddingBottom="@dimen/margin_5" />
+
+        <TextView
+            android:id="@+id/tvOption4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:layout_marginStart="@dimen/margin_20"
+            android:visibility="gone"
+            android:paddingStart="@dimen/margin_10"
+            android:paddingTop="@dimen/margin_5"
+            android:paddingEnd="@dimen/margin_10"
+            android:paddingBottom="@dimen/margin_5" />
+    </LinearLayout>
+</LinearLayout>

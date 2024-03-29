@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tooltip_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8"
+        android:orientation="horizontal">
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:lineHeight="@dimen/margin_25"
+        android:lineSpacingExtra="@dimen/margin_20"
+        android:layout_margin="@dimen/margin_8"
+        android:text="Principal Amt"
+        android:textColor="@color/black"
+        android:textSize="10sp" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:lineHeight="@dimen/margin_25"
+            android:lineSpacingExtra="@dimen/margin_20"
+            android:layout_margin="@dimen/margin_8"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvPrincipalAmt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:lineHeight="@dimen/margin_25"
+        android:lineSpacingExtra="@dimen/margin_20"
+        android:layout_margin="@dimen/margin_8"
+        android:text="509"
+        android:textAlignment="center"
+        android:textColor="@color/dark_gray"
+        android:textStyle="bold"
+        android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:layout_marginStart="@dimen/margin_8"
+        android:orientation="horizontal">
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:lineHeight="@dimen/margin_25"
+            android:lineSpacingExtra="@dimen/margin_20"
+            android:layout_margin="@dimen/margin_8"
+            android:text="Interest"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvTotalInterest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:lineHeight="@dimen/margin_25"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_8"
+            android:lineSpacingExtra="@dimen/margin_20"
+            android:text="509"
+            android:textAlignment="center"
+            android:textColor="@color/dark_gray"
+            android:textStyle="bold"
+            android:textSize="10sp" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvDiscountInterest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:lineHeight="@dimen/margin_25"
+            android:lineSpacingExtra="@dimen/margin_20"
+            android:layout_margin="@dimen/margin_8"
+            android:text="509"
+            android:textAlignment="center"
+            android:textColor="@color/dark_gray"
+            android:textStyle="bold"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

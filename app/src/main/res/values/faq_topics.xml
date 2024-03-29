@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="faq_topics">
+        <item>About CapitalNow</item>
+        <item>Application Process</item>
+        <item>Fees and Payments</item>
+        <item>Security</item>
+    </string-array>
+</resources>

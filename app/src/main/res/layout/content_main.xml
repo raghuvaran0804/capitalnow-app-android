@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                android:visibility="visible"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvMenuTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:gravity="center"
+                        android:textAppearance="@style/MediumText"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvApplyLoan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:background="@drawable/apply_now_bg"
+                        android:drawableStart="@drawable/ic_apply_loan"
+                        android:drawablePadding="@dimen/margin_5"
+                        android:gravity="start"
+                        android:padding="@dimen/margin_5"
+                        android:paddingStart="@dimen/margin_10"
+                        android:paddingEnd="@dimen/margin_10"
+                        android:text="Apply \n Now"
+                        android:textColor="@color/Primary1"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvAction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|top"
+                        android:layout_margin="@dimen/margin_10"
+                        android:background="@drawable/apply_now_bg"
+                        android:gravity="center"
+                        android:padding="@dimen/margin_10"
+                        android:text="RESET"
+                        android:textAppearance="@style/MicroText"
+                        android:textColor="@color/Primary2"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+            <LinearLayout
+                android:id="@+id/llReferBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorNavigationMenuBarGreen"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10"
+                    android:src="@drawable/ic_menu_black_24dp" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvCustomTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10"
+                    android:layout_weight="8"
+                    android:gravity="center"
+                    android:text="Refer Your Friends \n And Earn"
+                    android:textAppearance="@style/MediumText"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvApplyLoan1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    android:layout_weight="2.5"
+                    android:background="@drawable/rounded_corner"
+                    android:drawableStart="@drawable/ic_apply_loan"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:padding="@dimen/margin_5"
+                    android:text="Apply \n Now"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    d<FrameLayout
+        android:id="@+id/contentFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true" />
+
+</LinearLayout>

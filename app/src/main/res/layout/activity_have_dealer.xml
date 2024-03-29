@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".kotlin.activities.HaveDealerActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/margin_30"
+            android:layout_height="@dimen/margin_30"
+            android:rotation="180"
+            android:tint="@color/Primary2"
+            app:srcCompat="@drawable/ic_baseline_arrow_forward_24"
+            tools:ignore="UseAppTint" />
+
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/qc_tv_personal_details"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/title_already_have_dealer"
+            android:textAppearance="@style/LargeTextWithBold"
+            android:textColor="@color/Primary2"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/payu_dimen_16dp"
+            android:layout_marginEnd="@dimen/payu_dimen_16dp"
+            android:orientation="vertical">
+
+            <AutoCompleteTextView
+                android:id="@+id/etSearchDealer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:paddingEnd="@dimen/payu_dimen_20dp"
+                android:paddingStart="@dimen/margin_15"
+                android:cursorVisible="false"
+                android:drawableEnd="@drawable/ic_search_new"
+                android:focusable="false"
+                android:hint="@string/search_dealer"
+                android:textSize="@dimen/payu_dimen_16sp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textCursorDrawable="@null" />
+
+            <AutoCompleteTextView
+                android:id="@+id/etCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:cursorVisible="false"
+                android:drawableEnd="@drawable/ic_search_new"
+                android:focusable="false"
+                android:hint="@string/choose_city"
+                android:paddingStart="@dimen/margin_15"
+                android:paddingEnd="@dimen/margin_20"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/payu_dimen_16sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/etArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:cursorVisible="false"
+                android:drawableEnd="@drawable/ic_search_new"
+                android:focusable="false"
+                android:hint="@string/choose_area"
+                android:paddingStart="@dimen/margin_15"
+                android:paddingEnd="@dimen/margin_20"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/payu_dimen_16sp" />
+
+            <TextView
+                android:id="@+id/tvPickFromMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="@string/pick_from_map"
+                android:textColor="@color/Primary1"
+                android:textSize="12sp" />
+
+
+            <AutoCompleteTextView
+                android:id="@+id/etSearchTwoWheeler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/margin_15"
+                android:paddingEnd="@dimen/payu_dimen_20dp"
+                android:cursorVisible="false"
+                android:drawableEnd="@drawable/ic_search_new"
+                android:focusable="false"
+                android:hint="@string/search_two_wheeler"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/payu_dimen_16sp"
+                android:textCursorDrawable="@null" />
+
+            <Spinner
+                android:id="@+id/spinnerVarient"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:maxLines="1"
+                android:cursorVisible="false"
+                android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                android:hint="@string/choose_varient"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textCursorDrawable="@null" />
+
+            <Spinner
+                android:id="@+id/spinnerColor"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:cursorVisible="false"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:maxLines="1"
+                android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                android:hint="@string/choose_color"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textCursorDrawable="@null" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:orientation="vertical">
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvFinish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:background="@drawable/rounded_corner_gradient"
+                android:drawableTint="@color/white"
+                android:gravity="center"
+                android:layout_gravity="bottom"
+                android:padding="17dp"
+                android:text="@string/next_continue"
+                android:textAllCaps="true"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/white"
+                tools:ignore="MissingConstraints" />
+            </LinearLayout>
+        </LinearLayout>
+
+</LinearLayout>

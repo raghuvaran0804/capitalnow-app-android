@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".kotlin.activities.ChatActivity"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/topCnt"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@color/Primary2"
+        android:layout_weight="4"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_25"
+                android:src="@drawable/app_chat_top_logo" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="80dp"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_35"
+                android:text="@string/How_can_we_Help"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnExit"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/rounded_corner"
+                android:backgroundTint="@color/Accent2"
+                android:text="Exit Chat"
+                tools:ignore="InvalidId" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/llLayoutBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:inputType="textShortMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight=".5"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@android:color/white"
+            android:hint="Type a message..."
+            android:padding="10dp"
+            android:singleLine="true"
+            android:autofillHints=""
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner_gradient"
+            android:backgroundTint="#1c77ed"
+            android:text="Send"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvQuestionTitle"
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        android:layout_above="@id/rvMessages"
+        android:text="@string/how_can_i_help_you"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMessages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/llLayoutBar"
+        android:layout_below="@+id/topCnt"
+        tools:itemCount="20"
+        tools:listitem="@layout/message_item" />
+
+</RelativeLayout>

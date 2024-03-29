@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/margin_40"
+        android:layout_marginTop="@dimen/margin_30"
+        android:layout_marginEnd="@dimen/margin_40"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/ic_launcher" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_10"
+            android:gravity="center"
+            android:text="@string/rate_us_title"
+            android:textAppearance="@style/LargeTextWithBold"
+            android:textColor="@color/colorRateDialogTitle" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvMsg1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_10"
+            android:gravity="center"
+            android:text="@string/rate_us_msg1"
+            android:textAppearance="@style/SmallText"
+            android:textColor="@color/intro_page_body_color" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvMsg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_10"
+            android:gravity="center"
+            android:text="@string/rate_us_msg2"
+            android:textAppearance="@style/VerySmallText"
+            android:textColor="@color/green" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvRateNow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_20"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/color_primary"
+            android:gravity="center"
+            android:padding="@dimen/padding_10"
+            android:text="@string/rate_us_now_btn_text"
+            android:textAppearance="@style/VerySmallText"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvNoThanks"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner"
+                android:backgroundTint="@color/light_gray"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/margin_10"
+                android:text="@string/rate_us_no_thanks_btn_text"
+                android:textAppearance="@style/MicroText"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvLater"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="@dimen/margin_5"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner"
+                android:backgroundTint="@color/light_gray"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/margin_10"
+                android:text="@string/rate_us_later_btn_text"
+                android:textAppearance="@style/MicroText"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

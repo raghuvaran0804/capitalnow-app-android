@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.PermissionDenyAlertActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/margin_50">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_50"
+                android:layout_marginStart="@dimen/margin_40"
+                android:layout_marginTop="@dimen/margin_40"
+                android:layout_marginEnd="@dimen/margin_40"
+                android:src="@drawable/cn_logo_new" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/et_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivLogo"
+                android:layout_marginStart="@dimen/margin_40"
+                android:layout_marginTop="@dimen/margin_40"
+                android:lineSpacingExtra="@dimen/margin_5"
+                android:paddingEnd="@dimen/margin_10"
+                android:text="@string/permission_deny_page_title"
+                android:textAppearance="@style/ExtraLargeTextWithBold" />
+
+            <LinearLayout
+                android:id="@+id/llContent1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_title"
+                android:layout_marginStart="@dimen/margin_40"
+                android:layout_marginTop="@dimen/margin_40"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/margin_10"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_corner"
+                    android:backgroundTint="@color/Primary1" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/margin_5"
+                    android:paddingStart="@dimen/margin_20"
+                    android:paddingEnd="@dimen/margin_20"
+                    android:text="@string/permission_deny_page_content1"
+                    android:textAppearance="@style/MediumText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_second_Terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llContent1"
+                android:layout_marginStart="@dimen/margin_40"
+                android:layout_marginTop="@dimen/margin_40"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/margin_10"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_corner"
+                    android:backgroundTint="@color/Primary1" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/margin_5"
+                    android:paddingStart="@dimen/margin_20"
+                    android:paddingEnd="@dimen/margin_20"
+                    android:text="@string/permission_deny_page_content2"
+                    android:textAppearance="@style/MediumText" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_second_Terms"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/margin_30"
+                android:layout_marginTop="@dimen/margin_50"
+                android:layout_marginRight="@dimen/margin_30"
+                android:padding="17dp"
+                android:background="@drawable/rounded_corner_gradient"
+                android:text="BACK"
+                android:textAppearance="@style/MediumText"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

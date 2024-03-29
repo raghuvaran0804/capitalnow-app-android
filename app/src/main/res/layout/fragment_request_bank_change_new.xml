@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".kotlin.fragments.RequestBankChangeNewFragment">
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_32"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:lineHeight="@dimen/margin_30"
+        android:textSize="@dimen/payu_dimen_16sp"
+        android:text="@string/request_bank_change_text1"/>
+
+    <!--<com.capitalnow.mobile.customviews.CNTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:lineHeight="@dimen/margin_30"
+        android:textSize="@dimen/payu_dimen_16sp"
+        android:text="@string/request_bank_change_text2"/>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom">
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvContinueFinBit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginBottom="@dimen/margin_15"
+        android:background="@drawable/rounded_corner_gradient"
+        android:gravity="center"
+        android:padding="@dimen/margin_20"
+        android:text="@string/next_continue"
+        android:textAllCaps="true"
+        android:textAppearance="@style/SmallText"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

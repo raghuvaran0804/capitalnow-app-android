@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".kotlin.fragments.NoInternetFragment">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_no_net_png" />
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_10"
+        android:text="@string/no_internet"
+        android:textAppearance="@style/MediumText"
+        android:textColor="@color/black" />
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_20"
+        android:visibility="gone"
+        android:gravity="center"
+        android:text="@string/check_internet"
+        android:textColor="@color/intro_page_body_color" />
+
+    <Button
+        android:id="@+id/btTryAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/rounded_corner_gradient"
+        android:layout_marginTop="@dimen/margin_20"
+        android:paddingStart="@dimen/margin_50"
+        android:paddingEnd="@dimen/margin_50"
+        android:text="@string/try_again"
+        android:textColor="@color/white" />
+
+</LinearLayout>

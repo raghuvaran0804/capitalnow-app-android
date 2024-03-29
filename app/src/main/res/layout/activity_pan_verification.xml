@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".kotlin.activities.PanVerificationActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/payu_dimen_16dp"
+            android:layout_marginEnd="@dimen/payu_dimen_16dp"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvBack"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:drawableStart="@drawable/ic_baseline_arrow_forward_24"
+                    android:drawableTint="@color/Primary2"
+                    android:rotation="180"
+                    android:textColor="@color/Primary2"
+                    android:textStyle="bold" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvPanVerification"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_weight="9"
+                    android:gravity="center_horizontal"
+                    android:text="@string/title_pan_verification"
+                    android:textAppearance="@style/LargeTextWithBold"
+                    android:textColor="@color/Primary2"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--Pan Old-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_20"
+                    android:orientation="horizontal"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/margin_20"
+                        android:src="@drawable/pan_icon" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilPan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_40"
+                        app:boxBackgroundColor="@color/white"
+                        app:boxStrokeColor="@color/Primary2"
+                        app:hintTextColor="@color/Primary2"
+                        tools:ignore="MissingConstraints">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+                            android:hint="@string/pan_ex"
+                            android:inputType="textCapCharacters"
+                            android:maxLength="10"
+                            android:maxLines="1"
+                            android:paddingStart="0dp"
+                            android:paddingEnd="0dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/dark_gray"
+                            android:textCursorDrawable="@null"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/til_company_name"
+                            tools:ignore="MissingConstraints" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </FrameLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_30"
+                    android:src="@drawable/or_icon" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvUploadPan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_30"
+                    android:text="@string/upload_pan"
+                    android:textAppearance="@style/SmallText"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/upload_pan_Hint"
+                    android:textColor="@color/cb_errorRed"
+                    android:textSize="@dimen/payu_dimen_12sp" />
+
+                <FrameLayout
+                    android:id="@+id/ivFrame"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@drawable/dotted_border"
+                    android:src="@drawable/ic_upload_image"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/ivPanImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp" />
+
+                    <ImageView
+                        android:id="@+id/ivCancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:background="@drawable/ic_cancel_grey_24dp" />
+
+                </FrameLayout>
+
+
+                <ImageView
+                    android:id="@+id/ivPan"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@drawable/dotted_border"
+                    android:padding="@dimen/margin_60"
+                    android:src="@drawable/ic_upload_image" />
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:gravity="center"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/llTerms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_30"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/til_city">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cbAgreeTerms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:button="@drawable/checkbox"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:textColor="@color/black" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvPanConfirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:text="@string/pan_confirmation"
+                    android:textAppearance="@style/VerySmallText"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="#00FFFFFF" />
+
+            </LinearLayout>
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvValidate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/margin_15"
+                android:background="@drawable/rounded_corner_gradient"
+                android:drawableTint="@color/white"
+                android:gravity="center"
+                android:padding="17dp"
+                android:text="@string/title_submit"
+                android:textAllCaps="true"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/white"
+                tools:ignore="UnusedAttribute" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvSkip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin_40"
+                android:text="@string/skip_this"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/Primary2"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

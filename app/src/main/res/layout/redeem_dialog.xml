@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/margin_20"
+            android:src="@drawable/reward_coin"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvPoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="509"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:lineHeight="@dimen/margin_20"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/Primary2"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="By clicking on continue, you Agree to redeem Reward points against the voucher. "
+            android:layout_marginStart="@dimen/margin_32"
+            android:layout_marginEnd="@dimen/margin_32"
+            android:textAlignment="center"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_gravity="center"
+            android:lineHeight="@dimen/margin_20"
+            android:padding="@dimen/margin_10"
+            android:textSize="14sp"
+            android:textColor="#5f5f6f"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="@dimen/margin_8"
+            android:orientation="horizontal">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvNotNow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_gradient"
+                android:backgroundTint="@color/Secondary1"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/margin_16"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/margin_25"
+                android:paddingTop="@dimen/margin_10"
+                android:paddingEnd="@dimen/margin_25"
+                android:paddingBottom="@dimen/margin_10"
+                android:text="Not Now"
+                android:textAllCaps="true"
+                android:textAppearance="@style/VerySmallText"
+                android:textColor="@color/black"
+                android:visibility="visible" />
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvOk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner_gradient"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_gravity="center"
+            android:paddingStart="@dimen/margin_25"
+            android:paddingTop="@dimen/margin_10"
+            android:paddingEnd="@dimen/margin_25"
+            android:paddingBottom="@dimen/margin_10"
+            android:text="Continue"
+            android:textAllCaps="true"
+            android:textAppearance="@style/VerySmallText"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

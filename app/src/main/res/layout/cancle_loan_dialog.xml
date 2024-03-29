@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_10">
+
+        <ImageView
+            android:id="@+id/ivStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_20"
+            android:src="@drawable/ic_cross_red"
+            tools:ignore="ContentDescription" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvCreditLimitMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_20"
+            android:gravity="center"
+            android:paddingStart="@dimen/margin_20"
+            android:paddingEnd="@dimen/margin_20"
+            android:text="Are you sure want to cancel your two-wheeler loan request?"
+            android:textColor="@color/Accent1"
+            android:textSize="18sp"/>
+
+        <Spinner
+            android:id="@+id/spinnerReason"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginStart="@dimen/margin_50"
+            android:layout_marginEnd="@dimen/margin_50"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:maxLines="1"
+            android:cursorVisible="false"
+            android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+            android:hint="Reasons for Cancel"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textCursorDrawable="@null" />
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/margin_30"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:background="@drawable/rounded_corner_gradient"
+            android:backgroundTint="@color/light_gray"
+            android:gravity="center"
+            android:paddingStart="@dimen/margin_20"
+            android:paddingTop="@dimen/margin_15"
+            android:paddingEnd="@dimen/margin_20"
+            android:paddingBottom="@dimen/margin_15"
+            android:layout_marginStart="@dimen/margin_30"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:text="@string/cancel"
+            android:textAllCaps="true"
+            android:textAppearance="@style/MediumText"
+            android:textColor="@color/black" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvConfirm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_30"
+                android:layout_marginEnd="@dimen/margin_30"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner_gradient"
+                android:gravity="center"
+                android:paddingStart="@dimen/margin_20"
+                android:paddingTop="@dimen/margin_15"
+                android:paddingEnd="@dimen/margin_20"
+                android:paddingBottom="@dimen/margin_15"
+                android:text="CONFIRM"
+                android:textAppearance="@style/MediumText"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

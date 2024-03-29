@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".kotlin.fragments.TwoWheelerDashboardFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/imageSlider"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@drawable/rounded_corner_gradient"
+                android:backgroundTint="@color/transparent"
+                app:sliderAnimationDuration="600"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorEnabled="true"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderStartAutoCycle="true"
+                app:sliderAutoCycleEnabled="true"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                app:sliderIndicatorRadius="2dp"
+                app:sliderIndicatorSelectedColor="#5A5A5A"
+                app:sliderIndicatorUnselectedColor="#FFF"
+                app:sliderScrollTimeInSec="2"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/ivHaveDealer"
+                    android:layout_width="0dp"
+                    android:layout_height="170dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="2dp"
+                    android:backgroundTint="@color/transparent"
+                    android:src="@drawable/already"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/ivChooseDealer"
+                    android:layout_width="0dp"
+                    android:layout_height="170dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/transparent"
+                    android:src="@drawable/choose" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/ivHaveDealer1"
+                    android:layout_width="0dp"
+                    android:layout_height="170dp"
+                    android:layout_marginEnd="@dimen/margin_2"
+                    android:layout_weight="1"
+                    android:src="@drawable/right"
+                    tools:ignore="ContentDescription" />
+
+
+                <ImageView
+                    android:id="@+id/ivChooseDealer2"
+                    android:layout_width="0dp"
+                    android:layout_height="170dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/compare" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    android:padding="@dimen/margin_20"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+       <ImageView
+           android:id="@+id/tvCancel"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginEnd="@dimen/margin_8"
+           android:layout_marginTop="@dimen/margin_8"
+           android:layout_gravity="end"
+           android:src="@drawable/cs_cross"/>
+        <TextView
+            android:id="@+id/tvEnterOtpTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter 6 digit OTP"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:textAlignment="center"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_gravity="center"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvEmailText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We just sent a otp to your Mobile Number"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_8"
+            android:textAlignment="center"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_gravity="center"
+            android:lineHeight="@dimen/margin_20"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+
+        <com.chaos.view.PinView
+            android:id="@+id/tvOtp"
+            style="@style/PinWidget.PinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="20dp"
+            android:cursorVisible="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:cursorColor="@color/intro_page_body_color"
+            app:cursorWidth="1dp"
+            app:hideLineWhenFilled="false"
+            app:itemCount="6"
+            app:itemRadius="0dp"
+            app:itemSpacing="1dp"
+            app:lineColor="@color/black"
+            app:lineWidth="1dp"
+            app:viewType="line" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvOk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tilMobile"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/margin_64"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_64"
+            android:background="@drawable/rounded_corner_gradient"
+            android:gravity="center"
+            android:padding="17dp"
+            android:text="VERIFY OTP"
+            android:textAppearance="@style/MediumText"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+</FrameLayout>

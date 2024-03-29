@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rectangle_box"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_32"
+            android:layout_marginTop="@dimen/margin_32"
+            android:layout_marginEnd="@dimen/margin_32"
+            android:padding="@dimen/margin_8"
+            android:layout_marginBottom="@dimen/margin_32"
+            android:src="@drawable/otp_back" />
+
+        <ImageView
+            android:id="@+id/ivTop"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/login_new_top" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/givTimer"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:foregroundGravity="center"
+            android:layout_below="@+id/ivTop"
+            android:src="@drawable/otp_timer" />
+
+        <LinearLayout
+            android:id="@+id/llTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/givTimer"
+            android:layout_marginBottom="@dimen/margin_64"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvCalOTP"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:enabled="false"
+                android:text="@string/payu_resend_otp"
+                android:gravity="center"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/dark_gray"
+                android:textStyle="bold" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textAppearance="@style/VerySmallText"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/Primary1" />
+
+        </LinearLayout>
+
+
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvDigiyOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llTimer"
+            android:layout_marginStart="@dimen/margin_32"
+            android:layout_marginEnd="@dimen/margin_32"
+            android:text="Enter 6 digit OTP"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDigiyOtp"
+            android:layout_marginStart="@dimen/margin_32"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_32"
+            android:gravity="center"
+            android:lineHeight="@dimen/margin_24"
+            android:text="We just sent a otp to your Mobile Number"
+            android:textAppearance="@style/MediumText"
+            android:textColor="@color/black" />
+
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvverifying"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvNum"
+            android:layout_marginStart="@dimen/margin_32"
+            android:layout_marginTop="@dimen/margin_32"
+            android:layout_marginEnd="@dimen/margin_32"
+            android:gravity="center"
+            android:lineHeight="@dimen/margin_24"
+            android:text="Auto-detecting OTP..."
+            android:textAppearance="@style/MediumText"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_64"
+            android:layout_marginEnd="@dimen/margin_64"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_below="@id/tvNum"
+            android:hint="- - -  - - -"
+            app:boxBackgroundColor="@color/white"
+            android:textColorHint="@color/black"
+            app:boxStrokeColor="@color/Primary1"
+            app:hintTextColor="@color/transparent"
+            android:visibility="visible"
+            tools:ignore="HardcodedText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:inputType="number"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:paddingStart="10dp"
+                android:paddingTop="@dimen/margin_20"
+                android:paddingEnd="10dp"
+                android:paddingBottom="@dimen/margin_5"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="18sp"
+                android:textCursorDrawable="@null" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tilMobile"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/margin_64"
+            android:layout_marginTop="@dimen/margin_32"
+            android:layout_marginEnd="@dimen/margin_64"
+            android:background="@drawable/rounded_corner_gradient"
+            android:backgroundTint="@color/Secondary1"
+            android:gravity="center"
+            android:padding="17dp"
+            android:text="VERIFY"
+            android:textAppearance="@style/MediumText"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:visibility="visible"/>
+
+
+
+        <ImageView
+            android:id="@+id/ivBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/otp_bottom" />
+    </RelativeLayout>
+
+
+
+    <!--<com.capitalnow.mobile.customviews.CNTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:text="Enter Your OTP"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:orientation="horizontal">
+
+        <com.capitalnow.mobile.customviews.CNTextView
+            android:id="@+id/tvNum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_weight="2"
+            android:text="Enter OTP"
+            android:textAppearance="@style/LargeTextWithBold"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <com.capitalnow.mobile.customviews.CNTextView
+            android:id="@+id/tvEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_weight="0.7"
+            android:background="@drawable/just_corners_blue"
+            android:gravity="center"
+            android:padding="@dimen/margin_5"
+            android:text="Edit"
+            android:textAppearance="@style/MediumText"
+            android:textColor="@color/Primary1"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <com.chaos.view.PinView
+        android:id="@+id/otp"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_30"
+        android:layout_marginBottom="40dp"
+        android:cursorVisible="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:cursorColor="@color/intro_page_body_color"
+        app:cursorWidth="1dp"
+        app:hideLineWhenFilled="false"
+        app:itemCount="6"
+        app:itemRadius="0dp"
+        app:itemSpacing="1dp"
+        app:lineColor="@color/black"
+        app:lineWidth="1dp"
+        app:viewType="line" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/margin_20"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:orientation="horizontal">
+
+        <com.capitalnow.mobile.customviews.CNTextView
+            android:id="@+id/tvCalOTP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="@string/get_otp_via_call"
+            android:textAppearance="@style/SmallText"
+            android:textColor="@color/dark_gray"
+            android:textStyle="bold" />
+
+        <com.capitalnow.mobile.customviews.CNTextView
+            android:id="@+id/tvTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10"
+            android:textAppearance="@style/VerySmallText"
+            android:textColor="@color/Accent1" />
+
+    </LinearLayout>
+    <com.capitalnow.mobile.customviews.CNTextView
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="@dimen/payu_dimen_20dp"
+        android:background="@drawable/rounded_corner_gradient"
+        android:gravity="center"
+        android:padding="17dp"
+        android:text="Login"
+        android:textAllCaps="true"
+        android:textAppearance="@style/SmallText"
+        android:textColor="@color/white" />-->
+</LinearLayout>

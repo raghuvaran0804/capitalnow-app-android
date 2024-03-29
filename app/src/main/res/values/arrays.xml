@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="arrayBanks">
+        <item>ABASAHEB PATIL RENDAL SAHAKARI BANK</item>
+        <item>Abhyudaya Co-op. Bank Ltd</item>
+        <item>Adarsh Co Op Urban Bank</item>
+        <item>Adarsh Co-Operative Bank Ltd</item>
+        <item>Adinath Co-operative Bank</item>
+        <item>AHMEDABAD DISTRICT CO-OPERATIVE BANK</item>
+        <item>Airtel Bank</item>
+        <item>Ajara Urban Co-Op. Bank Ltd</item>
+        <item>Akhand Ananad Co-Op Bank</item>
+        <item>Allahabad Bank</item>
+        <item>AMAN SAHKARI BANK</item>
+        <item>AMBAJOGAI PEOPLES CO-OP BANK Ltd</item>
+        <item>Ambernath Jai-Hind Co.Op. Bank</item>
+        <item>American Express</item>
+        <item>Andarsul Urban Co Op Bank</item>
+        <item>Andhra Pradesh Grameena Vikas Bank</item>
+        <item>ANDHRA PRAGATHI GRAMEENA BANK</item>
+        <item>Annasaheb Magar Sahakari Bank</item>
+        <item>Apna Sahakari Bank</item>
+        <item>Arvind Sahakari Bank</item>
+        <item>Associate Co-Operative Bank Ltd</item>
+        <item>AU Small Finance Bank</item>
+        <item>Axis Bank</item>
+        <item>Bandhan Bank</item>
+        <item>BANK OF AMERICA</item>
+        <item>Bank Of Baroda</item>
+        <item>Bank Of Bhutan</item>
+        <item>Bank Of India</item>
+        <item>Bank Of Maharashtra</item>
+        <item>Baroda Gujarat Gramin Bank</item>
+        <item>Baroda Rajasthan Kshetriya Gramin Bank</item>
+        <item>Bassein Catholic Co-Operative Bank Ltd.</item>
+        <item>BELLAD BAGEWADI URBAN SOUHARDA SAHAKARI BANK</item>
+        <item>Bharat Bank</item>
+        <item>Bhartiya Mahila Bank</item>
+        <item>Bhutan National Bank</item>
+        <item>Bihar Gramin Bank</item>
+        <item>BNP PARIBAS</item>
+        <item>Bombay Mercantile Co-Operative Bank</item>
+        <item>BUSINESS CO-OP BANK</item>
+        <item>Canara Bank</item>
+        <item>Capital Small Finance Bank Limited</item>
+        <item>Catholic Syrian Bank</item>
+        <item>Central Bank of India</item>
+        <item>Central Co-Operative Bank</item>
+        <item>Chaitanya Godavari Grameena Bank</item>
+        <item>Citi Bank</item>
+        <item>Citizen Credit Co Op Bank</item>
+        <item>Citizens Co-Op Bank</item>
+        <item>City Union Bank</item>
+        <item>Coastal Bank</item>
+        <item>Corporation Bank</item>
+        <item>Dapoli Urban Co-operative Bank</item>
+        <item>DBS Bank Ltd</item>
+        <item>DCB Bank</item>
+        <item>Dena Bank</item>
+        <item>DEOGIRI NAGARI SAHAKARI BANK LTD</item>
+        <item>Deutsche Bank</item>
+        <item>Dhanlaxmi Bank</item>
+        <item>DHARMAVIR SAMBHAJI URBAN CO-OP BANK LTD</item>
+        <item>DMK JAOLI BANK</item>
+        <item>DNB Bank</item>
+        <item>DNS Bank</item>
+        <item>Dombivili Nagari Sahakari Bank Limited</item>
+        <item>Dr. Appasaheb Urf Sa.Re.Patil Jaysingpur Udgaon Sahakari Bank Ltd Jaysingpur</item>
+        <item>Dr. Babasaheb Ambedkar Multistate Co-Op Bank</item>
+        <item>Equitas Small Finance Bank</item>
+        <item>ESAF Bank</item>
+        <item>Federal Bank</item>
+        <item>FinBit Dummy Account</item>
+        <item>Fincare Small Finance Bank</item>
+        <item>Fingrowth Co-operative Bank</item>
+        <item>Fino Payments Bank</item>
+        <item>Gadhinglaj Urban Co-Op Bank</item>
+        <item>Gandevi People Co-Op Bank</item>
+        <item>Gandhibag Sahakari Bank Ltd</item>
+        <item>GP Parsik Bank</item>
+        <item>GS Mahanagar Co-Operative Bank</item>
+        <item>Gujarat Ambuja CO OP Bank LTD</item>
+        <item>H P State Co-Op Bank</item>
+        <item>Hassan District Co-Op Central Bank</item>
+        <item>HDFC Bank</item>
+        <item>HSBC Bank</item>
+        <item>ICICI Bank</item>
+        <item>IDBI(Industrial Development Bank of India)</item>
+        <item>IDFC Bank</item>
+        <item>India Post Payments Bank</item>
+        <item>Indian Bank</item>
+        <item>Indian Overseas Bank</item>
+        <item>Indusind Bank</item>
+        <item>INTEGRAL URBAN CO-OPERATIVE BANK LIMITED</item>
+        <item>Jai Tuljabhavani Urban Co-Op Bank</item>
+        <item>Jaihind Urban Co-Op.Bank</item>
+        <item>Jalna Merchants Co-Op Bank</item>
+        <item>Jamia Co-Operative Bank</item>
+        <item>Jammu and Kashmir Bank</item>
+        <item>Jana Small Finance Bank</item>
+        <item>Janakalyan Sahakari Bank</item>
+        <item>Janaseva Sahakari Bank Ltd</item>
+        <item>Janata Sahakari Bank</item>
+        <item>Janatha Seva Co-Operative Bank</item>
+        <item>Junagadh Co-Op Bank</item>
+        <item>Kallappanna Awade Ichalkaranji Janata Sahakari Bank</item>
+        <item>Kalupur Commercial Co Op Bank</item>
+        <item>Kalyan Janata Sahakari Bank Ltd</item>
+        <item>Kangra CO-Operative Bank</item>
+        <item>Kankariaa Maninagar NAG.SAH.BANK LTD</item>
+        <item>Karimnagar DCC Bank LTD</item>
+        <item>Karnataka Bank</item>
+        <item>KARNATAKA GRAMINA BANK</item>
+        <item>Karnataka Vikas Grameena Bank</item>
+        <item>Karnavati Co-Op Bank</item>
+        <item>Karur Vysya Bank</item>
+        <item>KEB Hana Bank</item>
+        <item>KHAMMAM DCC BANK</item>
+        <item>Kohinoor Sahakari Bank Ltd</item>
+        <item>Kokan Mercantile Co-Operative Bank</item>
+        <item>Kotak Mahindra Bank</item>
+        <item>KRISHNA BHIMA SAMRUDDHI BANK</item>
+        <item>KURLA NAGRIK SAHAKARI BANK LTD</item>
+        <item>Kurmanchal Bank</item>
+        <item>Lakshmi Vilas Bank</item>
+        <item>LALA URBAN CO-OP BANK</item>
+        <item>Lokmangal Co-Op Bank Ltd</item>
+        <item>M D Pawar People\'s Co-Op Bank</item>
+        <item>MADHESHWARI URBAN DEVELP COOP BANK</item>
+        <item>Mahanagar Co Op Bank Ltd</item>
+        <item>Mahanagar Nagrik Sahakari Bank MYDT</item>
+        <item>Maharashtra Gramin Bank</item>
+        <item>Mahesh Bank</item>
+        <item>Mahesh Sahakari Bank Ltd.</item>
+        <item>Malviya Urban Co-Op Bank Ltd</item>
+        <item>Maninagar CO OP Bank LTD</item>
+        <item>Manorama Co-operative Bank Solapur</item>
+        <item>Manvi Pattana Souharada Sahakari Bank</item>
+        <item>MARATHA CO-OPERATIVE BANK LTD</item>
+        <item>Mjalgaon Janata Sahakari Bank</item>
+        <item>Model Co-Operative Bank</item>
+        <item>Mogaveera Co Op Bank LTD</item>
+        <item>Msant Sopankaka Sahakari Bank Ltd</item>
+        <item>Msharad Sahakari Bank</item>
+        <item>MTHE BHAGYALAKSHMI MAHILA SAH BANK LTD</item>
+        <item>MUMBAI DISTRICT CENTRAL CO-OP BANK</item>
+        <item>Nagar Urban Co-Operative Bank</item>
+        <item>Nagpur Nagarik Sahakari Bank</item>
+        <item>Nainital Bank</item>
+        <item>Nandani Sahakari Bank</item>
+        <item>Nasik Merchant Co-Op Bank</item>
+        <item>National Mercantile Co Op Bank</item>
+        <item>Navi Mumbai Co-Op Bank Ltd</item>
+        <item>Navjeevan Co-Op Bank</item>
+        <item>Neelkanth Co-Operative Bank Ltd</item>
+        <item>New India Co-Op Bank Ltd.</item>
+        <item>Nidhi Co-Operative Bank</item>
+        <item>NKGSB Co Op Bank</item>
+        <item>Noida Commercial Co-Operative Bank Ltd</item>
+        <item>Nutan Nagarik Sahakari Bank</item>
+        <item>OCBC Bank Singapore</item>
+        <item>Ocean First</item>
+        <item>Oriental Bank of Commerce</item>
+        <item>Padmavathi Co Op Urban Bank</item>
+        <item>PARSHWANATH CO-OP BANK LTD</item>
+        <item>PAVANA SAHAKARI BANK LTD</item>
+        <item>Paytm Payments Bank</item>
+        <item>Pimpri Chinchwad Sahakari Bank</item>
+        <item>Pochampally Bank</item>
+        <item>Poornawadi Nagrik Sahakari Bank</item>
+        <item>PRAGATHI CO-OPERATIVE BANK LTD</item>
+        <item>Prathama Bank</item>
+        <item>PRAVARA SAHAKARI BANK LTD</item>
+        <item>Prerana Co-Operative Bank</item>
+        <item>Prime Bank</item>
+        <item>Progressive Co-Op Bank</item>
+        <item>Progressive Mercantile Co-Op Bank</item>
+        <item>PUNE CANTONMENT SAHAKARI BANK</item>
+        <item>PUNE DISTRICT CENTRAL CO-OP BANK</item>
+        <item>PUNE PEOPLES CO-OPERATIVE BANK</item>
+        <item>Pune Urban Co-Operative Bank</item>
+        <item>Punjab &amp; Maharashtra CO-OP Bank LTD(PMC)</item>
+        <item>Punjab &amp; Sind Bank</item>
+        <item>Punjab National Bank</item>
+        <item>PURVANCHAL BANK</item>
+        <item>Rabo Bank</item>
+        <item>RAIGAD SAHAKARI BANK</item>
+        <item>Rajarambapu Sahakari Bank Ltd</item>
+        <item>Rajarshi Shahu Sahakari Bank</item>
+        <item>Rajasthan Marudhra Grameen Bank</item>
+        <item>Rajgurunagar Sahakari Bank Ltd</item>
+        <item>Rajkot Nagarik Sahakari Bank Ltd</item>
+        <item>Rajkot Peoples Co-Op Bank Ltd</item>
+        <item>Rajlaxmi Urban Co-Op Bank Ltd</item>
+        <item>RBL Bank Limited</item>
+        <item>Royal Bank of Scotland</item>
+        <item>Rupica Co-Op Society Ltdd</item>
+        <item>S S L SHRIPAL ALASE(KAKA) KURUNDWAD URBAN CO-OP BANK LTD</item>
+        <item>Sadhana Sahakari Bank Ltd</item>
+        <item>SAHEBRAO DESHMUKH CO-OPERATIVE BANK</item>
+        <item>SAHYDRI SAHAKARI BANK</item>
+        <item>Saibaba Nagari Sahakari Bank</item>
+        <item>Samarth Sahkari Bank Ltd</item>
+        <item>Samata Sahakari Bank Ltd.</item>
+        <item>SAMPADA SAHAKARI BANK</item>
+        <item>Sangli District Central Co-Op Bank</item>
+        <item>SANGLI SAHAKARI BANK LTD</item>
+        <item>Sangli Urban Co-operative Bank</item>
+        <item>Sangola Urban Co-Op Bank Ltd</item>
+        <item>Sanmati Sahakari Bank Ltd</item>
+        <item>SAPTAGIRI GRAMEENA BANK</item>
+        <item>Saraspur Nagarik Co.Op.Bank Ltd</item>
+        <item>Saraswat Bank</item>
+        <item>Sardar Bhiladwala Pardi People\'s Co-Op Bank</item>
+        <item>Sarvodaya Commerical Co-Operative Bank</item>
+        <item>Saurashtra Gramin Bank</item>
+        <item>Sawji Bank</item>
+        <item>SDC Bank</item>
+        <item>Shankar Nagrik Sahakari Bank</item>
+        <item>SHARAD NAGARI SAHAKARI BANK</item>
+        <item>SHARAD SAHAKARI BANK</item>
+        <item>Shinhan Bank India</item>
+        <item>SHIVA SAHAKARI BANK</item>
+        <item>SHIVALIK MERCANTILE BANK</item>
+        <item>Shivalik Small Finance Bank</item>
+        <item>Shree Co Op Bank LTD</item>
+        <item>Shree Dharati CO OP Bank LTD</item>
+        <item>Shree Kadi Nagarik Sahakari Bank Ltd</item>
+        <item>Shree Mahesh Co-operative Bank</item>
+        <item>SHREE SHARADA SAHAKARI BANK LTD</item>
+        <item>Shree Talaja Nagrik Sahakari Bank Ltd</item>
+        <item>SHREE WARANA SAHAKARI BANK LTD</item>
+        <item>Shri Arihant CoOp Bank</item>
+        <item>SHRI BHARAT URBAN CO-OP BANK</item>
+        <item>SHRI CHATRAPATI SHIVAJI MAHARAJ SAHAKARI BANK</item>
+        <item>SHRI CHHATRAPATI RAJARSHI SHAHU URBAN CO-OPERATIVE BANK</item>
+        <item>Shri Mahalaxmi Co-Operative Bank</item>
+        <item>Shri Mahavir Urban Co-Op Bank Ltd</item>
+        <item>SHRI PANCHGANGA NAGARI SAHKARI BANK LTD</item>
+        <item>Shri Rajkot District Co Op Bank Ltd</item>
+        <item>SHRI SANT NAGEBABA MULTISTATE CO OP URBAN CREDIT SOCIETY LTD</item>
+        <item>SHRI SHIDDESHWAR CO-OP BANK LTD</item>
+        <item>SHRI SWAMI SAMARTH SAHAKARI BANK</item>
+        <item>SHRI VEERSHAIV CO-OP BANK</item>
+        <item>SIDDAGANGA URBAN CO-OP BANK LTD</item>
+        <item>Smriti Nagrik Sahakari Bank</item>
+        <item>Solapur Janata Sahakari Bank Ltd</item>
+        <item>South Indian Bank</item>
+        <item>SREE MAHAYOGI LAKSHMAMMA CO-OP. BANK LTD.</item>
+        <item>SREE NARAYANA GURU CO-OP BANK LTD</item>
+        <item>Sreenidhi Souharda Sahakari Bank</item>
+        <item>SRI GANESH CO-OP BANK LTD</item>
+        <item>Sri Guru Raghavendra Pattina Souharda Sahakari Niyamitha</item>
+        <item>SRI KANNIKAPARAMESWARI CO-OPERATIVE BANK LTD</item>
+        <item>Standard Chartered Bank</item>
+        <item>State Bank Of Bikaner &amp; Jaipur</item>
+        <item>State Bank Of Hyderabad</item>
+        <item>State Bank of India</item>
+        <item>State Bank of Mauritius</item>
+        <item>State Bank Of Mysore</item>
+        <item>State Bank Of Patiala</item>
+        <item>State Bank Of Travancore</item>
+        <item>Sterling Urban Co-Op Bank</item>
+        <item>SUCO BANK</item>
+        <item>Surat National Co Op Bank LTD</item>
+        <item>Suryoday Small Finance Bank Ltd.</item>
+        <item>Suvarnayug Sahakari Bank</item>
+        <item>SVC Co-Operative Bank Ltd.</item>
+        <item>Syndicate Bank</item>
+        <item>T Bank Limited</item>
+        <item>Tamil Nadu Grama Bank</item>
+        <item>Tamilnad Mercantile Bank</item>
+        <item>Telangana Grameena Bank</item>
+        <item>Telangana State Co-Operative Apex Bank Ltd</item>
+        <item>TEXTILE TRADERS CO-OP BANK LTD</item>
+        <item>TGMC Bank Ltd</item>
+        <item>Thane Bharat Sahakari Bank Ltd</item>
+        <item>Thane Janata Sahakari Bank</item>
+        <item>The Abhinav Sahakari Bank Ltd</item>
+        <item>The Ahmedabad Mercantile Co-Op Bank</item>
+        <item>The Ahmednagar Merchant Co-Op Bank Ltd</item>
+        <item>The Akola District Central Co-Op Bank Ltd</item>
+        <item>THE ANAND MERCANTILE CO.OPERATIVE BANK</item>
+        <item>The Andhra Pradesh State Cooperative Bank Ltd</item>
+        <item>The Ashta Peoples Co Op Bank</item>
+        <item>The Aurangabad District Central Co-op Bank</item>
+        <item>THE BAPUJI CO-OP BANK LTD</item>
+        <item>THE BAPUNAGAR MAHILA CO OP BANK LTD</item>
+        <item>The Baramati Sahakari Bank Ltd</item>
+        <item>The Bardoli Nagarik Sahakari Bank</item>
+        <item>The Bhagyodaya Co-Operative Bank Ltd</item>
+        <item>The Chembur Nagrik Sahakari Bank</item>
+        <item>The Chikhli Urban Co-Op Bank</item>
+        <item>The Co-Operative Bank Of Rajkot</item>
+        <item>THE COMMERCIAL CO-OP BANK LTD</item>
+        <item>The Cosmos Co-Op Bank Ltd.</item>
+        <item>The Dahod Urban Co-operative Bank</item>
+        <item>The Davangere Urban Co-Operative Bank Ltd</item>
+        <item>The Deccan Merchants Co-operative Bank</item>
+        <item>The Delhi State Co-operative Bank Ltd</item>
+        <item>The Eenadu Co-Op Urban Bank</item>
+        <item>The Financial Co-Operative Bank Ltd</item>
+        <item>The Gandhidham Co-Operative Bank Ltd</item>
+        <item>The Gandhinagar Urban Co-Operative Bank</item>
+        <item>The Gayatri Co Op Urban_Bank</item>
+        <item>The Greater Bombay Co-Op Bank</item>
+        <item>The Gujarat State Co Operative Bank Ltd</item>
+        <item>THE GUNTUR CO-OPERATIVE URBAN BANK</item>
+        <item>The Hindusthan Co-Op Bank Ltd</item>
+        <item>The Ichalkaranji Merchants Co-op Bank Ltd</item>
+        <item>The Indraprastha Sehkari Bank Ltd.</item>
+        <item>The Jain Sahakari Bank Ltd</item>
+        <item>THE JALGAON PEOPLES CO-OP BANK</item>
+        <item>The Jamkhandi Urban Co-Operative Bank</item>
+        <item>THE JANATA CO-OPERATIVE BANK LTD</item>
+        <item>THE KAIRA DIST CENTRAL CO-OP BANK LTD</item>
+        <item>The Kanakamahalakshmi Co-Op Bank Ltd</item>
+        <item>The Karad Urban Co Op Bank LTD</item>
+        <item>THE KARNATAKA STATE COOPERATIVE APEX BANK LTD</item>
+        <item>THE KHATTRI CO-OPERATIVE URBAN BANK</item>
+        <item>The Kolhapur Urban Co-Op Bank Ltd</item>
+        <item>The Konark Urban Co-Op Bank Ltd</item>
+        <item>THE KRANTHI CO-OP URBAN BANK</item>
+        <item>The Kukarwada Nagrik Sahakari Bank</item>
+        <item>THE LAXMI CO-OP BANK LTD</item>
+        <item>THE LIMBASI URBAN CO-OP BANK</item>
+        <item>The Maharashtra State Co-Op Bank Ltd</item>
+        <item>The Malad Sahakari Bank Ltd</item>
+        <item>The Malkapur Urban Co-Op Bank Ltd</item>
+        <item>The Malleshwaram Co-Op Bank Ltd</item>
+        <item>The Mehsana Urban Co-Op Bank Ltd.</item>
+        <item>The Municipal Co-Op Bank</item>
+        <item>The Muslim Co-Operative Bank Ltd</item>
+        <item>The Naroda Nagrik Co-Op Bank Ltd.</item>
+        <item>The Nasik Road Deolali Vyapari Sahakari Bank</item>
+        <item>The National Co-op Bank Ltd</item>
+        <item>The Navnirman Co-Op Bank</item>
+        <item>The Nawanagar Co-Operative Bank</item>
+        <item>The Panchsheel Mercantile Co-Op Bank Ltd</item>
+        <item>THE PANIPAT URBAN CO-OPERATIVE BANK LTD</item>
+        <item>THE PRATAP CO-OP BANK</item>
+        <item>THE RAJKOT COMMERCIAL CO-OP BANK</item>
+        <item>THE SARANGPUR CO-OP BANK</item>
+        <item>The Sarvodaya Sahakari Bank Ltd</item>
+        <item>The Satara Sahakari Bank Ltd</item>
+        <item>The Seva Vikas Co-Operative Bank</item>
+        <item>The Shimoga Arecanut Mandy Merchants Co-Op Bank</item>
+        <item>The Sind Co-Operative Urban Bank Ltd</item>
+        <item>The Social Co-Op Bank Ltd</item>
+        <item>THE SSK CO-OP BANK LTD</item>
+        <item>The Surat District Co Op Bank Ltd</item>
+        <item>The Surat People CO OP Bank LTD</item>
+        <item>The Sutex Co Op Bank LTD</item>
+        <item>The Tamil Nadu State Apex Cooperative Bank</item>
+        <item>The Texco Co-Operative Bank</item>
+        <item>The Textile Co-Operative Bank of Surat Ltd</item>
+        <item>THE THANE DISTRICT CENTRAL CO-OP BANK LTD</item>
+        <item>The Udaipur Urban Co-Operative Bank</item>
+        <item>THE UNION CO-OP BANK LTD</item>
+        <item>THE VAISH CO-OP NEW BANK</item>
+        <item>THE VAISH CO-OPERATIVE ADARSH BANK</item>
+        <item>The Vallabh VidyaNagar Commercial Co-Operative Bank Ltd</item>
+        <item>The Varachha Co Op Bank LTD</item>
+        <item>THE VERAVAL MERCANTILE CO-OP BANK LTD</item>
+        <item>The Vijay Co Op Bank Limited</item>
+        <item>The Vijaypur District Central Co-Op Bank</item>
+        <item>THE VISAKHAPATNAM CO-OPERATIVE BANK LTD</item>
+        <item>The Vishweshwar Sahakari Bank</item>
+        <item>The Vita Merchants Co-Operative Bank</item>
+        <item>THE VYANKATESHWARA SAHAKARI BANK</item>
+        <item>The Wai Urban Co-Operative Bank Limited</item>
+        <item>The Yadagiri Lakshmi Narasimha Swamy Co Op Urban Bank Ltd</item>
+        <item>Tirupati Urban Co-Operative Bank Ltd</item>
+        <item>Tumkur Grain Merchants Co-Operative Bank</item>
+        <item>UCO Bank</item>
+        <item>Ujjivan Small Finance Bank</item>
+        <item>Union Bank Of India</item>
+        <item>United Bank of India</item>
+        <item>Urban Co-operative Bank,Budaun</item>
+        <item>Utkarsh Small Finance Bank</item>
+        <item>Uttarakhand Gramin Bank</item>
+        <item>Vaijapur Marchants Co Op Bank</item>
+        <item>Vaishya Nagari Sahakari Bank</item>
+        <item>Vananchal Gramin Bank</item>
+        <item>Vanghee Bank</item>
+        <item>Vardhaman Mahila Co-Op Urban Bank</item>
+        <item>Vasai Janata Sahakari Bank Ltd</item>
+        <item>Vasai Vikas Sah Bank Ltd</item>
+        <item>Vidarbha Merchants Urban Co-Op Bank Ltd</item>
+        <item>Vidya Sahkari Bank LTD</item>
+        <item>Vijaya Bank</item>
+        <item>VIJAYPUR SAHAKARI BANK</item>
+        <item>Vikas Sahakari Bank</item>
+        <item>Vikas Souharda Co-Operative Bank Ltd</item>
+        <item>VYAPARI SAHKARI BANK MARYADIT</item>
+        <item>Vysya Co-Operative Bank Ltd</item>
+        <item>Wardhaman Urban Co-Op Bank</item>
+        <item>Yes Bank</item>
+        <item>Yes Bank Corporate Account</item>
+        <item>Zoroastrian Co Op Bank Limited</item>"
+    </string-array>
+
+    <string-array name="ld_activityScreenTitles">
+        <item>Profile</item>
+        <item>My Loans</item>
+        <item>Request For Bank Change</item>
+        <item>Notifications</item>
+        <item>Refer a Friend</item>
+        <item>talk to Us</item>
+        <item>Contact Us</item>
+        <item>FAQ</item>
+        <item />
+        <item>Log Out</item>
+    </string-array>
+
+    <array name="ld_activityScreenIcons">
+        <item>@drawable/ic_profile</item>
+        <item>@drawable/ic_loans</item>
+        <item>@drawable/ic_help</item>
+        <item>@drawable/ic_notifications</item>
+        <item>@drawable/ic_refer_friend</item>
+        <item>@drawable/ic_talk_us</item>
+        <item>@drawable/ic_contact_us</item>
+        <item>@drawable/ic_help</item>
+        <item>0</item>
+        <item>@drawable/ic_log_out</item>
+    </array>
+
+</resources>

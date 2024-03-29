@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_corner_gradient_rp_bg"
+    android:orientation="vertical"
+    tools:context=".kotlin.fragments.RewardRedeemHistoryFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/margin_8"
+        android:background="@color/rewards_bg">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_16"
+            android:src="@drawable/otp_back" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="History "
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner_rp_top"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rp_card2"
+                android:paddingBottom="@dimen/margin_32"
+                android:paddingTop="@dimen/margin_32"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/chat_room_title_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_32"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:layout_marginEnd="200dp"
+                        android:text="Your Available \nReward Points?"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvPoints"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/margin_30"
+                        android:background="@drawable/rounded_corner"
+                        android:backgroundTint="@color/Primary2"
+                        android:gravity="center"
+                        android:drawablePadding="@dimen/margin_3"
+                        android:layout_marginStart="@dimen/margin_32"
+                        android:drawableStart="@drawable/reward_coin"
+                        android:paddingStart="8dp"
+                        android:paddingTop="@dimen/margin_3"
+                        android:paddingEnd="@dimen/margin_8"
+                        android:paddingBottom="@dimen/margin_3"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/margin_8"
+                        android:text="1000"
+                        android:textSize="@dimen/payu_dimen_16sp"
+                        android:textAppearance="@style/VerySmallText"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:orientation="vertical">
+
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:text="Redeemed Coupons"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvData"
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/margin_8"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:visibility="gone">
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:background="@drawable/rounded_corner_gradient"
+            android:gravity="center"
+            android:padding="@dimen/margin_16"
+            android:text="Back to Home"
+            android:textAllCaps="true"
+            android:textAppearance="@style/SmallText"
+            android:textColor="@color/white"
+            tools:ignore="UnusedAttribute" />
+    </RelativeLayout>
+
+
+</LinearLayout>

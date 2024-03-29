@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="faq_about_cn">
+        <item>What is CapitalNow?</item>
+        <item>What do you mean by a Cash Loan?</item>
+        <item>What kind of loans does CapitalNow offer?</item>
+        <item>What is a Salary Advance Loan?</item>
+        <item>How safe is it to apply for a cash loan online?</item>
+        <item>On what grounds does CapitalNow lend cash loans?</item>
+        <item>How do I register in the CapitalNow app?</item>
+        <item>How much can I borrow?</item>
+        <item>What will I be asked during Sign up?</item>
+        <item>Can I apply for a cash loan in CapitalNow, besides having a current loan with  another company?</item>
+    </string-array>
+
+
+    <string-array name="faq_application_process">
+        <item>Who can apply for an instant cash loan?</item>
+        <item>Do you run a credit history check?</item>
+        <item>Is it mandatory to have a CapitalNow app to apply for a loan?</item>
+        <item>How long does the loan application take to finish?</item>
+        <item>Do I need a credit score to apply for a CapitalNow loan?</item>
+        <item>How does the loan application process work?</item>
+        <item>How long will it take for my instant cash loan to be approved in CapitalNow?</item>
+        <item>How can I track my loan application status?</item>
+        <item>Can I apply for two instant loans simultaneously?</item>
+        <item>What are the prerequisites for loan approval?</item>
+        <item>Do I have to submit any documents?</item>
+        <item>How frequently can I apply for a cash loan in CapitalNow?</item>
+        <item>Why should I prefer CapitalNow over a Bank?</item>
+    </string-array>
+
+
+    <string-array name="faq_fees">
+        <item>What are the terms of repayment?</item>
+        <item>What action will be taken against late repayment?</item>
+        <!--<item>Do you charge any fee on loan processing?</item>-->
+        <item>Can I pay my loan before the due date?</item>
+        <item>How do I pay my loan?</item>
+        <item>When can I avail a new loan after repaying the outstanding loan?</item>
+        <item>What are the available options for repayment?</item>
+        <item>What is the late payment charge?</item>
+        <item>I’ve made the payment but it’s not updated?</item>
+        <item>How to know my due date?</item>
+    </string-array>
+    <string-array name="faq_security">
+        <item>How do you protect my information?</item>
+        <item>What kind of online security controls do you implement?</item>
+    </string-array>
+</resources>

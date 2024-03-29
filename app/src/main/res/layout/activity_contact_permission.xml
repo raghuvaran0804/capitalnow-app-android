@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".kotlin.activities.ContactPermissionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30"
+            android:gravity="center"
+            android:text="Permissions"
+            android:textAppearance="@style/ExtraLargeTextWithBold"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvPermissionsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:gravity="center"
+            android:paddingStart="@dimen/margin_40"
+            android:paddingEnd="@dimen/margin_40"
+            android:text="@string/permissions_heading"
+            android:textAppearance="@style/VerySmallText"
+            android:textColor="@color/intro_page_body_color"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_30"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="@dimen/margin_30"
+            android:gravity="center|top"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="@dimen/margin_20"
+                app:srcCompat="@drawable/ic_contact_book" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:text="@string/contacts"
+                    android:textAppearance="@style/MediumText"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_3"
+                    android:lineHeight="@dimen/margin_20"
+                    android:paddingEnd="@dimen/margin_20"
+                    android:text="@string/permissions_heading"
+                    android:textAppearance="@style/VerySmallText"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llTerms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/llActions"
+            android:layout_marginStart="@dimen/margin_35"
+            android:layout_marginTop="@dimen/margin_40"
+            android:layout_marginEnd="@dimen/margin_30"
+            android:layout_marginBottom="@dimen/margin_40"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cb_agree_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox"
+                android:clickable="false"
+                android:focusable="false" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tv_privacy_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_25"
+                android:textAppearance="@style/VerySmallText"
+                android:textColor="@color/black"
+                android:textColorHighlight="#00FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <com.capitalnowapp.mobile.customviews.CNButton
+                android:id="@+id/continue_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner_gradient"
+                android:maxLines="1"
+                android:padding="17dp"
+                android:text="I Agree"
+                android:textAllCaps="true"
+                android:textAppearance="@style/MediumText"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

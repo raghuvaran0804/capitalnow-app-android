@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/single_rounded_square"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_32"
+        android:src="@drawable/sad_face"
+        tools:ignore="ContentDescription" />
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvDeleteText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin_16"
+        android:lineHeight="@dimen/margin_25"
+        android:padding="@dimen/margin_16"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16"
+        android:background="@drawable/rounded_corner_gradient"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/margin_32"
+        android:paddingStart="@dimen/margin_30"
+        android:paddingTop="@dimen/margin_10"
+        android:paddingEnd="@dimen/margin_30"
+        android:paddingBottom="@dimen/margin_10"
+        android:text="OKAY"
+        android:textAppearance="@style/MediumText"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

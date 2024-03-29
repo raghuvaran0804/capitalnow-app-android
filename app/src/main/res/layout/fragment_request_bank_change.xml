@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".kotlin.fragments.RequestBankChangeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/login_page_background"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_50">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_bank_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/login_page_background"
+                app:boxStrokeColor="@color/Primary2"
+                app:hintTextColor="@color/Primary2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tx_et_bank_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/bank_name"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    android:maxLength="100"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:paddingTop="@dimen/margin_25"
+                    android:paddingBottom="@dimen/margin_15"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textCursorDrawable="@null" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/login_page_background"
+                app:boxStrokeColor="@color/Primary2"
+                app:hintTextColor="@color/Primary2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_account_holder_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:hint="@string/account_name"
+                    android:maxLength="100"
+                    android:paddingTop="@dimen/margin_25"
+                    android:paddingBottom="@dimen/margin_10"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textCursorDrawable="@null" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_2"
+                android:paddingLeft="@dimen/padding_3"
+                android:text="@string/please_enter_account_holder_name_as_per_bank_statement"
+                android:textColor="@color/orange_alert"
+                android:textSize="@dimen/small_font_size" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/login_page_background"
+                app:boxStrokeColor="@color/Primary2"
+                app:hintTextColor="@color/Primary2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_account_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="1234567890"
+                    android:inputType="number"
+                    android:hint="@string/account_number"
+                    android:maxLength="100"
+                    android:paddingTop="@dimen/margin_25"
+                    android:paddingBottom="@dimen/margin_10"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textCursorDrawable="@null" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/login_page_background"
+                app:boxStrokeColor="@color/Primary2"
+                app:hintTextColor="@color/Primary2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_re_enter_account_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="1234567890"
+                    android:inputType="number"
+                    android:hint="@string/re_enter_account_no"
+                    android:maxLength="100"
+                    android:paddingTop="@dimen/margin_25"
+                    android:paddingBottom="@dimen/margin_10"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textCursorDrawable="@null" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/login_page_background"
+                app:boxStrokeColor="@color/Primary2"
+                app:hintTextColor="@color/Primary2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_ifsc_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/ifsc_code"
+                    android:maxLength="100"
+                    android:paddingTop="@dimen/margin_25"
+                    android:paddingBottom="@dimen/margin_10"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textCursorDrawable="@null" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/login_page_background"
+                app:boxStrokeColor="@color/Primary2"
+                app:hintTextColor="@color/Primary2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_branch_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:hint="@string/branch_name"
+                    android:maxLength="100"
+                    android:paddingTop="@dimen/margin_25"
+                    android:paddingBottom="@dimen/margin_10"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textCursorDrawable="@null" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_upload_doc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/login_page_background"
+                app:boxStrokeColor="@color/Primary2"
+                app:hintTextColor="@color/Primary2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_upload_doc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/upload_doc"
+                    android:inputType="text|textCapWords"
+                    android:drawableEnd="@drawable/ic_attach_file"
+                    android:maxLength="100"
+                    android:paddingTop="@dimen/margin_25"
+                    android:paddingBottom="@dimen/margin_15"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:maxLines="1"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textCursorDrawable="@null" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:paddingStart="@dimen/one_step_reg_title_padding"
+                android:text="@string/pfd_format"
+                android:textColor="@color/orange_alert"
+                android:textSize="@dimen/small_font_size" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/login_page_background"
+                app:boxStrokeColor="@color/Primary2"
+                app:hintTextColor="@color/Primary2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_enter_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/upload_docs_bank_statement_password"
+                    android:inputType="text|textCapWords"
+                    android:maxLength="100"
+                    android:paddingTop="@dimen/margin_25"
+                    android:paddingBottom="@dimen/margin_10"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textCursorDrawable="@null" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cb_first_terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/checkbox"
+                    android:clickable="true"
+                    android:focusable="false" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:text="@string/first_terms"
+                    android:textAppearance="@style/VerySmallText"
+                    android:textColor="@color/selected_text_color"
+                    android:textColorHint="@color/placeholder_color"
+                    android:textSize="@dimen/normal_font_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_second_Terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/cb_second_terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/checkbox"
+                    android:clickable="true"
+                    android:focusable="false" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:text="@string/second_terms"
+                    android:textAppearance="@style/VerySmallText"
+                    android:textColor="@color/selected_text_color"
+                    android:textColorHint="@color/placeholder_color"
+                    android:textSize="@dimen/normal_font_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llTerms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cbAgreeTerms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/checkbox"
+                    android:clickable="true"
+                    android:focusable="false" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tv_privacy_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:text="@string/first_terms"
+                    android:textAppearance="@style/VerySmallText"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="#00FFFFFF" />
+
+            </LinearLayout>
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="@dimen/margin_7"
+                android:text="Please accept the self-authorization"
+                android:textColor="@color/orange_alert"
+                android:textSize="@dimen/small_font_size" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_25"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_7"
+                android:text="@string/second_terms"
+                android:textAppearance="@style/VerySmallText"
+                android:textColor="@color/black" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/bt_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin_15"
+                android:background="@drawable/rounded_corner_gradient"
+                android:gravity="center"
+                android:padding="@dimen/margin_20"
+                android:text="Submit"
+                android:textAllCaps="true"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

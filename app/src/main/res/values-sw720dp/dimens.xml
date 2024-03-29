@@ -1,0 +1,6 @@
+<!-- Compatible to 10.1" tablet - 1280x800 mdpi devices eg: Nexus 10 -->
+
+<resources>
+    <dimen name="normal_font_size">20sp</dimen>
+    <dimen name="alert_dialog_title_font_size">23sp</dimen>
+</resources>

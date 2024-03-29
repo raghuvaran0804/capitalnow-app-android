@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="faq_about_cn_answers">
+        <item>CapitalNow is one of the leading online lending platforms in India offering monetary assistance through instant Cash loans ranging from 1k to 1lakh. The loan application process in the app is wholly online and digitised. The loan approval at capitalnow is free from physical documentation, thereby, the entire process is executed within minutes.</item>
+        <item>The cash loan is money offered to a person for a short period at mapped out interest rates and repayment tenure. This money can be utilized anywhere anytime to fulfill instant financial needs.</item>
+        <item>We offer cash loans in four different categories:
+
+            -Instant Cash Loan
+            -Salary Advance Loan
+            -Travel Loan &amp; Skill Loan.
+        You can request for monetary assistance in any of these categories.</item>
+        <item>A salary advance loan is a short period cash loan offered against the monthly salary of the working professionals to help them fulfill their financial requirements. Borrowers are required to repay the loan before their next payday.
+
+            You can apply for monetary assistance under the Salary Advance loan using CapitalNow app.</item>
+        <item>Well, it is safe to apply for online loans as every movement of your loan application journey will be kept transparent. Also, It is quite essential to figure out the genuineness of the lender.</item>
+        <item>CapitalNow lends Cash loans relying on the reliability of the borrower’s profile and, of course the documents submitted. </item>
+        <item>Go to the Play Store and Download CapitalNow App.
+        Register yourself with the requested details and submit them.
+        Once your profile is confirmed, you will be transferred to the next step to place a loan application.</item>
+        <item>You can borrow an Instant cash loan of any amount between Rs. 1000 to 100000 relying on your eligibility.</item>
+
+        <item>You are requested to provide Name, Mobile Number, Email Address, Company Name, and Monthly income while you register in the CapitalNow app.</item>
+        <item>Yes. If you are confident about your previous credit history and financial capabilities, you can apply for a cash loan while having an outstanding with another lender.</item>
+    </string-array>
+
+    <string-array name="faq_application_process_answers">
+        <item>Any Salaried individual earning above 20,000 per month and with basic documents like aadhaar pan and salary crediting in the bank account is eligible to apply for an instant cash loan with CapitalNow.</item>
+        <item>As we realize that not every individual holds an impressive credit score, we do not consider credit history analysis.</item>
+        <item>Obviously! You need to download and install the CapitalNow app on your mobile phone to apply for a loan. The CapitalNow app is entirely user friendly and the Artificial intelligence technology will save your precious time which eventually offers an effortless and satisfying low borrowing experience.</item>
+        <item>At CapitalNow, industry professionals will analyze your documents and confirm your eligibility for loan application. As soon as your loan application is approved, the money will be credited to your account on the same day.</item>
+        <item>No. We consider the persona of the customer’s profile and financial capacity over the credit score. So, you can apply for a loan at CapitalNow despite a low or no credit score.</item>
+        <item>We make it feasible for you:
+
+            Finish Registration and submit all the essential documents.
+            Allow CapitalNow to assess your profile and credibility to repay the loan.
+            Receive an application approval and loan offer from our team.
+            Get cash disbursed into your account.
+         Isn’t that easy!</item>
+        <item>The loan amount will be credited into your account on the same day of loan approval.</item>
+        <item>You can easily track the status of the loan application in the profile section. Or contact the assigned account manager.</item>
+        <item>Yes. One can apply for multiple loans as long as the credit limit doesn’t exhaust.</item>
+        <item>The Applicant should be aged above 21.
+            A Monthly income of at least 20000.
+            Basic and Professional Details.</item>
+        <item>You are required to submit documents while you apply for a loan. As soon as our team confirms your profile and eligibility for the requested loan, we do not ask you for any kind of documents.</item>
+        <item>There is no limit for applying for cash loans as far as the allocated loan limit exists. Contact us for more details.</item>
+        <item>Getting an instant cash loan online approved at a bank comprises diverse rules &amp; regulations along with full-scale documentation and especially, long hours of waiting. Moreover, you are required to make multiple visits to the bank until your loan gets approved.
+        There is no compulsion that you may have the possibility to approach a bank for monetary assistance every time you face financial difficulties.
+
+      At CapitalNow, the whole process of loan application is online and paperless. It just takes 3 simple steps to get an instant cash loan approved at CapitalNow with an instant loan disbursement facility.</item>
+    </string-array>
+
+
+    <string-array name="faq_fees_answers">
+        <!--<item>You are required to repay the acquired loan amount within 30 days from the approval date. For your information, we provide a part payment facility also to pay back the loan in case you are facing any financial difficulties.</item>-->
+        <item>You are required to repay the acquired loan amount within the tenure. For your information, we provide a part payment facility also to pay back the loan in case you are facing any financial difficulties.</item>
+
+        <!--<item>CapitalNow was established to lend a helping hand to the needy to fulfill the financial needs of the hour. Not paying back would never get out as an option. We would call you and leave you reminder emails but if you dwell on not repaying we are liable to take necessary action against you to recover our money.
+            You are bound to face legal action and your nearing monetary protection might be at risk. This doesn’t end here, your employer will be intimated about this, and imagine what if this word spreads out among your colleagues and friends which eventually leads to a huge fall of your stature in the society. We would never need someone to get harassed in and out. Thus we always insist on our customers to repay the loan on time. Contact us for more details.</item>
+        -->
+        <item>CapitalNow was established to lend a helping hand to the needy to fulfill the financial needs of the hour. Thus we always insist on our customers to repay the loan on time. Contact us for more details.</item>
+
+        <!--<item>Yes. The processing fee would be based on the membership. Let’s say:
+
+                Normal Membership - Rs. 250 to 500
+                Gold Plan - Rs. 150 to 500
+                Platinum - Rs. 100</item>-->
+        <item>You can repay the acquired loan amount at any time within repayment tenure. We do not request any pre-closure charges.</item>
+        <item>You can repay the loan amount either in the CapitalNow website or the app. For more details contact us.</item>
+        <item>As soon as you repay the loan amount, the existing credit limit will get revised instantly which allows you to apply for a new loan freshly.</item>
+        <item>You can use Internet Banking, PhonePe, GPay, Paytm to repay the loan. If you have any queries regarding this, contact your account manager.</item>
+        <item>The late payment charges would be based on the loan amount you’ve acquired and it varies according to the amount.</item>
+        <item>Kindly contact the support team immediately if you face that situation.</item>
+        <item>You can find out on the app by visiting the profile section or contact your account manager for better assistance.</item>
+
+    </string-array>
+
+
+    <string-array name="faq_security_answers">
+        <item>We always keep the safety of user data at the frontend. All of your information, be it personal or bank details are encrypted and retained carefully. We do not have access to amend any of your details.</item>
+        <item>Our clients privacy and security are quite important to us more than anything. We use optimum quality products to ensure strong security on online platforms.</item>
+    </string-array>
+</resources>

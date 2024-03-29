@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/backScreen_color"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_basic"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/padding_10"
+                android:paddingTop="@dimen/margin_20"
+                android:paddingEnd="@dimen/margin_20"
+                android:paddingBottom="@dimen/margin_5"
+                android:text="@string/note_currently_we_are_supporting_msg"
+                android:textAppearance="@style/VerySmallText"
+                android:textColor="@color/orange_alert" />
+
+            <com.capitalnowapp.mobile.customviews.CNEditText
+                android:id="@+id/etGuidelines"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:backgroundTint="@color/colorSky"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusedByDefault="false"
+                android:paddingBottom="@dimen/margin_10"
+                android:text="@string/upload_docs_guidelines"
+                android:textAppearance="@style/VerySmallText"
+                android:textColor="@color/colorSky" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/llSalarySlip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                app:cardCornerRadius="@dimen/margin_5"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:padding="@dimen/margin_15"
+                            android:visibility="visible">
+
+                            <com.capitalnowapp.mobile.customviews.CNTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_2"
+                                android:background="@color/white"
+                                android:text="@string/upload_docs_salary_slip_title"
+                                android:textAppearance="@style/MediumText"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+
+                            <com.capitalnowapp.mobile.customviews.CNTextView
+                                android:id="@+id/tvSalarySlip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/margin_50"
+                                android:background="@color/white"
+                                android:drawablePadding="@dimen/margin_5"
+                                android:gravity="center|start"
+                                android:text="@string/upload_docs_salary_slip_select"
+                                android:textAppearance="@style/MicroText"
+                                android:textColor="@color/intro_page_body_color" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/tvSelectSlip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/margin_20"
+                            android:background="@color/white"
+                            android:src="@drawable/ic_docs_expand" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llSlipAttachments"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/ivSlip"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/ic_upload_doc_up" />
+
+                        <com.capitalnowapp.mobile.customviews.CNEditText
+                            android:id="@+id/etSlipPwd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:layout_marginBottom="@dimen/margin_10"
+                            android:background="@drawable/login_page_text_view_background"
+                            android:hint="@string/upload_docs_salary_slip_password"
+                            android:inputType="textPassword"
+                            android:maxLength="30"
+                            android:padding="@dimen/margin_3"
+                            android:textAppearance="@style/MicroText"
+                            android:textColor="@color/intro_page_body_color" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/llBankStatement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                app:cardCornerRadius="@dimen/margin_5"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_15">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.capitalnowapp.mobile.customviews.CNTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/upload_docs_bank_statement_title"
+                                    android:textAppearance="@style/MediumText"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold" />
+
+                                <com.capitalnowapp.mobile.customviews.CNTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/margin_50"
+                                    android:background="@color/white"
+                                    android:drawablePadding="@dimen/margin_5"
+                                    android:gravity="center|start"
+                                    android:text="@string/upload_docs_bank_statement_select"
+                                    android:textAppearance="@style/MicroText"
+                                    android:textColor="@color/intro_page_body_color" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/tvSelectBank"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@color/white"
+                                android:src="@drawable/ic_docs_expand" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llBankAttachments"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_5"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/ivBank1"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:src="@drawable/ic_upload_doc_up" />
+
+
+                                <ImageView
+                                    android:id="@+id/ivBank2"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_marginStart="@dimen/margin_10"
+                                    android:src="@drawable/ic_upload_doc_up" />
+
+                                <ImageView
+                                    android:id="@+id/ivBank3"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:visibility="visible"
+                                    android:layout_marginStart="@dimen/margin_10"
+                                    android:src="@drawable/ic_upload_doc_up" />
+                            </LinearLayout>
+
+                            <com.capitalnowapp.mobile.customviews.CNEditText
+                                android:id="@+id/etBankSlipPassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:background="@drawable/login_page_text_view_background"
+                                android:hint="@string/upload_docs_bank_statement_password_doc"
+                                android:inputType="textPassword"
+                                android:maxLength="30"
+                                android:padding="@dimen/margin_3"
+                                android:textAppearance="@style/MicroText"
+                                android:textColor="@color/intro_page_body_color" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:padding="@dimen/padding_10"
+                android:text="@string/latest_docs_warning_msg"
+                android:textAppearance="@style/MicroText"
+                android:textColor="@color/orange_alert" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/ivSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="@dimen/margin_10"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/rounded_corner_gradient"
+                android:gravity="center"
+                android:padding="17dp"
+                android:text="Submit"
+                android:textAllCaps="true"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/white"
+                android:visibility="visible" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

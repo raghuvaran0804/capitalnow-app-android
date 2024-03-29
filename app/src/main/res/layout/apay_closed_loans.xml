@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llSplitAmount"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounder_grey_border"
+    android:orientation="horizontal"
+    android:padding="@dimen/margin_3">
+
+    <ImageView
+        android:id="@+id/ivOnlyBank"
+        android:layout_width="@dimen/margin_25"
+        android:layout_height="@dimen/margin_25"
+        android:padding="@dimen/margin_5"
+        android:src="@drawable/ic_myloans_bank"
+        android:visibility="gone" />
+
+
+    <ImageView
+        android:id="@+id/ivOnlyApay"
+        android:layout_width="@dimen/margin_25"
+        android:layout_height="@dimen/margin_25"
+        android:src="@drawable/ic_myloans_apay"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/llBank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/margin_20"
+            android:layout_height="@dimen/margin_20"
+            android:src="@drawable/ic_myloans_bank" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvBankAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_3"
+            android:gravity="center"
+            android:padding="@dimen/margin_3"
+            android:text="3000"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llApay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/margin_25"
+            android:layout_height="@dimen/margin_20"
+            android:layout_marginStart="@dimen/margin_5"
+            android:src="@drawable/ic_myloans_apay" />
+
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvAmazonAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_3"
+            android:gravity="center"
+            android:padding="@dimen/margin_3"
+            android:text="3000"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+    </LinearLayout>
+</LinearLayout>

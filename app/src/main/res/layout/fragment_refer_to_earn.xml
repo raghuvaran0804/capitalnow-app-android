@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".kotlin.fragments.ReferToEarnFragment">
+
+    <RelativeLayout
+        android:id="@+id/llReferBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/ivMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_20"
+            android:src="@drawable/ic_baseline_dehaze_24"
+            app:tint="@color/Accent1" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvCustomTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/refer_and_earn"
+            android:textAppearance="@style/MediumText"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/margin_5"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvApplyLoan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:background="@drawable/apply_now_bg"
+                android:drawableStart="@drawable/ic_apply_loan"
+                android:drawablePadding="@dimen/margin_5"
+                android:padding="@dimen/margin_5"
+                android:paddingStart="@dimen/margin_10"
+                android:paddingEnd="@dimen/margin_10"
+                android:text="Apply \n Now"
+                android:textColor="@color/Primary1"
+                android:textSize="10sp"
+                android:visibility="invisible"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/llContent1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_gravity="bottom|center"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:src="@drawable/ic_refer_home_icon" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvReferralMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/margin_25"
+                android:text=""
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/black" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvReferralCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAppearance="@style/LargeTextWithBold"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/ivCopy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@drawable/rounded_corner_gradient"
+                android:gravity="center"
+                android:paddingStart="@dimen/margin_25"
+                android:paddingTop="@dimen/margin_15"
+                android:paddingEnd="@dimen/margin_25"
+                android:paddingBottom="@dimen/margin_15"
+                android:src="@drawable/ic_copy_gateway"
+                android:text="@string/copy_code"
+                android:textAllCaps="true"
+                android:textAppearance="@style/VerySmallText"
+                android:textColor="@color/white"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/black"
+                android:visibility="gone">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|top"
+                    android:layout_marginTop="?attr/actionBarSize"
+                    android:background="@drawable/single_rounded_square"
+                    android:backgroundTint="@color/colorApplyNowBg"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/margin_30"
+                    android:paddingTop="@dimen/margin_7"
+                    android:paddingEnd="@dimen/margin_30"
+                    android:paddingBottom="@dimen/margin_7"
+                    android:text="@string/title_history"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llContent1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="30dp">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/ivFacebookApp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_msg_png"
+                android:drawablePadding="@dimen/margin_10"
+                android:gravity="center"
+                android:text="Message" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/ivWhatsApp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_whatsapp_png"
+                android:drawablePadding="@dimen/margin_10"
+                android:gravity="center"
+                android:text="WhatsApp" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/ivOthers"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_more_png"
+                android:drawablePadding="@dimen/margin_10"
+                android:gravity="center"
+                android:text="Others" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

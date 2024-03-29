@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/addBg"
+    tools:context=".kotlin.fragments.TransactionsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:background="@color/white"
+        android:padding="@dimen/margin_10"
+        tools:ignore="MissingConstraints">
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvBack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_baseline_arrow_forward_24"
+            android:drawableTint="@color/Primary2"
+            android:rotation="180"
+            android:textColor="@color/Primary2"
+            android:textStyle="bold"
+            tools:ignore="UnusedAttribute" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_weight="9"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:gravity="center_horizontal"
+            android:text="Transactions"
+            android:textAppearance="@style/LargeTextWithBold"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTransactionData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/margin_5"
+        android:nestedScrollingEnabled="true"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/llNoTransactions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/no_transactions"/>
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Transactions Found"
+            android:textSize="16sp"
+            android:layout_marginTop="@dimen/margin_16"/>
+
+    </LinearLayout>
+
+</LinearLayout>

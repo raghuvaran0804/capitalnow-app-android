@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_20">
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|start"
+        android:layout_marginEnd="@dimen/margin_25"
+        android:text="@string/amount_will_be_credited"
+        android:textAppearance="@style/MediumText"
+        android:textColor="@color/color_primary"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10">
+
+        <LinearLayout
+            android:id="@+id/llBank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbBank"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/green"
+                android:paddingStart="@dimen/margin_15"
+                android:paddingEnd="@dimen/margin_10"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/ivOfr1"
+                android:layout_width="@dimen/margin_25"
+                android:layout_height="@dimen/margin_25" />
+        </LinearLayout>
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvAmountInfoBank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_50"
+            android:layout_marginTop="@dimen/margin_10"
+            android:textAppearance="@style/MicroText"
+            android:textColor="@color/orange_alert"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/llApay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbAmazon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/green"
+                android:paddingStart="@dimen/margin_15"
+                android:paddingEnd="@dimen/margin_10"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/ivOfr2"
+                android:layout_width="@dimen/margin_25"
+                android:layout_height="@dimen/margin_25" />
+        </LinearLayout>
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvAmountInfoApay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_50"
+            android:layout_marginTop="@dimen/margin_10"
+            android:textAppearance="@style/MicroText"
+            android:textColor="@color/orange_alert"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/llAmazonNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_50"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_amazon_pay" />
+
+            <com.capitalnowapp.mobile.customviews.CNEditText
+                android:id="@+id/etMobileAmazon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_25"
+                android:layout_weight="6"
+                android:background="@drawable/layout_border"
+                android:cursorVisible="true"
+                android:digits="0123456789"
+                android:hint="@string/enter_mobile"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:paddingStart="@dimen/margin_10"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/color_primary"
+                android:textColorHint="@color/colorGrey" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/margin_25"
+                android:layout_weight="4"
+                android:background="@drawable/layout_border"
+                android:backgroundTint="@color/color_primary"
+                android:gravity="center"
+                android:text="@string/verify"
+                android:textAllCaps="true"
+                android:textAppearance="@style/VerySmallText"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llBothLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbBoth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/green"
+                android:paddingStart="@dimen/margin_15"
+                android:paddingEnd="@dimen/margin_10"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/ivOfr3"
+                android:layout_width="@dimen/margin_25"
+                android:layout_height="@dimen/margin_25" />
+        </LinearLayout>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/llBoth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_50"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_40"
+            android:drawableStart="@drawable/ic_req_bank_change"
+            android:drawableEnd="@drawable/ic_amazon_pay"
+            android:drawablePadding="@dimen/margin_10"
+            android:gravity="center|start"
+            android:text="Bank Account"
+            android:textAllCaps="true"
+            android:textAppearance="@style/MicroText"
+            android:textColor="@color/black" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_50"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:layout_marginBottom="@dimen/margin_10">
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:progressDrawable="@drawable/seekbar_drawable_progress"
+                android:thumb="@drawable/seekbar_drawable_thumb" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvBankAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|start"
+                android:layout_marginStart="@dimen/margin_20"
+                android:text="12000"
+                android:textAppearance="@style/MediumText"
+                android:textColor="@color/white" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvAmazonAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="@dimen/margin_25"
+                android:text="8000"
+                android:textAppearance="@style/MediumText"
+                android:textColor="@color/white" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_50"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_amazon_pay" />
+
+            <com.capitalnowapp.mobile.customviews.CNEditText
+                android:id="@+id/etMobileBoth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_25"
+                android:layout_weight="6"
+                android:background="@drawable/layout_border"
+                android:cursorVisible="true"
+                android:digits="0123456789"
+                android:hint="@string/enter_mobile"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:paddingStart="@dimen/margin_10"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/color_primary"
+                android:textColorHint="@color/colorGrey" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/margin_25"
+                android:layout_weight="4"
+                android:background="@drawable/layout_border"
+                android:backgroundTint="@color/color_primary"
+                android:gravity="center"
+                android:text="@string/verify"
+                android:textAllCaps="true"
+                android:textAppearance="@style/VerySmallText"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvAmountInfoBoth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_50"
+        android:layout_marginTop="@dimen/margin_10"
+        android:textAppearance="@style/MicroText"
+        android:textColor="@color/orange_alert"
+        android:visibility="gone" />
+</LinearLayout>

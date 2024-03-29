@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilMobileNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/Primary1"
+        app:hintTextColor="@color/transparent"
+        android:visibility="gone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mobile_number"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:autofillHints="phone"
+            android:background="@color/white"
+            android:digits="0123456789"
+            android:drawableLeft="@drawable/mobile_phone_new"
+            android:drawablePadding="@dimen/margin_20"
+            android:focusable="false"
+            android:hint="@string/prompt_mobile"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:padding="@dimen/padding_10"
+            android:textAppearance="@style/LargeTextWithBold"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@null" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/llAutoFill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvMobileNumber1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@color/white"
+            android:digits="0123456789"
+            android:hint="Select Mobile Number"
+            android:drawableLeft="@drawable/mobile_phone_new"
+            android:padding="@dimen/padding_15"
+            android:textAppearance="@style/LargeTextWithBold"
+            android:drawablePadding="@dimen/margin_20"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/dark_gray"/>
+    </LinearLayout>
+
+
+   <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/get_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/margin_32"
+        android:background="@drawable/rounded_corner_gradient"
+        android:backgroundTint="@color/Secondary1"
+        android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
+        android:padding="17dp"
+        android:text="Get OTP"
+        android:textAllCaps="true"
+        android:textAppearance="@style/SmallText"
+        android:textColor="@color/Accent1"/>
+
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20"
+        android:gravity="start"
+        android:text="Enter OTP"
+        android:textAppearance="@style/VerySmallText"
+        android:textColor="@color/intro_page_body_color"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <com.chaos.view.PinView
+        android:id="@+id/otp"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="70dp"
+        android:cursorVisible="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:inputType="number"
+        android:textAppearance="@style/LargeTextWithBold"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:cursorColor="@color/intro_page_body_color"
+        app:cursorWidth="1dp"
+        app:hideLineWhenFilled="false"
+        app:itemCount="6"
+        app:itemRadius="0dp"
+        app:itemSpacing="17dp"
+        app:lineColor="@color/black"
+        app:lineWidth="1.5dp"
+        app:viewType="line" />
+
+</LinearLayout>

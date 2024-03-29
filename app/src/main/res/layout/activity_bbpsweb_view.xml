@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".kotlin.activities.BBPSWebViewActivity">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/Primary2"
+            tools:ignore="MissingConstraints">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvBack"
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:layout_height="15dp"
+                android:layout_marginStart="@dimen/margin_16"
+                android:drawableStart="@drawable/ic_cross"
+                android:layout_gravity="center"
+                android:drawableTint="@color/white"
+                android:textColor="@color/Primary2"
+                android:textStyle="bold"
+                tools:ignore="UnusedAttribute" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Bill Payments"
+                android:textAppearance="@style/LargeTextWithBold"
+                android:layout_gravity="center|start"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:layout_height="@dimen/margin_50"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:src="@drawable/ic_bbpsright_cn"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+    <WebView
+        android:id="@+id/wvWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_50"/>
+
+</FrameLayout>

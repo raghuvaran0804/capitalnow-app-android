@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_alignParentTop="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/margin_25"
+            android:layout_height="@dimen/margin_25"
+            android:rotation="180"
+            app:srcCompat="@drawable/ic_baseline_arrow_forward_24"
+            tools:ignore="ContentDescription,UseAppTint"
+            app:tint="@color/Primary2"
+            android:visibility="invisible"/>
+
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Permissions"
+            android:textAppearance="@style/ExtraLargeTextWithBold"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMandatoryLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@color/light_white"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:orientation="vertical">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvPermissionsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:text="All Permissions are mandatory"
+                    android:textAppearance="@style/VerySmallText"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/payu_dimen_16sp"
+                    android:textStyle="bold" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvPermissionsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:text="Phone Settings > Apps > Capital Now > Permissions"
+                    android:textAppearance="@style/VerySmallText"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <com.capitalnowapp.mobile.customviews.CNButton
+                android:id="@+id/btnSettings"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_50"
+                android:background="@drawable/arrow_red_new" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_20"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                app:srcCompat="@drawable/safe_new" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvSafe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_5"
+                android:text="Your data is 100% safe"
+                android:textAppearance="@style/VerySmallText"
+                android:textColor="#75BD4A"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvExperience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:text="Get the best experience with these permissions"
+            android:textAppearance="@style/VerySmallText"
+            android:textColor="@color/black"
+            android:textSize="@dimen/payu_dimen_18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:orientation="vertical">
+
+            <!--Location-->
+
+            <LinearLayout
+                android:id="@+id/llLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_30"
+                android:gravity="center|top"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    app:srcCompat="@drawable/location_new" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:text="@string/location"
+                        android:textAppearance="@style/MediumText"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/payu_dimen_14sp"
+                        android:textStyle="bold" />
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_3"
+                        android:lineHeight="@dimen/margin_15"
+                        android:paddingEnd="@dimen/margin_20"
+                        android:text="Our app collects Location Permission to determine availability of Capital Now products in your region/area, provide region specific offers and promotions; also for performing fraud and risk checks."
+                        android:textAppearance="@style/VerySmallText"
+                        android:textColor="@color/black"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--CAMERA-->
+
+            <LinearLayout
+                android:id="@+id/llCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_30"
+                android:gravity="center|top"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivCamera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    app:srcCompat="@drawable/camera_audio" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvCamers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:text="Camera &amp; Audio"
+                        android:textAppearance="@style/MediumText"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/payu_dimen_14sp"
+                        android:textStyle="bold" />
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_3"
+                        android:lineHeight="@dimen/margin_15"
+                        android:paddingEnd="@dimen/margin_20"
+                        android:text="Our app collects Camera &amp; Audio Permission to allow you capture &amp; validate selfie for Live KYC and capture other KYC documents. This ensures that you can easily scan documents and upload them for your loan application."
+                        android:textAppearance="@style/VerySmallText"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/margin_10" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--DeviceData-->
+
+            <LinearLayout
+                android:id="@+id/llDeviceData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_30"
+                android:gravity="center|top"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivDeviceData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_10"
+                    app:srcCompat="@drawable/device_data" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_3"
+                    android:orientation="vertical">
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvDeviceData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:text="Device Data"
+                        android:textAppearance="@style/MediumText"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/payu_dimen_14sp"
+                        android:textStyle="bold" />
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_3"
+                        android:lineHeight="@dimen/margin_15"
+                        android:paddingEnd="@dimen/margin_20"
+                        android:text="Our app collects data related to your device, such as the OS version, phone model, IP address etc which helps us further customize and improve your experience. This data also helps us debug issues specific to devices."
+                        android:textAppearance="@style/VerySmallText"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/margin_10" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llTerms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/llActions"
+            android:layout_marginStart="@dimen/margin_25"
+            android:layout_marginTop="@dimen/margin_40"
+            android:layout_marginEnd="@dimen/margin_30"
+            android:layout_marginBottom="@dimen/margin_30"
+            android:orientation="horizontal">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cb_agree_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox"
+                android:clickable="false"
+                android:focusable="false" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tv_privacy_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_25"
+                android:lineHeight="@dimen/payu_dimen_15dp"
+                android:textAppearance="@style/VerySmallText"
+                android:textColor="@color/black"
+                android:textColorHighlight="#00FFFFFF"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/margin_10"
+            android:paddingEnd="@dimen/margin_10">
+
+            <com.capitalnowapp.mobile.customviews.CNButton
+                android:id="@+id/deny_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_15"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner"
+                android:backgroundTint="@color/colorGrey"
+                android:maxLines="1"
+                android:text="I DISAGREE"
+                android:textAllCaps="true"
+                android:textAppearance="@style/MediumText"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <com.capitalnowapp.mobile.customviews.CNButton
+                android:id="@+id/continue_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corner_gradient"
+                android:maxLines="1"
+                android:padding="17dp"
+                android:text="I Agree"
+                android:textAllCaps="true"
+                android:textAppearance="@style/MediumText"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

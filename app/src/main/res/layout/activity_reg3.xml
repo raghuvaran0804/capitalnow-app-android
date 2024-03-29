@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".kotlin.activities.Reg3Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_16"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="FILL YOUR DETAILS"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/payu_dimen_16dp"
+        android:layout_marginEnd="@dimen/payu_dimen_16dp"
+        android:layout_marginTop="@dimen/payu_dimen_8dp"
+        android:layout_marginBottom="@dimen/payu_dimen_8dp"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/payu_dimen_16dp"
+            android:layout_marginEnd="@dimen/payu_dimen_5dp"
+            android:background="@color/Primary1"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/payu_dimen_5dp"
+            android:layout_marginEnd="@dimen/payu_dimen_5dp"
+            android:background="@color/Primary1"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/payu_dimen_5dp"
+            android:layout_marginEnd="@dimen/payu_dimen_16dp"
+            android:background="@color/Primary1"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_8"
+            android:orientation="vertical">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Present Address"
+                android:textStyle="bold"
+                android:textAppearance="@style/MediumText"
+                android:textColor="@color/Accent1"
+                android:textSize="20sp"/>
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address Line 1"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/Accent1"
+                android:textSize="@dimen/payu_dimen_12sp"
+                android:layout_marginStart="@dimen/margin_5"
+                android:textStyle="bold" />
+            <com.capitalnowapp.mobile.customviews.CNEditText
+                android:id="@+id/etAdr1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Apartment/Tower Name/Area/Locality"
+                android:maxLines="1"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
+                android:paddingTop="@dimen/margin_5"
+                android:textSize="@dimen/payu_dimen_14sp"
+                android:importantForAutofill="no"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="@color/light_gray"
+                android:textCursorDrawable="@null"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_company_name"
+                tools:ignore="MissingConstraints" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address Line 2"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/Accent1"
+                android:textSize="@dimen/payu_dimen_12sp"
+                android:layout_marginStart="@dimen/margin_5"
+                android:textStyle="bold" />
+            <com.capitalnowapp.mobile.customviews.CNEditText
+                android:id="@+id/etAdr2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Flat No/Tower No/Wing/Plot No/Floor"
+                android:maxLines="1"
+                android:importantForAutofill="no"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
+                android:paddingTop="@dimen/margin_5"
+                android:textSize="@dimen/payu_dimen_14sp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="@color/light_gray"
+                android:textCursorDrawable="@null"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_company_name"
+                tools:ignore="MissingConstraints" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Landmark"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/Accent1"
+                android:textSize="@dimen/payu_dimen_12sp"
+                android:layout_marginStart="@dimen/margin_5"
+                android:textStyle="bold" />
+            <com.capitalnowapp.mobile.customviews.CNEditText
+                android:id="@+id/etLandmark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Near by school/ Hospital/ Mall/ Park/ Others"
+                android:maxLines="1"
+                android:importantForAutofill="no"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
+                android:paddingTop="@dimen/margin_5"
+                android:textSize="@dimen/payu_dimen_14sp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="@color/light_gray"
+                android:textCursorDrawable="@null"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_company_name"
+                tools:ignore="MissingConstraints" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Present Address Pincode"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/Accent1"
+                android:textSize="@dimen/payu_dimen_12sp"
+                android:layout_marginStart="@dimen/margin_5"
+                android:textStyle="bold" />
+            <com.capitalnowapp.mobile.customviews.CNEditText
+                android:id="@+id/etPincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Pincode"
+                android:maxLines="1"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="6"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
+                android:paddingTop="@dimen/margin_5"
+                android:textSize="@dimen/payu_dimen_14sp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="@color/light_gray"
+                android:textCursorDrawable="@null"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_company_name"
+                tools:ignore="MissingConstraints" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvStateAndCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/black"
+                android:textSize="@dimen/payu_dimen_12sp" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Office Address"
+                android:textStyle="bold"
+                android:textAppearance="@style/MediumText"
+                android:textColor="@color/Accent1"
+                android:textSize="20sp"/>
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address Line 1"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/Accent1"
+                android:textSize="@dimen/payu_dimen_12sp"
+                android:layout_marginStart="@dimen/margin_5"
+                android:textStyle="bold" />
+            <com.capitalnowapp.mobile.customviews.CNEditText
+                android:id="@+id/etOffAdr1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Complex No. / Corporate Park / Area / Locality"
+                android:maxLines="1"
+                android:importantForAutofill="no"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
+                android:paddingTop="@dimen/margin_5"
+                android:textSize="@dimen/payu_dimen_14sp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="@color/light_gray"
+                android:textCursorDrawable="@null"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_company_name"
+                tools:ignore="MissingConstraints" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address Line 2"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/Accent1"
+                android:textSize="@dimen/payu_dimen_12sp"
+                android:layout_marginStart="@dimen/margin_5"
+                android:textStyle="bold" />
+            <com.capitalnowapp.mobile.customviews.CNEditText
+                android:id="@+id/etOffAdr2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Floor No. / Wing"
+                android:maxLines="1"
+                android:importantForAutofill="no"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
+                android:paddingTop="@dimen/margin_5"
+                android:textSize="@dimen/payu_dimen_14sp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="@color/light_gray"
+                android:textCursorDrawable="@null"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_company_name"
+                tools:ignore="MissingConstraints" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Office Address Pincode"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/Accent1"
+                android:textSize="@dimen/payu_dimen_12sp"
+                android:layout_marginStart="@dimen/margin_5"
+                android:textStyle="bold" />
+            <com.capitalnowapp.mobile.customviews.CNEditText
+                android:id="@+id/etOffPincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Pincode"
+                android:maxLines="1"
+                android:inputType="number"
+                android:maxLength="6"
+                android:importantForAutofill="no"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
+                android:paddingTop="@dimen/margin_5"
+                android:textSize="@dimen/payu_dimen_14sp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="@color/light_gray"
+                android:textCursorDrawable="@null"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_company_name"
+                tools:ignore="MissingConstraints" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvOffStateAndCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/black"
+                android:textSize="@dimen/payu_dimen_12sp" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_weight="0">
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvProceed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:background="@drawable/rounded_corner_gradient"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="SUBMIT"
+            android:textAllCaps="true"
+            android:textAppearance="@style/SmallText"
+            android:textColor="@color/white"
+            tools:ignore="UnusedAttribute" />
+    </RelativeLayout>
+
+</LinearLayout>

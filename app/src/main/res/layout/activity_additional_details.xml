@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".kotlin.activities.AdditionalDetailsActivity">
+
+            <ImageView
+                android:id="@+id/iv_back_add_details"
+                android:layout_width="@dimen/margin_30"
+                android:layout_height="@dimen/margin_30"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_15"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_30"
+                android:adjustViewBounds="true"
+                android:rotation="180"
+                app:layout_constraintLeft_toLeftOf="@id/qc_tv_add_details"
+                app:layout_constraintRight_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_arrow_forward_24"
+                tools:ignore="MissingConstraints" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/qc_tv_add_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_15"
+                android:text="@string/title_additional_details"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_pan_number"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_15"
+                app:boxStrokeColor="@color/intro_page_body_color"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/qc_tv_add_details"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tx_et_pan_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/pan_card"
+                    android:inputType="text"
+                    android:maxLength="10"
+                    android:paddingBottom="@dimen/padding_20"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textColorHint="@color/black"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/qc_tv_add_details"
+                    tools:ignore="MissingConstraints" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_year_graduation"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_15"
+                app:boxStrokeColor="@color/intro_page_body_color"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_pan_number"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tx_et_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    android:drawablePadding="@dimen/margin_20"
+                    android:focusable="false"
+                    android:textCursorDrawable="@null"
+                    android:hint="@string/year_graduation"
+                    android:inputType="number"
+                    android:paddingBottom="@dimen/padding_20"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/til_pan_number"
+                    tools:ignore="MissingConstraints" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_college_name"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_15"
+                app:boxStrokeColor="@color/intro_page_body_color"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_year_graduation"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tx_et_college_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    android:drawablePadding="@dimen/margin_20"
+                    android:focusable="false"
+                    android:hint="@string/college_name"
+                    android:inputType="text"
+                    android:paddingBottom="@dimen/padding_20"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textColorHint="@color/black"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/til_year_graduation"
+                    tools:ignore="MissingConstraints" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_residence_type"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_15"
+                app:boxStrokeColor="@color/intro_page_body_color"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_college_name"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tx_et_residence_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    android:drawablePadding="@dimen/margin_20"
+                    android:focusable="false"
+                    android:hint="@string/residence_type"
+                    android:inputType="text"
+                    android:paddingBottom="@dimen/padding_20"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textCursorDrawable="@null"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rg_marital"
+                    tools:ignore="MissingConstraints" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_credit_card"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_15"
+                android:visibility="gone"
+                app:boxStrokeColor="@color/intro_page_body_color"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_residence_type"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tx_et_credit_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    android:drawablePadding="@dimen/margin_20"
+                    android:focusable="false"
+                    android:hint="@string/credit_card"
+                    android:inputType="number"
+                    android:paddingBottom="@dimen/padding_20"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:textCursorDrawable="@null"
+                    app:layout_constraintTop_toBottomOf="@+id/til_residence_type"
+                    tools:ignore="MissingConstraints" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RadioGroup
+                android:id="@+id/rg_marital"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_15"
+                android:orientation="horizontal"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_credit_card"
+                tools:ignore="MissingConstraints">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tv_married"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/single_rounded_square"
+                    android:drawableStart="@drawable/ic_marrige"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:drawableTint="@color/black"
+                    android:gravity="start|center"
+                    android:paddingStart="@dimen/margin_10"
+                    android:paddingTop="@dimen/padding_10"
+                    android:paddingBottom="@dimen/padding_10"
+                    android:text="@string/married"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tv_unmarried"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/padding_15"
+                    android:layout_weight="1"
+                    android:background="@drawable/single_rounded_square"
+                    android:drawableStart="@drawable/ic_single"
+                    android:drawablePadding="@dimen/margin_10"
+                    android:gravity="start|center"
+                    android:paddingStart="@dimen/margin_10"
+                    android:paddingTop="@dimen/margin_10"
+                    android:paddingBottom="@dimen/padding_10"
+                    android:text="@string/unmarried"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+            </RadioGroup>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPurpose"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_15"
+                android:visibility="invisible"
+                app:boxStrokeColor="@color/intro_page_body_color"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rg_marital"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPurpose"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="false"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    android:drawablePadding="@dimen/margin_20"
+                    android:focusable="false"
+                    android:hint="@string/purpose_of_loan"
+                    android:inputType="number"
+                    android:paddingBottom="@dimen/padding_20"
+                    android:textColor="@color/black"
+                    android:textCursorDrawable="@null"
+                    android:textColorHint="@color/black"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/til_credit_card"
+                    tools:ignore="MissingConstraints" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <EditText
+                android:id="@+id/etCustomPurpose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_15"
+                android:hint="@string/loan_purpose_custom_validation_msg"
+                android:inputType="text"
+                android:maxLength="249"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/intro_page_body_color"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tilPurpose"
+                app:layout_goneMarginBottom="@dimen/margin_30"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/sv"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+       <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvFinish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/margin_15"
+            android:layout_marginTop="@dimen/margin_15"
+            android:background="@drawable/rounded_corner_gradient"
+            android:gravity="center"
+            android:padding="17dp"
+            android:text="@string/title_finish"
+            android:textAllCaps="true"
+            android:textAppearance="@style/SmallText"
+            android:textColor="@color/white"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:adjustViewBounds="true"
+            android:alpha="0.2"
+            app:srcCompat="@drawable/ic_undraw_mobile_login"
+            tools:ignore="MissingConstraints" />
+
+    </FrameLayout>
+
+</RelativeLayout>

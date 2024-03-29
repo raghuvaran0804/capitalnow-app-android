@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_dialog"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_10">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin_10"
+        android:adjustViewBounds="true"
+        android:src="@drawable/rewards_success_star" />
+
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:gravity="center"
+        android:textAppearance="@style/LargeTextWithBold"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvSuccess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="@dimen/margin_10"
+        android:background="@drawable/rounded_corner_gradient"
+        android:gravity="center"
+        android:padding="@dimen/margin_15"
+        android:paddingStart="@dimen/margin_10"
+        android:paddingTop="@dimen/margin_5"
+        android:paddingEnd="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_5"
+        android:text="check the coupon"
+        android:textAllCaps="true"
+        android:textAppearance="@style/MediumText"
+        android:textColor="@color/white" />
+</LinearLayout>

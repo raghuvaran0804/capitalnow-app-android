@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2FA"
+    android:orientation="vertical"
+    tools:context=".kotlin.activities.NewApplyLoanActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvBack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:drawableStart="@drawable/ic_baseline_arrow_forward_24"
+            android:drawableTint="@color/Primary2"
+            android:rotation="180"
+            android:textColor="@color/Primary2"
+            android:textStyle="bold"
+            tools:ignore="UnusedAttribute" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvPanVerification"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_weight="9"
+            android:gravity="center_horizontal"
+            android:text="Final Offer"
+            android:textAppearance="@style/LargeTextWithBold"
+            android:textColor="@color/Primary2"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_4"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:orientation="vertical">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pick Your Loan"
+                android:layout_marginTop="@dimen/margin_8"
+                android:textColor="@color/Accent1"
+                android:textSize="@dimen/payu_dimen_12sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvData"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_height="wrap_content" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvLoanSummaryText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:letterSpacing="0.05"
+                android:text="Loan Summary"
+                android:visibility="gone"
+                android:textColor="@color/Accent1"
+                android:textSize="@dimen/payu_dimen_12sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/llLoanSummery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:background="@drawable/rounded_corner"
+                android:backgroundTint="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:orientation="horizontal">
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvLoanAmountText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_2"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:layout_weight="1"
+                        android:letterSpacing="0.05"
+                        android:text="Loan Amount"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvLoanAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_2"
+                        android:layout_weight="1"
+                        android:letterSpacing="0.05"
+                        android:paddingStart="@dimen/margin_16"
+                        android:paddingEnd="@dimen/margin_20"
+                        android:text="Rs. 20000.00"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:orientation="horizontal">
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvProcessingFeeText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_2"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:layout_weight="1"
+                        android:letterSpacing="0.05"
+                        android:text="Processing Fee"
+                        android:textColor="@color/Accent1"
+                        android:textSize="10sp" />
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvProcessingFee"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/payu_dimen_2dp"
+                        android:layout_weight="1"
+                        android:letterSpacing="0.05"
+                        android:paddingEnd="@dimen/margin_20"
+                        android:text="(-) Rs. 2000.00"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/Accent1"
+                        android:textSize="10sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:orientation="horizontal">
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvGst"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_2"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:layout_weight="1.5"
+                        android:letterSpacing="0.05"
+                        android:text="GST 18% of Processing Fee"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="10sp" />
+
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvGstAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_2"
+                        android:layout_weight="1"
+                        android:letterSpacing="0.05"
+                        android:paddingEnd="@dimen/margin_20"
+                        android:text="(-) Rs. 200.00"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/Accent1"
+                        android:textSize="10sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llInsurance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:orientation="horizontal">
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvInsuranceText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_2"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:layout_weight="1"
+                        android:letterSpacing="0.05"
+                        android:text="Insurance +18%"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="10sp" />
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvInsuranceAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_2"
+                        android:layout_weight="1"
+                        android:letterSpacing="0.05"
+                        android:paddingEnd="@dimen/margin_20"
+                        android:text="(-) Rs. 200.00"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/Accent1"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:orientation="horizontal">
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvDisbursalText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_2"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:layout_weight="1"
+                        android:letterSpacing="0.05"
+                        android:text="Net Disbursal Amount"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvDisbursalAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_2"
+                        android:layout_weight="1"
+                        android:letterSpacing="0.05"
+                        android:paddingStart="@dimen/margin_16"
+                        android:paddingEnd="@dimen/margin_20"
+                        android:text="Rs. 17920.00"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvRepaySchedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:letterSpacing="0.05"
+                android:text="Repayment Schedule"
+                android:textColor="@color/Accent1"
+                android:textSize="@dimen/payu_dimen_12sp"
+                android:visibility="gone"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSheduleData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/llDayRepayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E8F3FF"
+                android:padding="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_8"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="EMI Amount"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:textColor="@color/dark_gray"/>
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvDayEmiAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0509"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Due Date"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:textColor="@color/dark_gray"/>
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvDayEmiDueDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="01/01/01"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Interest"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:textColor="@color/dark_gray"/>
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvDayEmiInterest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="150"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Principal Amount"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:textColor="@color/dark_gray"/>
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvDayEmiPrincipalAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3000"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llPromocode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_4"
+                    android:letterSpacing="0.05"
+                    android:text="Promocode"
+                    android:textColor="@color/Accent1"
+                    android:textSize="@dimen/payu_dimen_12sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.capitalnowapp.mobile.customviews.CNEditText
+                        android:id="@+id/etReferralCode"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="4"
+                        android:hint="Enter Promocode"
+                        android:inputType="textCapCharacters"
+                        android:maxLines="1"
+                        android:paddingStart="5dp"
+                        android:paddingTop="@dimen/margin_5"
+                        android:paddingEnd="0dp"
+                        android:textColor="@color/dark_gray"
+                        android:textColorHint="@color/light_gray"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/payu_dimen_14sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/til_company_name"
+                        tools:ignore="MissingConstraints" />
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvApplyPromo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:layout_marginStart="@dimen/margin_16"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_corner_gradient"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/margin_8"
+                        android:paddingTop="@dimen/payu_dimen_4dp"
+                        android:paddingEnd="@dimen/margin_8"
+                        android:paddingBottom="@dimen/payu_dimen_4dp"
+                        android:text="APPLY"
+                        android:textAppearance="@style/SmallText"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/payu_dimen_12sp"
+                        android:textStyle="bold" />
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvRemovePromo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:layout_marginStart="@dimen/margin_16"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/margin_8"
+                        android:paddingTop="@dimen/payu_dimen_4dp"
+                        android:paddingEnd="@dimen/margin_8"
+                        android:paddingBottom="@dimen/payu_dimen_4dp"
+                        android:text="REMOVE"
+                        android:textAppearance="@style/SmallText"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/payu_dimen_12sp"
+                        android:visibility="gone"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvSavedText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="0.05"
+                    android:text=""
+                    android:textColor="@color/Accent1"
+                    android:textSize="10sp"/>
+
+            </LinearLayout>
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.05"
+                android:text="Remember"
+                android:textColor="@color/Accent1"
+                android:textSize="@dimen/payu_dimen_12sp"
+                android:textStyle="bold" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvRememberText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_4"
+                android:lineHeight="14dp"
+                android:text=""
+                android:textAppearance="@style/VerySmallText"
+                android:textColor="@color/black"
+                android:textColorHighlight="#00FFFFFF"
+                android:textSize="10sp" />
+
+            <LinearLayout
+                android:id="@+id/llBorrowerTerms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/cbBorrowerTerms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:textColor="@color/black" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvBorrowerTerms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    android:lineHeight="14dp"
+                    android:text=""
+                    android:textAppearance="@style/VerySmallText"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="#00FFFFFF"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0">
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvAgree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/margin_32"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_32"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:background="@drawable/rounded_corner_gradient"
+            android:gravity="center"
+            android:padding="@dimen/margin_16"
+            android:text="AGREED"
+            android:textAllCaps="true"
+            android:textAppearance="@style/SmallText"
+            android:textColor="@color/white"
+            tools:ignore="UnusedAttribute" />
+    </RelativeLayout>
+
+</LinearLayout>

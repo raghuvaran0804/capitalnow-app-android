@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary">#FFFF</color>
+    <color name="color_primary_dark">#0E2549</color>
+    <color name="color_accent">#178BFF</color>
+    <color name="colorInsBg">#AED8F4</color>
+    <color name="colorSky">#00B8C9</color>
+    <color name="colorSky_1">#7FB3F2</color>
+    <color name="colorBlackShade">#143234</color>
+    <color name="colorThickBlack">#1a1a1a</color>
+    <color name="grey_bg">#f2f2f2</color>
+    <color name="colorBlackShade1">#3e4b5d</color>
+    <color name="pop_up_color">#0E2549</color>
+    <color name="redeem_tab_color">#A09E9E</color>
+
+    <color name="basicBg">#F0F4FA</color>
+    <color name="menuBg">#F4F2EC </color>
+    <color name="professionalBg">#F8F7E5</color>
+    <color name="addBg">#FAFAFA</color>
+
+    <color name="green">#85B96A</color>
+    <color name="colorNavigationMenuBar">#000000</color>
+    <color name="colorNavigationMenuBarGreen">#000000</color>
+    <color name="colorAlertDialog">#1db954</color>
+    <color name="colorApplyNowBg">#75B26B</color>
+    <color name="colorProfileProgress">#6FF46F</color>
+    <color name="colorProfileProgress_1">#18C777</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="light_white">#f5f5f5</color>
+    <color name="black">#000000</color>
+    <color name="dark_gray">#6F7784</color>
+    <color name="translucent_black">#4F000000</color>
+    <color name="dark_gray_1">#ADADAD</color>
+    <color name="light_gray">#d3d3d3</color>
+    <color name="transparent">#00000000</color>
+    <color name="colorSideMenuUnSelect">#485564</color>
+    <color name="colorMyLoansBg">#F6F2F2</color>
+
+    <color name="alert_dialog_background">@color/color_primary</color><!--#203f54-->
+    <color name="alert_dialog_color_accent">#ffc107</color><!--#ffc107-->
+
+    <color name="login_page_background">#f6f6f6</color>
+    <color name="placeholder_color">#B9CCCF</color>
+    <color name="selected_text_color">#324A4C</color>
+    <color name="apply_loan_background">#89c261</color>
+    <color name="toggle_widget_checked_button_color">#efeff4</color>
+
+    <color name="intro_page_body_color">#909090</color>
+    <color name="backScreen_color">#f6f6f6</color>
+    <color name="colorSecondary">#85B96A</color>
+    <color name="colorGrey">#DFE4EA</color>
+    <color name="colorGrey_1">#efeff4</color>
+    <color name="colorDarkBlue">#485564</color>
+    <color name="colorDarkBlue_1">#020B21</color>
+    <color name="colorDarkBlue_3">#285372</color>
+
+    <color name="colorFB">#3268A3</color>
+    <color name="colorFlipCart">#FFE300</color>
+    <color name="colorOLA">#DEE40F</color>
+    <color name="colorInShorts">#FF0073</color>
+    <color name="colorQuora">#DE2D34</color>
+    <color name="colorInstagam_and_Uber">#000000</color>
+    <color name="colorSnap">#F9FD12</color>
+    <color name="colorSwiggy">#E47B02</color>
+    <color name="colorZomato">#DE2D37</color>
+    <color name="colorAmazon">#E79004</color>
+    <color name="colorMyntra">#E1309B</color>
+    <color name="colorLN">#478EC6</color>
+    <color name="colorIndeed">#4777FE</color>
+    <color name="colorQuickRide">#419A39</color>
+    <color name="colorTOI">#DE2C01</color>
+    <color name="light_red">#f57162</color>
+    <color name="colorFundsIndia">#3567AF</color>
+    <color name="colorInvesTAP">#4777FE</color>
+    <color name="colorMyCams">#7F8683</color>
+    <color name="colorNaukri">#008CC8</color>
+
+
+    <color name="black_overlay">#66000000</color>
+    <color name="orange_alert">#FA7300</color>
+    <color name="orange_alert_1">#F60707</color>
+    <color name="colorIntroItemsBG">#00808C</color>
+
+    <color name="colorRateDialogTitle">#0A4065</color>
+    <color name="colorRedeemBlue">#0A7AFF</color>
+
+    <color name="colorFederalShade">#333436</color>
+    <color name="otpSheetBG">#FFFBEA</color>
+    <color name="colorPaymentStatus">#25D395</color>
+    <color name="colorNewPay">#0CBA92</color>
+    <color name="expenseBG">#F4F3F3</color>
+
+    //Text color of header text and button text
+
+    //Moshi Moshi Branding
+    <color name="Primary1">#178BFF</color>
+    <color name="Primary2">#2300DA</color>
+    <color name="Secondary1">#E1E1E1</color>
+    <color name="Secondary2">#AED8F4</color>
+    <color name="Secondary3">#BFBFBF</color>
+    <color name="Accent1">#0E2549</color>
+    <color name="Accent2">#FCB9C0</color>
+    <color name="NewBg">#EFF0F2</color>
+    <color name="cs_bg">#E2E9F4</color>
+    <color name="rewards_bg">#E9F4FE</color>
+    <color name="rewards_card_bg">#EAE8F5</color>
+
+    //PieGraph
+    <color name="miscellaneous">#8A3FFC</color>
+    <color name="groceries">#33B1FF</color>
+    <color name="transfer">#FA4D56</color>
+    <color name="loans">#FF7EB6</color>
+    <color name="others">#FFC1C1</color>
+
+
+    // App Background
+    <color name="appBackground">#f2f2fa</color>
+    <color name="cardEmiBg">#F7F7F7</color>
+    <color name="cardEmiPaidBg">#EAF2F0</color>
+
+
+
+
+
+</resources>

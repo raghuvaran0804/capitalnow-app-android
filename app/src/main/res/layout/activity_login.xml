@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_15"
+        android:background="@color/Secondary1"
+        android:gravity="center"
+        android:padding="@dimen/margin_10"
+        android:text="@string/nbfc_text"
+        android:textAppearance="@style/VerySmallText"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/header_logo"
+            android:layout_width="270dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/cn_logo_new" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_30"
+                android:text="Login"
+                android:textAppearance="@style/LargeTextWithBold"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <include
+                android:id="@+id/llOTP"
+                layout="@layout/fragment_login_with_mobile_otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_40"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_40"
+                android:importantForAutofill="yes" />
+
+            <com.capitalnowapp.mobile.customviews.CNButton
+                android:id="@+id/login_button"
+                style="?android:textAppearanceLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_30"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:background="@drawable/rounded_corner_gradient"
+                android:text="@string/action_log_in"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_30"
+            android:orientation="vertical">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/made_in_india"
+                android:textAllCaps="true"
+                android:textAppearance="@style/MediumText"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@drawable/ic_india_bg" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:adjustViewBounds="true"
+            android:alpha="0.2"
+            app:srcCompat="@drawable/ic_undraw_mobile_login" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/margin_15"
+            android:backgroundTint="@color/Primary1"
+            android:gravity="center"
+            android:padding="@dimen/margin_20"
+            android:text="Login"
+            android:textAllCaps="true"
+            android:textAppearance="@style/SmallText"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</LinearLayout>

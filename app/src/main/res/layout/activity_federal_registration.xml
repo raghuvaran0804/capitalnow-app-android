@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".kotlin.activities.FederalRegistrationActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.99"
+            android:background="@color/Accent1" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.05"
+            android:src="@drawable/ic_federal_bg" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="right">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/etnotYou"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/margin_5"
+                android:gravity="right"
+                android:layout_marginTop="@dimen/margin_20"
+                android:text="Not you?"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvLogoutFedReg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/margin_5"
+                android:gravity="right"
+                android:layout_marginStart="@dimen/margin_2"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:text="@string/not_you_logout"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/et_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:lineSpacingExtra="@dimen/margin_5"
+            android:paddingStart="50dp"
+            android:paddingEnd="150dp"
+            android:text="@string/federal_registration_title"
+            android:textColor="@color/white"
+            android:textSize="26sp" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llLogin"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="-20dp"
+        android:layout_weight="3.5"
+        android:background="@drawable/bottom_sheet_bg"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_40"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/margin_5"
+            android:text="@string/social_login_title"
+            android:textAppearance="@style/LargeTextWithBold"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivGoogle"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_federal_g" />
+
+            <ImageView
+                android:id="@+id/ivFb"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_federal_fb"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/ivLn"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="@dimen/margin_100"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_federal_ln"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

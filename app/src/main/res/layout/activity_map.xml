@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".kotlin.activities.MapActivity">
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/google_map"
+        android:layout_marginBottom="250dp"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        tools:ignore="FragmentTagUsage" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:layout_below="@+id/google_map"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Your Current Location"
+            android:layout_marginStart="@dimen/margin_20"
+            android:textColor="@color/black"
+            android:textSize="@dimen/payu_dimen_16sp"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_10">
+        <FrameLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:src="@drawable/mapaddress" />
+
+
+            <TextView
+                android:id="@+id/tvMainAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_50"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="120dp"
+                android:text="Location"
+                android:textStyle="bold"
+                android:textSize="@dimen/margin_20"
+                android:textColor="@color/Primary2"/>
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvEditAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="250dp"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:gravity="right"
+                    android:text="Edit ADDRESS"
+                    android:textSize="12sp"
+                    android:padding="@dimen/margin_5"
+                    android:layout_marginBottom="@dimen/margin_5"
+                    android:background="@drawable/rectangle_border"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    tools:ignore="MissingConstraints" />
+
+
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_50"
+                android:layout_marginTop="@dimen/margin_40"
+                android:layout_marginEnd="@dimen/margin_40"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:text="Location"
+                android:textSize="14sp" />
+
+
+        </FrameLayout>
+            <EditText
+                android:id="@+id/etAdr1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="85dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:maxLength="38"
+                android:textSize="15sp"
+                android:hint="House No/Flat No/Villa No"/>
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvFinish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="135dp"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:padding="17dp"
+                android:background="@drawable/rounded_corner_gradient"
+                android:drawableTint="@color/white"
+                android:gravity="center"
+                android:text="CONFIRM"
+                android:textAllCaps="true"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/white"
+                tools:ignore="MissingConstraints" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_30"
+    android:layout_marginTop="@dimen/margin_30"
+    android:layout_marginRight="@dimen/margin_30"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/margin_50">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_Image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="@dimen/margin_7"
+                android:layout_marginEnd="@dimen/margin_7"
+                android:clickable="false"
+                app:srcCompat="@drawable/rounded_corner_square" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/vRoundLetterView"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="@dimen/margin_7"
+                android:layout_marginEnd="@dimen/margin_7"
+                android:background="@drawable/rounded_corner_square"
+                android:enabled="false"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_cross"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="top|end"
+                android:background="@drawable/bg_oval_shape"
+                android:backgroundTint="@color/black"
+                android:clickable="false"
+                android:padding="@dimen/margin_3"
+                app:srcCompat="@drawable/ic_cross_delete" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_30"
+            android:orientation="vertical">
+
+            <com.capitalnowapp.mobile.customviews.CNEditText
+                android:id="@+id/et_reference_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dark_gray"
+                android:hint="Enter Name"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="100"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/margin_15"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <com.capitalnowapp.mobile.customviews.CNEditText
+                android:id="@+id/qc_tv_mobile_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dark_gray"
+                android:digits="0123456789"
+                android:hint="Enter Number"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingBottom="@dimen/margin_15"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/margin_10"
+                android:alpha="0.4"
+                android:background="@color/dark_gray"
+                android:visibility="gone" />
+
+            <com.capitalnowapp.mobile.customviews.CNEditText
+                android:id="@+id/etRelation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dark_gray"
+                android:hint="Enter Relation"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/margin_15"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_25"
+        android:alpha="0.4"
+        android:background="@color/dark_gray" />
+</LinearLayout>

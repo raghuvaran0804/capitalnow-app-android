@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_marginEnd="@dimen/margin_10"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvLoanId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:layout_toStartOf="@id/llType"
+                android:maxLines="2"
+                android:textAppearance="@style/MicroText"
+                android:textColor="@color/colorDarkBlue"
+                android:textStyle="bold" />
+
+            <include
+                android:id="@+id/llType"
+                layout="@layout/apay_closed_loans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/margin_10" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:text="@string/borrow_amount"
+                android:textAppearance="@style/MicroText"
+                android:textColor="@color/colorDarkBlue" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:textAppearance="@style/MicroText"
+                android:textColor="@color/colorDarkBlue"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:text="@string/interest"
+                android:textAppearance="@style/MicroText"
+                android:textColor="@color/colorDarkBlue" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvInterest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:textAppearance="@style/MicroText"
+                android:textColor="@color/colorDarkBlue"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:text="@string/fee"
+                android:textAppearance="@style/MicroText"
+                android:textColor="@color/colorDarkBlue" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvFee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:textAppearance="@style/MicroText"
+                android:textColor="@color/colorDarkBlue"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:text="Discount"
+                android:textAppearance="@style/MicroText"
+                android:textColor="@color/colorDarkBlue" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:textAppearance="@style/MicroText"
+                android:textColor="@color/colorDarkBlue"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:background="@color/black" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:text="@string/total"
+                android:textAppearance="@style/MicroText"
+                android:textColor="@color/colorDarkBlue" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:textAppearance="@style/MicroText"
+                android:textColor="@color/colorDarkBlue"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivCLose"
+        android:layout_width="@dimen/margin_25"
+        android:layout_height="@dimen/margin_25"
+        android:layout_gravity="end"
+        android:background="@drawable/rzp_loader_circle"
+        android:backgroundTint="@color/black"
+        android:padding="@dimen/margin_7"
+        android:src="@drawable/ic_close" />
+</FrameLayout>

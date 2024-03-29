@@ -1,0 +1,6 @@
+<!-- Compatible to 7.0" tablet - 1024x600 mdpi devices eg: Nexus 7 -->
+
+<resources>
+    <dimen name="normal_font_size">17sp</dimen>
+    <dimen name="alert_dialog_title_font_size">20sp</dimen>
+</resources>

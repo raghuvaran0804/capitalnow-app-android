@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="@dimen/margin_3"
+    android:layout_marginEnd="@dimen/margin_3"
+    android:orientation="vertical"
+    tools:context=".kotlin.fragments.ActiveLoansFragment">
+
+    <LinearLayout
+        android:id="@+id/llData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rp_card2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_50"
+            android:layout_marginBottom="@dimen/margin_8"
+            android:layout_marginStart="@dimen/margin_16"
+            android:orientation="vertical">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                app:lineHeight="@dimen/margin_24"
+                android:text="Your Available \nReward Points?"
+                android:lineHeight="@dimen/margin_20"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/payu_dimen_16sp"/>
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvPoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_30"
+                android:background="@drawable/rounded_corner"
+                android:backgroundTint="@color/Primary2"
+                android:gravity="center"
+                android:drawablePadding="@dimen/margin_3"
+                android:drawableStart="@drawable/reward_coin"
+                android:paddingStart="8dp"
+                android:paddingTop="@dimen/margin_3"
+                android:paddingEnd="@dimen/margin_8"
+                android:paddingBottom="@dimen/margin_3"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/margin_8"
+                android:text="1000"
+                android:textSize="@dimen/payu_dimen_16sp"
+                android:textAppearance="@style/VerySmallText"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

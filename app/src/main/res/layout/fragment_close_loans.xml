@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_page_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".kotlin.fragments.CloseLoansFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_close_loan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_10"
+        android:orientation="vertical"
+        android:visibility="visible"
+        tools:context=".kotlin.fragments.CloseLoansFragment" />
+
+    <LinearLayout
+        android:id="@+id/llNoLoanContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/margin_40"
+        android:layout_marginEnd="@dimen/margin_40"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/margin_40"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_noloan"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|top"
+            android:textAppearance="@style/MediumText"
+            android:textColor="@color/black"
+            android:textStyle="normal" />
+    </LinearLayout>
+</LinearLayout>
+

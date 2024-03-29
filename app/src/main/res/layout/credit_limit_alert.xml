@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/single_rounded_square"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_10">
+
+        <ImageView
+            android:id="@+id/ivStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_20"
+            android:src="@drawable/limitpop"
+            tools:ignore="ContentDescription" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvCreditLimitMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_20"
+            android:gravity="center"
+            android:paddingStart="@dimen/margin_20"
+            android:paddingEnd="@dimen/margin_20"
+            android:text="Your credit limit is increased to"
+            android:textColor="@color/Primary2"
+            android:textSize="18sp"/>
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvAmountMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_20"
+            android:gravity="center"
+            android:paddingStart="@dimen/margin_20"
+            android:paddingEnd="@dimen/margin_20"
+            android:text="30,000"
+            android:textColor="@color/Primary2"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20" />
+
+
+        <LinearLayout
+            android:id="@+id/llDownpayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:padding="@dimen/margin_10"
+            android:textSize="14sp"
+            android:textColor="#5f5f6f"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/ivInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_info_new"
+                android:layout_marginTop="@dimen/margin_5"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tvInfoDownPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineHeight="@dimen/margin_20"
+                android:paddingStart="@dimen/margin_5"
+                android:visibility="gone"
+                tools:ignore="RtlSymmetry,UnusedAttribute"/>
+
+        </LinearLayout>
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvAgree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:background="@drawable/rounded_corner_gradient"
+            android:gravity="center"
+            android:paddingStart="@dimen/margin_30"
+            android:paddingTop="@dimen/margin_10"
+            android:paddingEnd="@dimen/margin_30"
+            android:paddingBottom="@dimen/margin_10"
+            android:text="@string/agree_and_continue"
+            android:textAppearance="@style/MediumText"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</ScrollView>

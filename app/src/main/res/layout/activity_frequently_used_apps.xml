@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".kotlin.activities.FrequentlyUsedAppsActivity">
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/et_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_20"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:gravity="center"
+        android:padding="@dimen/margin_20"
+        android:text="@string/frequently_used_title"
+        android:textAppearance="@style/LargeTextWithBold"
+        android:textStyle="bold" />
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/QCTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Select any 4 Apps"
+        android:textAppearance="@style/LargeTextWithBold"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/et_title"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAppsList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/margin_30"
+        android:paddingTop="@dimen/margin_40"
+        android:paddingBottom="@dimen/margin_20"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/margin_30"
+        android:layout_weight="1"
+        android:visibility="visible" />
+
+    <com.igalata.bubblepicker.rendering.BubblePicker
+        android:id="@+id/picker"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:layout_weight="1"
+        app:backgroundColor="@android:color/transparent" />
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/ivSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_margin="@dimen/margin_15"
+        android:background="@drawable/rounded_corner_gradient"
+        android:gravity="center"
+        android:padding="17dp"
+        android:text="Submit "
+        android:textAllCaps="true"
+        android:textAppearance="@style/SmallText"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tilIndustry"
+        tools:ignore="MissingConstraints" />
+</LinearLayout>

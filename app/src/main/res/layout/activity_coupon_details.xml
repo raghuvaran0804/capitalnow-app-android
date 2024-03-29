@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".kotlin.fragments.RewardPointsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:background="@color/colorDarkBlue_1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:background="@color/colorGrey_1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <include layout="@layout/toolbar_basic_rewards" />
+
+            <ImageView
+                android:id="@+id/ivBanner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:adjustViewBounds="true"
+                android:src="@drawable/rewards_star" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="7"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_15"
+                    android:layout_weight="1.3"
+                    android:orientation="vertical">
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingStart="@dimen/margin_10"
+                        android:paddingEnd="@dimen/margin_10"
+                        android:textAppearance="@style/SmallText"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvOn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingStart="@dimen/margin_10"
+                        android:paddingEnd="@dimen/margin_10"
+                        android:textAppearance="@style/VerySmallText"
+                        android:textColor="@color/dark_gray" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorGrey_1" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10"
+                    android:layout_weight=".7"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_10">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_rewards_calendar" />
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Expires On"
+                        android:textAppearance="@style/MicroText"
+                        android:textColor="@color/black" />
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvExpireDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textAppearance="@style/VerySmallText"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tvRedeem"
+                android:layout_below="@id/ll1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_15">
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginStart="@dimen/margin_15"
+                        android:text="Terms:"
+                        android:textAppearance="@style/MediumText"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <com.capitalnowapp.mobile.customviews.CNTextView
+                        android:id="@+id/tvDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_marginStart="@dimen/margin_15"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/VerySmallText"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_25"
+                        android:layout_marginBottom="@dimen/margin_20"
+                        android:gravity="center|start"
+                        android:layout_marginStart="@dimen/margin_15"
+                        android:orientation="horizontal">
+
+                        <com.capitalnowapp.mobile.customviews.CNTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Website Link:"
+                            android:textAppearance="@style/MediumText"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <com.capitalnowapp.mobile.customviews.CNTextView
+                            android:id="@+id/tvTermsLink"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/margin_10"
+                            android:text="Terms:"
+                            android:textAppearance="@style/VerySmallText"
+                            android:textColor="@color/colorSky_1"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </ScrollView>
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvRedeem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:background="@drawable/rounded_corner_gradient"
+                android:gravity="center"
+                android:padding="17dp"
+                android:paddingStart="@dimen/margin_10"
+                android:paddingTop="@dimen/margin_5"
+                android:paddingEnd="@dimen/margin_10"
+                android:paddingBottom="@dimen/margin_5"
+                android:textAllCaps="true"
+                android:textAppearance="@style/MediumText"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

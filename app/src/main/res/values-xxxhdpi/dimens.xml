@@ -1,0 +1,12 @@
+<!-- Compatible to 5.5” 720 x 1280 xhdpi devices eg : Le2, Lenovo K3 Note -->
+<resources>
+    <dimen name="normal_font_size">16sp</dimen>
+
+    <dimen name="text_large">22sp</dimen>
+    <dimen name="text_medium">19sp</dimen>
+    <dimen name="text_small">17sp</dimen>
+    <dimen name="text_very_small">15sp</dimen>
+    <dimen name="text_micro">12sp</dimen>
+    <dimen name="text_extra_large">24sp</dimen>
+
+</resources>

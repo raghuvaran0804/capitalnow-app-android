@@ -1,0 +1,217 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+    compileSdkVersion 33
+    defaultConfig {
+        applicationId "com.capitalnowapp.mobile"
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 115
+        versionName '1.0.14'
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    signingConfigs {
+        release {
+            keyAlias 'capitalnow'
+            keyPassword 'altair'
+            storeFile file('/Users/apple/Documents/Workspace/Android/Others/CapitalNow/keystore/CapitalNow.jks')
+            storePassword 'altair'
+        }
+    }
+    productFlavors {
+    }
+
+// This is to fix the error : More than one file was found with OS independent path
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude '*/res/**'
+        exclude 'AndroidManifest.xml'
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+// To resolve Lint found fatal errors while assembling a release target
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+
+dependencies {
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
+    implementation 'androidx.compose.ui:ui-graphics:1.0.0-rc01'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    implementation 'androidx.lifecycle:lifecycle-process:2.3.1'
+    testImplementation 'junit:junit:4.13.2'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.core:core-ktx:1.6.0'
+    implementation 'androidx.legacy:legacy-support-core-utils:1.0.0'
+    implementation 'androidx.fragment:fragment-ktx:1.3.6'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.facebook.android:facebook-android-sdk:11.1.0'
+    implementation 'com.facebook.android:audience-network-sdk:6.8.0'
+    //implementation 'dev.dworks.libs:volleyplus:+'
+    implementation 'com.google.firebase:firebase-messaging:23.0.0'
+    implementation 'com.google.firebase:firebase-dynamic-links:21.0.0'
+    // Add the Firebase Crashlytics SDK.
+    implementation 'com.google.firebase:firebase-crashlytics:18.2.7'
+    implementation ('com.google.firebase:firebase-analytics:20.0.2'){
+        exclude group: 'com.google.android.gms', module : 'play-services-ads-identifier'
+    }
+
+    implementation ('com.google.android.gms:play-services-auth:20.1.0'){
+        exclude group: 'com.google.android.gms', module : 'play-services-ads-identifier'
+    }
+    implementation ('com.google.android.gms:play-services-location:19.0.1'){
+        exclude group: 'com.google.android.gms', module : 'play-services-ads-identifier'
+    }
+    implementation 'com.google.api-client:google-api-client-android:1.22.0'
+    implementation 'com.google.apis:google-api-services-people:v1-rev466-1.25.0'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    implementation 'com.razorpay:checkout:1.6.38'
+
+    // retrofit, network request
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    implementation "androidx.core:core-ktx:1.6.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.chaos.view:pinview:1.4.2'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'com.github.rantianhua:AssembleEssay:v1.0.0'
+    implementation 'com.eftimoff:android-viewpager-transformers:1.0.1@aar'
+    implementation "com.razorpay:razorpay-java:1.3.8"
+    implementation 'com.airbnb.android:lottie:3.4.0'
+    implementation 'com.google.android.play:core:1.10.0'
+
+    implementation 'com.yarolegovich:sliding-root-nav:1.1.0'
+    //implementation 'com.github.corouteam:GlideToVectorYou:v2.0.0'
+    implementation 'com.github.2coffees1team:GlideToVectorYou:v2.0.0'
+
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1"
+
+    // crop image
+    implementation 'com.steelkiwi:cropiwa:1.0.3'
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+
+    // payu
+    implementation 'in.payu:payu-checkout-pro:1.6.0'
+    /*implementation ('in.payu:phonepe-intent:1.6.1'){
+        exclude group: 'com.google.android.gms', module : 'play-services-ads-identifier'
+    }*/
+    implementation 'in.payu:payu-gpay:1.4.0'
+
+    implementation 'com.mikhaellopez:circularprogressbar:3.0.3'
+
+    implementation 'com.romandanylyk:pageindicatorview:1.0.3'
+    implementation 'com.github.mukeshsolanki:DrawingView-Android:1.0.13'
+    implementation 'com.github.igalata:Bubble-Picker:v0.2.4'
+
+    //appsflyer
+    implementation 'com.appsflyer:af-android-sdk:6.0.0'
+    //implementation 'com.appsflyer:af-android-sdk:6.0.0'
+    implementation 'com.android.installreferrer:installreferrer:2.2'
+    implementation 'com.gauravbhola.ripplepulsebackground:library:1.0.0'
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    //branch
+    //implementation 'io.branch.sdk.android:library:5.2.0'
+    //implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+    implementation 'androidx.browser:browser:1.4.0'
+    implementation 'com.google.firebase:firebase-appindexing:20.0.0'
+
+    // support for branch integration
+    implementation 'com.google.guava:guava:27.0.1-android'
+
+    //SignaturePad
+    implementation 'com.williamww:silky-signature:0.1.0'
+    //ZoomImageview
+    implementation 'com.jsibbold:zoomage:1.3.1'
+
+    implementation 'com.google.android.gms:play-services-auth:20.2.0'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+    implementation 'com.github.smarteist:autoimageslider:1.3.9'
+
+    implementation 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:3.0.0-RC2'
+
+    //Mixpanel
+    implementation 'com.mixpanel.android:mixpanel-android:7.3.0'
+    //play integrity API
+    implementation 'com.google.android.play:integrity:1.1.0'
+
+    //circular seek bar
+    implementation 'me.tankery.lib:circularSeekBar:1.4.2'
+
+    //Tolltip
+    implementation "com.github.skydoves:balloon:1.4.2"
+
+    //EasyBuzz
+    implementation files('libs/peb-lib-android-x.aar')
+    implementation 'com.squareup.okhttp:okhttp:2.4.0'
+    implementation 'androidx.multidex:multidex:2.0.0'
+    implementation 'com.squareup.okhttp:okhttp-urlconnection:2.2.0'
+    implementation 'com.google.android.gms:play-services-auth-api-phone:17.1.0'
+}
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+    flatDir {
+        dirs 'libs'
+    }
+}

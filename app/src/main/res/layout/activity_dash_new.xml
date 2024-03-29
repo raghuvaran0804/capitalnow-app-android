@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/llMainContent"
+                layout="@layout/content_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.appbar.AppBarLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/navigation_layout"
+        android:layout_width="@dimen/navigation_drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_20"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/ivUser"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:paddingBottom="@dimen/margin_7"
+                    android:src="@drawable/ic_camera" />
+
+                <ImageView
+                    android:id="@+id/ivCamera"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginEnd="@dimen/margin_2"
+                    android:layout_marginBottom="13dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/bg_oval_shape"
+                    android:backgroundTint="@color/color_primary"
+                    android:padding="@dimen/margin_3"
+                    android:src="@drawable/ic_camera_alt_black_24dp"
+                    app:tint="@color/Primary2" />
+
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/txt_prfname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginTop="45dp"
+                android:layout_toEndOf="@+id/ivUser"
+                android:layout_toRightOf="@+id/ivUser"
+                android:text="Profile Name"
+                android:textSize="@dimen/margin_15"
+                android:textStyle=""
+                android:textColor="@color/black"
+                android:visibility="visible"/>
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/navigation_rv"
+                android:layout_width="@dimen/navigation_drawer_width"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_10"
+                android:scrollbarThumbHorizontal="@null"
+                android:scrollbarThumbVertical="@null">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+            <!--<ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:alpha="0.3"
+                android:src="@drawable/ic_undraw_mobile_login" />-->
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/llContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:background="@color/Secondary2"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_5"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/rlContact"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_contact_us_menu" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvContactUs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_toEndOf="@id/ivContact"
+                    android:gravity="center"
+                    android:text="@string/contact_us"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/SmallText"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlRate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_rate_us_menu" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvRateUs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_toEndOf="@id/ivRate"
+                    android:gravity="center"
+                    android:text="@string/rate_us"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/SmallText"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_log_out"/>
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawablePadding="@dimen/margin_10"
+                android:gravity="center"
+                android:padding="@dimen/margin_5"
+                android:text="@string/logout"
+                android:textAlignment="center"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="-10dp"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:textAppearance="@style/MicroText"
+            android:textColor="@color/dark_gray"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/Primary1" />
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,13 @@
+<!-- Compatible to 3.7” 480x854 - 4.0” 480x800 hdpi devices -->
+
+<resources>
+
+    <dimen name="text_large">19sp</dimen>
+    <dimen name="text_medium">14sp</dimen>
+    <dimen name="text_small">14sp</dimen>
+    <dimen name="text_very_small">12sp</dimen>
+    <dimen name="text_micro">9sp</dimen>
+    <dimen name="text_extra_large">20sp</dimen>
+
+</resources>
+

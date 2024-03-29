@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.capitalnowapp.mobile.customviews.CNTextView
+        android:id="@+id/tvTitle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewPagerImage"
+        android:text="Title"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_32"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/frameText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_30"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="@dimen/margin_30"
+                android:gravity="center|top"
+                android:orientation="horizontal">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_5"
+                    android:background="@drawable/rounded_corner_square"
+                    android:backgroundTint="@color/colorIntroItemsBG"
+                    android:padding="@dimen/margin_5"
+                    android:text="Quick . Digital . Safe"
+                    android:textColor="@color/white" />
+
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_5"
+                    android:background="@drawable/rounded_corner_square"
+                    android:backgroundTint="@color/colorIntroItemsBG"
+                    android:padding="@dimen/margin_5"
+                    android:text="Offerings"
+                    android:textColor="@color/white" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="66dp"
+                android:gravity="center|top"
+                android:orientation="horizontal">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_5"
+                    android:background="@drawable/rounded_corner_square"
+                    android:backgroundTint="@color/colorIntroItemsBG"
+                    android:padding="@dimen/margin_5"
+                    android:text="Salary Loan"
+                    android:textColor="@color/white" />
+
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:background="@drawable/rounded_corner_square"
+                    android:backgroundTint="@color/colorIntroItemsBG"
+                    android:padding="@dimen/margin_5"
+                    android:text="Travel Loan"
+                    android:textColor="@color/white" />
+
+            </FrameLayout>
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/viewPagerImage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:adjustViewBounds="true"
+            android:clickable="false"
+            android:visibility="visible" />
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_50"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewPagerImage"
+                android:text="Simple Registration"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTitle"
+                android:layout_marginTop="@dimen/margin_15"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/margin_3"
+                android:paddingStart="@dimen/margin_40"
+                android:paddingEnd="@dimen/margin_40"
+                android:text="@string/get_started_content2"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

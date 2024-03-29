@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".kotlin.activities.PanNewActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/payu_dimen_16dp"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/payu_dimen_16dp"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvBack"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:drawableStart="@drawable/ic_baseline_arrow_forward_24"
+                    android:drawableTint="@color/Primary2"
+                    android:rotation="180"
+                    android:textColor="@color/Primary2"
+                    android:textStyle="bold" />
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvPanVerification"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_weight="9"
+                    android:gravity="center_horizontal"
+                    android:text="@string/title_pan_verification"
+                    android:textAppearance="@style/LargeTextWithBold"
+                    android:textColor="@color/Primary2"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--Pan New-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:layout_marginTop="@dimen/payu_dimen_32dp"
+                    android:text="First Name(As per PAN)"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/payu_dimen_16sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilFirtsName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="@color/Primary2"
+                    app:hintTextColor="@color/transparent"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etFirstName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:hint="First  Name"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/dark_gray"
+                        android:textCursorDrawable="@null"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/til_company_name"
+                        tools:ignore="MissingConstraints" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:layout_marginTop="@dimen/payu_dimen_32dp"
+                    android:text="Last Name(As per PAN)"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/payu_dimen_16sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="@color/Primary2"
+                    app:hintTextColor="@color/transparent"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etLastName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:hint="Last Name"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/dark_gray"
+                        android:textCursorDrawable="@null"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/til_company_name"
+                        tools:ignore="MissingConstraints" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:layout_marginTop="@dimen/payu_dimen_16dp"
+                    android:text="Date of Birth(As per PAN)"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/payu_dimen_16sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDOB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="@color/Primary2"
+                    app:hintTextColor="@color/transparent"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDOB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789"
+                        android:hint="Date of Birth"
+                        android:drawableEnd="@drawable/ic_calendar"
+                        android:inputType="textCapCharacters"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/dark_gray"
+                        android:textCursorDrawable="@null"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/til_company_name"
+                        tools:ignore="MissingConstraints" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:layout_marginTop="16dp"
+                    android:text="Enter PAN"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/payu_dimen_16sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="@color/Primary2"
+                    app:hintTextColor="@color/transparent"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+                        android:hint="@string/pan_ex"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/dark_gray"
+                        android:textCursorDrawable="@null"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/til_company_name"
+                        tools:ignore="MissingConstraints" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:layout_marginTop="16dp"
+                    android:text="Pincode"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/payu_dimen_16sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPinCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_20"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="@color/Primary2"
+                    app:hintTextColor="@color/transparent"
+                    tools:ignore="MissingConstraints">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPinCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789"
+                        android:hint="Enter Oin Code"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:maxLines="1"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/dark_gray"
+                        android:textCursorDrawable="@null"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/til_company_name"
+                        tools:ignore="MissingConstraints" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.capitalnowapp.mobile.customviews.CNTextView
+                    android:id="@+id/tvValidate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="@dimen/margin_15"
+                    android:layout_marginTop="@dimen/margin_80"
+                    android:background="@drawable/rounded_corner_gradient"
+                    android:drawableTint="@color/white"
+                    android:gravity="center"
+                    android:padding="17dp"
+                    android:text="@string/title_submit"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/SmallText"
+                    android:textColor="@color/white"
+                    tools:ignore="UnusedAttribute" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

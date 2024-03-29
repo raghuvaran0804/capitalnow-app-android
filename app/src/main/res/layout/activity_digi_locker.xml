@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".kotlin.activities.DigiLockerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvBack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:drawableStart="@drawable/ic_baseline_arrow_forward_24"
+            android:drawableTint="@color/Primary2"
+            android:rotation="180"
+            android:textColor="@color/Primary2"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            tools:ignore="UnusedAttribute" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:gravity="center_horizontal"
+            android:text="Aadhaar Verification"
+            android:textAppearance="@style/LargeTextWithBold"
+            android:textColor="@color/Primary2"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+    <!--Main View-->
+
+    <LinearLayout
+        android:id="@+id/llMainView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:src="@drawable/aadhaar_dummy"/>
+
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:lineHeight="@dimen/margin_30"
+            android:textAlignment="center"
+            android:text="Initiate Aadhaar Verification"
+            android:textColor="@color/Primary2"
+            android:textSize="22sp" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:lineHeight="@dimen/margin_20"
+            android:textAlignment="center"
+            android:text="Keep your Aadhaar card number\n handy to complete verification."
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:padding="@dimen/margin_8"
+            android:layout_gravity="center"
+            android:lineHeight="@dimen/margin_20"
+            android:textAlignment="center"
+            android:background="@drawable/rectangle_border"
+            android:backgroundTint="@color/cb_errorRed"
+            android:text="* Complete within 180 seconds *"
+            android:textColor="@color/cb_errorRed"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin_32"
+                android:lineHeight="@dimen/margin_20"
+                android:text="I, confirm that details shared would belongs to me &amp; true in it’s nature"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvContinue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin_15"
+                android:background="@drawable/rounded_corner_gradient"
+                android:gravity="center"
+                android:padding="@dimen/margin_20"
+                android:text="Proceed"
+                android:textAllCaps="true"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--Success View-->
+
+    <LinearLayout
+        android:id="@+id/llSuccessView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_128"
+            android:src="@drawable/ic_success_new"/>
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:lineHeight="@dimen/margin_30"
+            android:textAlignment="center"
+            android:text="Aadhaar Verified"
+            android:textColor="@color/dark_gray"
+            android:textSize="22sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvSuccessProceed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin_15"
+                android:background="@drawable/rounded_corner_gradient"
+                android:gravity="center"
+                android:padding="@dimen/margin_20"
+                android:text="Proceed"
+                android:textAllCaps="true"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--Failure View-->
+
+    <LinearLayout
+        android:id="@+id/llFailureView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_128"
+            android:src="@drawable/ic_failure_new"/>
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:lineHeight="@dimen/margin_30"
+            android:textAlignment="center"
+            android:text="Aadhaar Authentication Failed"
+            android:textColor="@color/dark_gray"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom">
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:padding="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:lineHeight="@dimen/margin_24"
+                android:background="@drawable/rectangle_border"
+                android:text="Possible Reasons:\n1. Incorrect Details or OTP \n2. Network connectivity issue with UIDAI \n3. Session timed-out \n4. Other technical issue"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvRetry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_20"
+                android:layout_marginBottom="@dimen/margin_15"
+                android:background="@drawable/rounded_corner_gradient"
+                android:gravity="center"
+                android:padding="@dimen/margin_20"
+                android:text="RETRY"
+                android:textAllCaps="true"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/wvWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</LinearLayout>

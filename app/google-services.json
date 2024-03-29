@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "4471361792",
+    "project_id": "capital-now-v2-400406",
+    "storage_bucket": "capital-now-v2-400406.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:4471361792:android:9969609ce17fa82d9aa3e5",
+        "android_client_info": {
+          "package_name": "com.capitalnowapp.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "4471361792-s8inkmckthrp8fnqolvomm4nkrekdb3s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.capitalnowapp.mobile",
+            "certificate_hash": "99e68f2ab31f9b344f8b5498f8a65ebad24c7b48"
+          }
+        },
+        {
+          "client_id": "4471361792-dgnbl01okgl7p2kf5gsrhleoi4baqj1g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfeOAluqrvuo8rma2cG2do7kkEB3fM_Jo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "4471361792-dgnbl01okgl7p2kf5gsrhleoi4baqj1g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
