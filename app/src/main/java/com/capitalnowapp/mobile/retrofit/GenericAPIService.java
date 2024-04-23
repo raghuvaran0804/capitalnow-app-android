@@ -258,6 +258,7 @@ public class GenericAPIService {
         try {
             verifyAlternateEmail.setApiKey(token);
             Call<GetVerifyAlternateEmailResponse> contactUsResponseCall = apiService.sendVerifyEmail(verifyAlternateEmail);
+            Log.d("verifyAlternate", new Gson().toJson(verifyAlternateEmail));
             contactUsResponseCall.enqueue(new Callback<GetVerifyAlternateEmailResponse>() {
                 @Override
                 public void onResponse(Call<GetVerifyAlternateEmailResponse> call, Response<GetVerifyAlternateEmailResponse> response) {
@@ -389,7 +390,6 @@ public class GenericAPIService {
         }
 
     }
-
 
 
     public interface DataInterface {
@@ -530,7 +530,7 @@ public class GenericAPIService {
                 RequestBody requestBody = RequestBody.create(MediaType.parse("multipart/form-data"), file);
                 fileToUploadback = MultipartBody.Part.createFormData("aadhar_back_img", file.getName(), requestBody);
             }
-            String apiKey =  token;
+            String apiKey = token;
             Log.d("tag", apiKey);
             RequestBody userId = RequestBody.create(MediaType.parse("text/plain"), id);
             RequestBody aadharNum = RequestBody.create(MediaType.parse("text/plain"), aadharNumber);
@@ -1228,6 +1228,28 @@ public class GenericAPIService {
         try {
             getBankLinkReq.setApiKey(token);
             Call<WebLinkRes> contactUsResponseCall = apiService.getBankWeblink(getBankLinkReq);
+            contactUsResponseCall.enqueue(new Callback<WebLinkRes>() {
+                @Override
+                public void onResponse(Call<WebLinkRes> call, Response<WebLinkRes> response) {
+                    if (response.body() != null) {
+                        mResponseListener.responseData(new Gson().toJson(response.body()));
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<WebLinkRes> call, Throwable t) {
+                    mErrorListener.errorData(t);
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void getBankWebLinkType(GetBankLinkReq getBankLinkReq, String token) {
+        try {
+            getBankLinkReq.setApiKey(token);
+            Call<WebLinkRes> contactUsResponseCall = apiService.getBankWebLinkType(getBankLinkReq);
             contactUsResponseCall.enqueue(new Callback<WebLinkRes>() {
                 @Override
                 public void onResponse(Call<WebLinkRes> call, Response<WebLinkRes> response) {
@@ -2050,6 +2072,7 @@ public class GenericAPIService {
                         mResponseListener.responseData(new Gson().toJson(response.body()));
                     }
                 }
+
                 @Override
                 public void onFailure(Call<ProfileFormDataResponse> call, Throwable t) {
                     mErrorListener.errorData(t);
@@ -2235,7 +2258,7 @@ public class GenericAPIService {
     }
 
     public void getCouponCategories(@NotNull GetCouponCategoriesReq couponCategoriesReq, @Nullable String token) {
-        try{
+        try {
             couponCategoriesReq.setApiKey(token);
             Call<GetCouponCategoriesResponse> contactUsResponseCall = apiService.getCouponCategories(couponCategoriesReq);
             contactUsResponseCall.enqueue(new Callback<GetCouponCategoriesResponse>() {
@@ -2252,7 +2275,7 @@ public class GenericAPIService {
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -2276,13 +2299,13 @@ public class GenericAPIService {
             });
 
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void getCouponInfo(@NotNull GetCouponInfoReq couponInfoReq, @Nullable String token) {
-        try{
+        try {
 
             couponInfoReq.setApiKey(token);
             Call<GetCouponInfoResponse> contactUsResponseCall = apiService.getCouponInfo(couponInfoReq);
@@ -2300,7 +2323,7 @@ public class GenericAPIService {
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -2323,13 +2346,13 @@ public class GenericAPIService {
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void getRedeemCouponDetails(@NotNull GetRedeemCouponDetailsReq redeemCouponDetailsReq, @Nullable String token) {
-        try{
+        try {
             redeemCouponDetailsReq.setApiKey(token);
             Call<GetRedeemCouponDetailsResponse> contactUsResponseCall = apiService.getRedeemCouponDetails(redeemCouponDetailsReq);
             contactUsResponseCall.enqueue(new Callback<GetRedeemCouponDetailsResponse>() {
@@ -2346,7 +2369,7 @@ public class GenericAPIService {
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -2369,13 +2392,13 @@ public class GenericAPIService {
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void getRedeemedCoupons(@NotNull GetRedeemedCouponsReq redeemedCouponsReq, @Nullable String token) {
-        try{
+        try {
             redeemedCouponsReq.setApiKey(token);
             Call<GetRedeemedCouponsResponse> contactUsResponseCall = apiService.getRedeemedCoupons(redeemedCouponsReq);
             contactUsResponseCall.enqueue(new Callback<GetRedeemedCouponsResponse>() {
@@ -2392,14 +2415,14 @@ public class GenericAPIService {
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void prSaveSign(@NotNull PrSaveSignReq prSaveSignReq, @Nullable String token) {
 
-        try{
+        try {
             prSaveSignReq.setApiKey(token);
             Call<CSGenericResponse> contactUsResponseCall = apiService.prSaveSign(prSaveSignReq);
             contactUsResponseCall.enqueue(new Callback<CSGenericResponse>() {
@@ -2416,14 +2439,14 @@ public class GenericAPIService {
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
     }
 
     public void saveReferences(@NotNull SaveReferencesReq saveReferencesReq, @Nullable String token) {
-        try{
+        try {
             saveReferencesReq.setApiKey(token);
             Call<SaveReferencesResponse> contactUsResponseCall = apiService.saveReferences(saveReferencesReq);
             contactUsResponseCall.enqueue(new Callback<SaveReferencesResponse>() {
@@ -2440,13 +2463,13 @@ public class GenericAPIService {
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void saveSalary(@NotNull SaveSalaryReq saveSalaryReq, @Nullable String token) {
-        try{
+        try {
             saveSalaryReq.setApiKey(token);
             Call<SaveSalaryResponse> contactUsResponseCall = apiService.saveSalary(saveSalaryReq);
             contactUsResponseCall.enqueue(new Callback<SaveSalaryResponse>() {
@@ -2463,14 +2486,14 @@ public class GenericAPIService {
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void getPincodes(@NotNull GetPinCodesReq pincodesReq, @Nullable String token) {
 
-        try{
+        try {
             pincodesReq.setApiKey(token);
             Call<GetPinCodesResponse> contactUsResponseCall = apiService.getPincodes(pincodesReq);
             contactUsResponseCall.enqueue(new Callback<GetPinCodesResponse>() {
@@ -2487,14 +2510,14 @@ public class GenericAPIService {
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void memberUpgradeConsent(MemberUpgradeConsentReq memberUpgradeConsentReq, String token) {
 
-        try{
+        try {
             memberUpgradeConsentReq.setApiKey(token);
             Call<MemberUpgradeConsentResponse> contactUsResponseCall = apiService.memberUpgradeConsent(memberUpgradeConsentReq);
             contactUsResponseCall.enqueue(new Callback<MemberUpgradeConsentResponse>() {
@@ -2511,13 +2534,13 @@ public class GenericAPIService {
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void submitContactUsWeb(@NotNull String webCntExistingCustomer, @Nullable String selectedFilePath1, @Nullable String selectedFilePath2, @Nullable String selectedFilePath3, @Nullable String webCntName, @Nullable String webCntMobileNumber, @Nullable String webCntEmail, @NotNull String platform, @Nullable String webCntQuery, @NotNull String webCntSubQuery, @Nullable String webCntMessage, @Nullable String token) {
-        try{
+        try {
             MultipartBody.Part fileToUploadSelectedFile1 = null;
             MultipartBody.Part fileToUploadSelectedFile2 = null;
             MultipartBody.Part fileToUploadSelectedFile3 = null;
@@ -2546,8 +2569,8 @@ public class GenericAPIService {
             RequestBody cntQuery = RequestBody.create(MediaType.parse("text/plain"), webCntQuery);
             RequestBody cntSubQuery = RequestBody.create(MediaType.parse("text/plain"), webCntSubQuery);
             RequestBody cntMessage = RequestBody.create(MediaType.parse("text/plain"), webCntMessage);
-            Call<FileUploadResponse> call = apiService.submitContactUsWeb(fileToUploadSelectedFile1, fileToUploadSelectedFile2, fileToUploadSelectedFile3,apiKey, existingCustomer, cntName, cntEmail,
-                     cntMobileNumber, mobilePlatform, cntQuery, cntSubQuery, cntMessage);
+            Call<FileUploadResponse> call = apiService.submitContactUsWeb(fileToUploadSelectedFile1, fileToUploadSelectedFile2, fileToUploadSelectedFile3, apiKey, existingCustomer, cntName, cntEmail,
+                    cntMobileNumber, mobilePlatform, cntQuery, cntSubQuery, cntMessage);
             call.enqueue(new Callback<FileUploadResponse>() {
                 @Override
                 public void onResponse(Call<FileUploadResponse> call, Response<FileUploadResponse> response) {
@@ -2562,7 +2585,7 @@ public class GenericAPIService {
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -2584,7 +2607,7 @@ public class GenericAPIService {
                     mErrorListener.errorData(t);
                 }
             });
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -2606,13 +2629,13 @@ public class GenericAPIService {
                     mErrorListener.errorData(t);
                 }
             });
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void getPendingDocuments(@NotNull GetPendingDocReq getPendingDocReq, @Nullable String token) {
-        try{
+        try {
             getPendingDocReq.setApiKey(token);
             Call<GetPendingDocResponse> contactUsResponseCall = apiService.getPendingDocuments(getPendingDocReq);
             contactUsResponseCall.enqueue(new Callback<GetPendingDocResponse>() {
@@ -2629,7 +2652,7 @@ public class GenericAPIService {
                 }
             });
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -2651,7 +2674,7 @@ public class GenericAPIService {
                     mErrorListener.errorData(t);
                 }
             });
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -2673,13 +2696,13 @@ public class GenericAPIService {
                     mErrorListener.errorData(t);
                 }
             });
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void getAnalysisType(@NotNull GetAnalysisTypeReq analysisTypeReq, @Nullable String token) {
-        try{
+        try {
             analysisTypeReq.setApiKey(token);
             Call<GetAnalysisTypeResponse> contactUsResponseCall = apiService.getAnalysisType(analysisTypeReq);
             contactUsResponseCall.enqueue(new Callback<GetAnalysisTypeResponse>() {
@@ -2695,10 +2718,11 @@ public class GenericAPIService {
                     mErrorListener.errorData(t);
                 }
             });
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
     public void saveCreditCardData(GenericRequest genericRequest, String token) {
         try {
             genericRequest.setApiKey(token);
@@ -2717,7 +2741,7 @@ public class GenericAPIService {
                 }
             });
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -2740,13 +2764,13 @@ public class GenericAPIService {
                 }
             });
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void getCaptcha(@NotNull GetCaptchaReq captchaReq, @Nullable String token) {
-        try{
+        try {
             captchaReq.setApiKey(token);
             Call<GetCaptchaResponse> contactUsResponseCall = apiService.getCaptchaAadhaar(captchaReq);
             contactUsResponseCall.enqueue(new Callback<GetCaptchaResponse>() {
@@ -2763,7 +2787,7 @@ public class GenericAPIService {
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -2786,7 +2810,7 @@ public class GenericAPIService {
                 }
             });
 
-        } catch ( Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -2809,7 +2833,7 @@ public class GenericAPIService {
                 }
             });
 
-        } catch ( Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -2833,13 +2857,13 @@ public class GenericAPIService {
                 }
             });
 
-        } catch ( Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void saveRegistrationThree(@NotNull SaveRegistrationThreeReq saveRegistrationThreeReq, @Nullable String token) {
-        try{
+        try {
             saveRegistrationThreeReq.setApiKey(token);
             Call<SaveRegistrationThreeResponse> contactUsResponseCall = apiService.saveRegistrationThree(saveRegistrationThreeReq);
             contactUsResponseCall.enqueue(new Callback<SaveRegistrationThreeResponse>() {
@@ -2856,7 +2880,7 @@ public class GenericAPIService {
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -2880,7 +2904,7 @@ public class GenericAPIService {
                 }
             });
 
-        } catch ( Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -2903,13 +2927,13 @@ public class GenericAPIService {
                 }
             });
 
-        } catch ( Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void stateAndCityFromPinCode(@NotNull PinCodeReq pinCodeReq, @Nullable String token) {
-        try{
+        try {
             pinCodeReq.setApiKey(token);
             Call<PinCodeResponse> contactUsResponseCall = apiService.stateAndCityFromPinCode(pinCodeReq);
             contactUsResponseCall.enqueue(new Callback<PinCodeResponse>() {
@@ -2925,13 +2949,13 @@ public class GenericAPIService {
                     mErrorListener.errorData(t);
                 }
             });
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void verifyAlternateMobile(@NotNull VerifyAlternateMobileReq verifyAlternateMobileReq, @Nullable String token) {
-        try{
+        try {
             verifyAlternateMobileReq.setApiKey(token);
             Call<GetVerifyAlternateMobileResponse> contactUsResponseCall = apiService.verifyAlternateMobile(verifyAlternateMobileReq);
             contactUsResponseCall.enqueue(new Callback<GetVerifyAlternateMobileResponse>() {
@@ -2948,13 +2972,13 @@ public class GenericAPIService {
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void verifyAltMobileByOTP(@NotNull VerifyAltMobileByOTPReq verifyAltMobileByOTPReq, @Nullable String token) {
-        try{
+        try {
             verifyAltMobileByOTPReq.setApiKey(token);
             Call<VerifyAltMobileByOTPResponse> contactUsResponseCall = apiService.verifyAltMobileByOTP(verifyAltMobileByOTPReq);
             contactUsResponseCall.enqueue(new Callback<VerifyAltMobileByOTPResponse>() {
@@ -2971,13 +2995,13 @@ public class GenericAPIService {
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void getDesignationList(@NotNull GetDesignationListReq designationListReq, @Nullable String token) {
-        try{
+        try {
             designationListReq.setApiKey(token);
             Call<DesignationListResponse> contactUsResponseCall = apiService.getDesignationList(designationListReq);
             contactUsResponseCall.enqueue(new Callback<DesignationListResponse>() {
@@ -2994,13 +3018,13 @@ public class GenericAPIService {
                 }
             });
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void checkLoanStatus(@NotNull CheckLoanStatusForDeletionReq checkLoanStatusForDeletionReq, @Nullable String token) {
-        try{
+        try {
             checkLoanStatusForDeletionReq.setApiKey(token);
             Call<CheckLoanStatusForDeletionResponse> contactUsResponseCall = apiService.checkLoanStatus(checkLoanStatusForDeletionReq);
             contactUsResponseCall.enqueue(new Callback<CheckLoanStatusForDeletionResponse>() {
@@ -3017,14 +3041,14 @@ public class GenericAPIService {
                 }
             });
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void evSendOTP(@NotNull SendOTPDeletionReq sendOTPDeletionReq, @Nullable String token) {
 
-        try{
+        try {
             sendOTPDeletionReq.setApiKey(token);
             Call<SendOTPDeletionResponse> contactUsResponseCall = apiService.evSendOTP(sendOTPDeletionReq);
             contactUsResponseCall.enqueue(new Callback<SendOTPDeletionResponse>() {
@@ -3041,13 +3065,13 @@ public class GenericAPIService {
                 }
             });
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void verifyOtpAccountDelete(@NotNull VerifyOTPDeletionReq verifyOTPDeletionReq, @Nullable String token) {
-        try{
+        try {
             verifyOTPDeletionReq.setApiKey(token);
             Call<VerifyOTPDeletionResponse> contactUsResponseCall = apiService.verifyOtpAccountDelete(verifyOTPDeletionReq);
             contactUsResponseCall.enqueue(new Callback<VerifyOTPDeletionResponse>() {
@@ -3064,13 +3088,13 @@ public class GenericAPIService {
                 }
             });
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void deleteConsent(@NotNull DeleteConsentReq deleteConsentReq, @Nullable String token) {
-        try{
+        try {
             deleteConsentReq.setApiKey(token);
             Call<DeleteConsentResponse> contactUsResponseCall = apiService.deleteConsent(deleteConsentReq);
             contactUsResponseCall.enqueue(new Callback<DeleteConsentResponse>() {
@@ -3087,13 +3111,13 @@ public class GenericAPIService {
                 }
             });
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void getLoanRange(@NotNull GetLoanRangeReq loanRangeReq, @Nullable String token) {
-        try{
+        try {
             loanRangeReq.setApiKey(token);
             Call<GetLoanRangeResponse> contactUsResponseCall = apiService.getLoanRange(loanRangeReq);
             contactUsResponseCall.enqueue(new Callback<GetLoanRangeResponse>() {
@@ -3110,13 +3134,13 @@ public class GenericAPIService {
                 }
             });
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void registerLoan(@NotNull RegisterLoanReq registerLoanReq, @Nullable String token) {
-        try{
+        try {
             registerLoanReq.setApiKey(token);
             Call<RegisterLoanResponse> contactUsResponseCall = apiService.registerLoan(registerLoanReq);
             contactUsResponseCall.enqueue(new Callback<RegisterLoanResponse>() {
@@ -3133,13 +3157,13 @@ public class GenericAPIService {
                 }
             });
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void homePageBannerImages(BannerImageRequest bannerImageRequest, String token) {
-        try{
+        try {
             bannerImageRequest.setApiKey(token);
             Call<BannerImageResponse> contactUsResponseCall = apiService.homePageBannerImages(bannerImageRequest);
             contactUsResponseCall.enqueue(new Callback<BannerImageResponse>() {
@@ -3156,13 +3180,13 @@ public class GenericAPIService {
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void getEligibleOffers(@NotNull GetEligibleOffersReq eligibleOffersReq, @Nullable String token) {
-        try{
+        try {
             eligibleOffersReq.setApiKey(token);
             Call<GetEligibleOffersResponse> contactUsResponseCall = apiService.getEligibleOffers(eligibleOffersReq);
             contactUsResponseCall.enqueue(new Callback<GetEligibleOffersResponse>() {
@@ -3179,13 +3203,13 @@ public class GenericAPIService {
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void getEligibleOfferDetails(@NotNull GetEligibleOfferDetailReq eligibleOfferDetailReq, @Nullable String token) {
-        try{
+        try {
             eligibleOfferDetailReq.setApiKey(token);
             Call<GetEligibleOfferDetailsResponse> contactUsResponseCall = apiService.getEligibleOfferDetails(eligibleOfferDetailReq);
             contactUsResponseCall.enqueue(new Callback<GetEligibleOfferDetailsResponse>() {
@@ -3202,13 +3226,13 @@ public class GenericAPIService {
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void bbpsBillPay(GenericRequest genericRequest, String token) {
-        try{
+        try {
             genericRequest.setApiKey(token);
             Call<BbpsBillPayResponse> contactUsResponseCall = apiService.bbpsBillPay(genericRequest);
             contactUsResponseCall.enqueue(new Callback<BbpsBillPayResponse>() {
@@ -3225,13 +3249,13 @@ public class GenericAPIService {
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void bbpsLinkGenerator(@NotNull GetBbpsLinkGeneratorReq bbpsLinkGeneratorReq, @Nullable String token) {
-        try{
+        try {
             bbpsLinkGeneratorReq.setApiKey(token);
             Call<GetBbpsLinkGeneratorResponse> contactUsResponseCall = apiService.bbpsLinkGenerator(bbpsLinkGeneratorReq);
             contactUsResponseCall.enqueue(new Callback<GetBbpsLinkGeneratorResponse>() {
@@ -3247,13 +3271,13 @@ public class GenericAPIService {
                     mErrorListener.errorData(t);
                 }
             });
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void getProcessPageContent(@NotNull GenericRequest genericRequest, @Nullable String token) {
-        try{
+        try {
             genericRequest.setApiKey(token);
             Call<GetProcessPageContentResponse> contactUsResponseCall = apiService.getProcessPageContent(genericRequest);
             contactUsResponseCall.enqueue(new Callback<GetProcessPageContentResponse>() {
@@ -3270,13 +3294,13 @@ public class GenericAPIService {
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void offerScroll(GenericRequest genericRequest, String token) {
-        try{
+        try {
             genericRequest.setApiKey(token);
             Call<OfferScrollResponse> contactUsResponseCall = apiService.offerScroll(genericRequest);
             contactUsResponseCall.enqueue(new Callback<OfferScrollResponse>() {
@@ -3286,19 +3310,20 @@ public class GenericAPIService {
                         mResponseListener.responseData(new Gson().toJson(response.body()));
                     }
                 }
+
                 @Override
                 public void onFailure(Call<OfferScrollResponse> call, Throwable t) {
                     mErrorListener.errorData(t);
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void easebuzzResponseHandler(@NotNull EasebuzzResponseRequest easebuzzResponseRequest, @Nullable String token) {
-        try{
+        try {
             easebuzzResponseRequest.setApiKey(token);
             Call<EasebuzzResponseResponse> contactUsResponseCall = apiService.easebuzzResponseHandler(easebuzzResponseRequest);
             contactUsResponseCall.enqueue(new Callback<EasebuzzResponseResponse>() {
@@ -3308,19 +3333,20 @@ public class GenericAPIService {
                         mResponseListener.responseData(new Gson().toJson(response.body()));
                     }
                 }
+
                 @Override
                 public void onFailure(Call<EasebuzzResponseResponse> call, Throwable t) {
                     mErrorListener.errorData(t);
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void setTransactionData(@NotNull GetTransactionReq transactionReq, @Nullable String token) {
-        try{
+        try {
             transactionReq.setApiKey(token);
             Call<GetTransactionResponse> contactUsResponseCall = apiService.setTransactionData(transactionReq);
             contactUsResponseCall.enqueue(new Callback<GetTransactionResponse>() {
@@ -3330,20 +3356,21 @@ public class GenericAPIService {
                         mResponseListener.responseData(new Gson().toJson(response.body()));
                     }
                 }
+
                 @Override
                 public void onFailure(Call<GetTransactionResponse> call, Throwable t) {
                     mErrorListener.errorData(t);
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void openDigiLocker(@NotNull OpenDigiLockerReq openDigiLockerReq, @Nullable String token) {
 
-        try{
+        try {
             openDigiLockerReq.setApiKey(token);
             Call<OpenDigiLockerResponse> contactUsResponseCall = apiService.openDigiLocker(openDigiLockerReq);
             contactUsResponseCall.enqueue(new Callback<OpenDigiLockerResponse>() {
@@ -3353,16 +3380,40 @@ public class GenericAPIService {
                         mResponseListener.responseData(new Gson().toJson(response.body()));
                     }
                 }
+
                 @Override
                 public void onFailure(Call<OpenDigiLockerResponse> call, Throwable t) {
                     mErrorListener.errorData(t);
                 }
             });
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
+    }
+
+    public void getAnalysisList(@NotNull GetAnalysisTypeReq analysisTypeReq, @Nullable String token) {
+        try {
+            analysisTypeReq.setApiKey(token);
+            Call<GetAnalysisListResponse> contactUsResponseCall = apiService.getAnalysisList(analysisTypeReq);
+            contactUsResponseCall.enqueue(new Callback<GetAnalysisListResponse>() {
+                @Override
+                public void onResponse(Call<GetAnalysisListResponse> call, Response<GetAnalysisListResponse> response) {
+                    if (response.body() != null) {
+                        mResponseListener.responseData(new Gson().toJson(response.body()));
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<GetAnalysisListResponse> call, Throwable t) {
+                    mErrorListener.errorData(t);
+                }
+            });
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 

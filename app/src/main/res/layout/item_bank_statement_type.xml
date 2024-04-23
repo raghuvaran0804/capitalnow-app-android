@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/margin_8"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_corner_gray_10dp"
+        android:orientation="vertical">
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:padding="@dimen/margin_5"
+            android:background="@drawable/rounded_corner_bottom"
+            android:backgroundTint="@color/Primary1"
+            android:text="ACCOUNT AGGRIGATION"
+            android:textColor="@color/white"/>
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bank Statement Via OTP"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_8"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use your salary account linked mobile \nnumber for secure OTP consent it's that easy!"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:textColor="@color/black"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilMobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundColor="@color/white"
+            app:boxStrokeColor="@color/Primary2"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginEnd="@dimen/margin_32"
+            android:layout_marginBottom="@dimen/margin_16"
+            app:hintTextColor="@color/dark_gray"
+            android:visibility="gone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etMobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mobile Number"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:maxLines="1"
+                android:paddingTop="@dimen/margin_10"
+                android:paddingLeft="-10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textCursorDrawable="@null"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.capitalnowapp.mobile.customviews.CNTextView
+            android:id="@+id/tvFooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_5"
+            android:textAlignment="center"
+            android:background="@drawable/rounded_corner_gradient"
+            android:text="RECOMMENDED"
+            android:visibility="gone"
+            android:textColor="@color/white"/>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

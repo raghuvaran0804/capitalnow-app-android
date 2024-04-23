@@ -3,15 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     android:orientation="vertical">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fitsSystemWindows="true"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        android:fitsSystemWindows="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,9 +20,8 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/white"
-                android:visibility="visible"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+                android:background="@color/appBackground"
+                android:visibility="visible">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -92,7 +89,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/margin_10"
-                    android:src="@drawable/ic_menu_black_24dp" />
+                    android:src="@drawable/ic_menu_new" />
 
                 <com.capitalnowapp.mobile.customviews.CNTextView
                     android:id="@+id/tvCustomTitle"
@@ -128,7 +125,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
 
-    d<FrameLayout
+    <FrameLayout
         android:id="@+id/contentFrame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

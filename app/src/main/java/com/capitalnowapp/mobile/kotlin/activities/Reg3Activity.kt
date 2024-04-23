@@ -381,6 +381,11 @@ class Reg3Activity : BaseActivity() {
             }
             if(userDetailsResponse?.userDetails !=null && userDetailsResponse?.userDetails?.offPincode !=null){
                 binding?.etOffPincode?.setText(userDetailsResponse?.userDetails?.offPincode)
+                binding?.etOffPincode?.isEnabled = false
+                binding?.etOffPincode?.isFocusable = false
+            }else {
+                binding?.etOffPincode?.isEnabled = true
+                binding?.etOffPincode?.isFocusable = true
             }
             if(userDetailsResponse?.userDetails !=null && userDetailsResponse?.userDetails?.offStateCity !=null){
                 binding?.tvOffStateAndCity?.text = userDetailsResponse?.userDetails?.offStateCity

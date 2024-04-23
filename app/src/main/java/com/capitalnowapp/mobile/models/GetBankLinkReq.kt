@@ -27,6 +27,10 @@ class GetBankLinkReq : Serializable{
     @Expose
     var referrer: String? = null
 
+    @SerializedName("type")
+    @Expose
+    var type: String? = null
+
     @SerializedName("mob_no")
     @Expose
     var mobNo: String? = null

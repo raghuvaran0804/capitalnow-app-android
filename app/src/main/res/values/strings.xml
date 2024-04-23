@@ -219,7 +219,7 @@
     <string name="upload_doc">Upload Bank Statement</string>
     <string name="bank_statement">Bank Statement</string>
     <string name="face_match_title">Video KYC</string>
-    <string name="secure_details">Your data is secure with us.</string>
+    <string name="secure_details">Your data is 100% safe and secure.</string>
     <string name="pfd_format">*Pdf Format Only</string>
     <string name="first_terms">I agree that the above mentioned bank account is mine and I hereby authorize Capital Now to update my bank account for further loan disbursals.</string>
     <string name="second_terms">*Please provide accurate bank account details for successful updation.</string>

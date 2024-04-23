@@ -90,6 +90,7 @@ class Reg1Activity : BaseActivity(), View.OnFocusChangeListener {
     private var employmentType: String? = ""
     private var pinCode: String? = ""
     private var permanentPinCode: String? = ""
+    private var officePinCode: String? = ""
     private var howDoYouKnow: String? = ""
     private var companyName: String? = ""
     private var companyId: Int? = -1
@@ -433,6 +434,22 @@ class Reg1Activity : BaseActivity(), View.OnFocusChangeListener {
                     permanentPinCode = s.toString()
                 }
             })
+            binding?.etOfficePincode?.addTextChangedListener(object : TextWatcher {
+                override fun beforeTextChanged(
+                    s: CharSequence?,
+                    start: Int,
+                    count: Int,
+                    after: Int
+                ) {
+                }
+
+                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                }
+
+                override fun afterTextChanged(s: Editable?) {
+                    officePinCode = s.toString()
+                }
+            })
 
 
             binding?.etModeOfSalary?.setOnClickListener {
@@ -745,6 +762,7 @@ class Reg1Activity : BaseActivity(), View.OnFocusChangeListener {
             employmentType = binding?.etEmpType?.text.toString().trim { it <= ' ' }
             pinCode = binding?.etPincode?.text.toString().trim { it <= ' ' }
             permanentPinCode = binding?.etPerPincode?.text.toString().trim { it <= ' ' }
+            officePinCode = binding?.etOfficePincode?.text.toString().trim { it <= ' ' }
             howDoYouKnow = binding?.etHowDoYouKnow?.text.toString().trim { it <= ' ' }
             var count = 0
             if (firstName!!.isEmpty() || firstName!!.length < 2) {
@@ -857,6 +875,7 @@ class Reg1Activity : BaseActivity(), View.OnFocusChangeListener {
             saveRegistrationOneReq.modeOfPay = modeOfSalary
             saveRegistrationOneReq.presentPincode = pinCode
             saveRegistrationOneReq.permanentPincode = permanentPinCode
+            saveRegistrationOneReq.officePincode = officePinCode
             saveRegistrationOneReq.howYouKnowCn = howDoYouKnow
             saveRegistrationOneReq.pageNo = "34"
             val token = userToken
@@ -1078,6 +1097,9 @@ class Reg1Activity : BaseActivity(), View.OnFocusChangeListener {
 
             if (userDetailsResponse?.userDetails != null && userDetailsResponse?.userDetails?.permanentPincode != null) {
                 binding?.etPerPincode?.setText(userDetailsResponse?.userDetails?.permanentPincode)
+            }
+            if (userDetailsResponse?.userDetails != null && userDetailsResponse?.userDetails?.offPincode != null) {
+                binding?.etOfficePincode?.setText(userDetailsResponse?.userDetails?.offPincode)
             }
 
             if (userDetailsResponse?.userDetails != null && userDetailsResponse?.userDetails?.howYouKnowCn1 != null) {

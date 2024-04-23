@@ -12,4 +12,8 @@ class GetAnalysisTypeReq : Serializable{
     @SerializedName("bank_code")
     @Expose
     var bankCode: String? = null
+
+    @SerializedName("referrer")
+    @Expose
+    var referrer: String? = null
 }

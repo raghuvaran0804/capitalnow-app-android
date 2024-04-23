@@ -64,6 +64,10 @@ class UserDetails: Serializable {
     @Expose
     var permanentPincode: String? = null
 
+    @SerializedName("office_pincode")
+    @Expose
+    var officePincode: String? = null
+
     @SerializedName("active_profile")
     @Expose
     var activeProfile: String? = null

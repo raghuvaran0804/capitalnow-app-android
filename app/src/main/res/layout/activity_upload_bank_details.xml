@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,6 +7,7 @@
     tools:context=".kotlin.activities.UploadBankDetailsActivity"
     android:orientation="vertical">
     <LinearLayout
+        android:id="@+id/llPageName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_16"
@@ -28,130 +29,144 @@
         android:id="@+id/tvBankDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/bank_statement"
+        android:text="Verify Bank Statement"
         android:gravity="center"
         android:textAppearance="@style/LargeTextWithBold"
-        android:textColor="@color/Primary2"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         android:textSize="20sp" />
     </LinearLayout>
 
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="@dimen/margin_40"
-        android:layout_marginEnd="16dp"
-        android:orientation="vertical">
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_weight="1">
 
-        <com.capitalnowapp.mobile.customviews.CNTextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/margin_16"
-            android:text="Upload Salary Account Details for review &amp; disbursement"
-            android:textAppearance="@style/VerySmallText"
-            android:textColor="@color/cb_errorRed"
-            android:textColorHighlight="#00FFFFFF"
-            android:textSize="12sp" />
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:orientation="vertical">
 
-        <com.capitalnowapp.mobile.customviews.CNTextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_20"
-            android:text="Login to submit bank statement"
-            android:textAppearance="@style/SmallText"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            android:textStyle="bold" />
-
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilSelectBank"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:boxBackgroundColor="@color/white"
-            app:boxStrokeColor="@color/Primary2"
-            app:hintTextColor="@color/Primary2"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/til_mode_pay"
-            tools:ignore="MissingConstraints">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etSelectBank"
-                android:layout_width="match_parent"
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:clickable="false"
-                android:cursorVisible="false"
-                android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
-                android:hint="@string/select_bank"
-                android:inputType="text"
-                android:paddingTop="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_20"
+                android:text="Select Your Salary Bank"
+                android:textAppearance="@style/SmallText"
                 android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textCursorDrawable="@null"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/til_mode_pay"
-                tools:ignore="MissingConstraints" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <RelativeLayout
-            android:id="@+id/rlMobileNumber"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilMobileNumber"
+                android:id="@+id/tilSelectBank"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:boxBackgroundColor="@color/white"
                 app:boxStrokeColor="@color/Primary2"
-                app:hintTextColor="@color/dark_gray"
-                android:visibility="gone">
+                app:hintTextColor="@color/Primary2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_mode_pay"
+                tools:ignore="MissingConstraints">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etMobileNumber"
+                    android:id="@+id/etSelectBank"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Mobile Number"
-                    android:inputType="number"
-                    android:maxLength="10"
-                    android:paddingStart="0dp"
-                    android:paddingEnd="0dp"
-                    android:maxLines="1"
-                    android:paddingTop="@dimen/margin_10"
-                    android:paddingLeft="-10dp"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:drawableEnd="@drawable/ic_keyboard_arrow_down_black_24dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/select_bank"
+                    android:inputType="text"
                     android:textColor="@color/black"
                     android:textColorHint="@color/black"
-                    android:textCursorDrawable="@null"/>
+                    android:textCursorDrawable="@null"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/til_mode_pay"
+                    tools:ignore="MissingConstraints" />
 
             </com.google.android.material.textfield.TextInputLayout>
-            <ImageView
-                android:id="@+id/tvCancel"
+
+            <com.capitalnowapp.mobile.customviews.CNTextView
+                android:id="@+id/tvSecure"
                 android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/cross"
-                android:visibility="gone"
-                app:tint="@color/dark_gray" />
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/secure_details"
+                android:gravity="center"
+                android:text="@string/secure_details"
+                android:textAppearance="@style/SmallText"
+                android:textColor="@color/black" />
 
-        </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rlMobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilMobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="@color/Primary2"
+                    app:hintTextColor="@color/dark_gray"
+                    android:visibility="gone">
 
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etMobileNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Mobile Number"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:maxLines="1"
+                        android:paddingTop="@dimen/margin_10"
+                        android:paddingLeft="-10dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textCursorDrawable="@null"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <ImageView
+                    android:id="@+id/tvCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/cross"
+                    android:visibility="gone"
+                    app:tint="@color/dark_gray" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSelectType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/llProceed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:orientation="vertical"
+        android:layout_weight="0">
         <LinearLayout
-            android:id="@+id/llAadhaar"
+            android:id="@+id/llConsent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_50"
+            android:layout_marginTop="@dimen/margin_10"
             android:layout_marginBottom="@dimen/margin_20"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/til_city">
+            android:orientation="horizontal">
 
             <androidx.appcompat.widget.AppCompatCheckBox
                 android:id="@+id/cbConfrimBank"
@@ -173,73 +188,22 @@
 
         </LinearLayout>
 
-
         <com.capitalnowapp.mobile.customviews.CNTextView
             android:id="@+id/tvInternetBanking"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_marginTop="@dimen/margin_15"
             android:layout_marginBottom="@dimen/margin_15"
             android:background="@drawable/rounded_corner_gradient"
-            android:drawableTint="@color/white"
             android:gravity="center"
-            android:padding="17dp"
+            android:padding="15dp"
             android:text="PROCEED"
             android:textAllCaps="true"
             android:textAppearance="@style/SmallText"
             android:textColor="@color/white"
             tools:ignore="UnusedAttribute" />
-
-        <com.capitalnowapp.mobile.customviews.CNTextView
-            android:id="@+id/tvSecure"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/margin_30"
-            android:background="@drawable/rounded_corner_square"
-            android:drawableLeft="@drawable/secure_details"
-            android:gravity="center"
-            android:paddingLeft="@dimen/margin_5"
-            android:paddingRight="@dimen/margin_15"
-            android:text="@string/secure_details"
-            android:textAppearance="@style/SmallText"
-            android:textColor="@color/black" />
-
-
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/llUploadBankStatement"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:layout_marginBottom="@dimen/margin_30"
-        android:layout_gravity="bottom|center"
-        android:visibility="gone">
-        <com.capitalnowapp.mobile.customviews.CNTextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:lineSpacingExtra="@dimen/margin_5"
-            android:gravity="end"
-            android:text="@string/trouble_logging_in"
-            android:textColor="@color/black"
-            android:textSize="14sp" />
-        <com.capitalnowapp.mobile.customviews.CNTextView
-            android:id="@+id/tvUploadBankStatement"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:lineSpacingExtra="@dimen/margin_5"
-            android:gravity="start"
-            android:layout_marginStart="@dimen/margin_2"
-            android:layout_marginEnd="@dimen/margin_20"
-            android:text="@string/upload_bank_statement"
-            android:textColor="@color/Primary2"
-            android:textSize="14sp" />
-    </LinearLayout>
 
     <WebView
         android:id="@+id/wvFinBit"
@@ -247,4 +211,4 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-</RelativeLayout>
+</LinearLayout>

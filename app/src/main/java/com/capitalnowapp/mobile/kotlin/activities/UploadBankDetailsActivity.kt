@@ -13,7 +13,6 @@ import android.os.CountDownTimer
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.DisplayMetrics
-import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.WindowManager
@@ -22,6 +21,7 @@ import android.webkit.WebViewClient
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -36,13 +36,17 @@ import com.capitalnowapp.mobile.customviews.CNProgressDialog
 import com.capitalnowapp.mobile.databinding.ActivityUploadBankDetailsBinding
 import com.capitalnowapp.mobile.interfaces.AlertDialogSelectionListener
 import com.capitalnowapp.mobile.interfaces.SelectedIdCallback
+import com.capitalnowapp.mobile.kotlin.adapters.AdapterItemClickListener
+import com.capitalnowapp.mobile.kotlin.adapters.BankStatementTypeAdapter
 import com.capitalnowapp.mobile.kotlin.adapters.ListFilterAdapter
 import com.capitalnowapp.mobile.kotlin.adapters.LoanOptionsAdapter
 import com.capitalnowapp.mobile.models.AnalyseCapabilityReq
+import com.capitalnowapp.mobile.models.AnalysisListData
 import com.capitalnowapp.mobile.models.BankDetails
 import com.capitalnowapp.mobile.models.BankListRes
 import com.capitalnowapp.mobile.models.CNModel
 import com.capitalnowapp.mobile.models.GenericRequest
+import com.capitalnowapp.mobile.models.GetAnalysisListResponse
 import com.capitalnowapp.mobile.models.GetAnalysisTypeReq
 import com.capitalnowapp.mobile.models.GetAnalysisTypeResponse
 import com.capitalnowapp.mobile.models.GetBankLinkReq
@@ -66,9 +70,12 @@ import java.util.Locale
 
 
 @Suppress("DEPRECATED_IDENTITY_EQUALS")
-class UploadBankDetailsActivity : BaseActivity() {
+class UploadBankDetailsActivity : BaseActivity(), AdapterItemClickListener {
+    private var typeList: List<AnalysisListData>? = null
+    private var selectedType: String? = null
     private var otherMobileNumber: String? = null
     private var getAnalysisTypeResponse: GetAnalysisTypeResponse? = null
+    private var getAnalysisListResponse: GetAnalysisListResponse? = null
     private lateinit var cnModel: CNModel
     private var activity: AppCompatActivity? = null
 
@@ -90,6 +97,8 @@ class UploadBankDetailsActivity : BaseActivity() {
     private var readonly: Boolean = false
     private var monitoring: String? = null
     private var selectedMobileNumber: String? = null
+    private var mobileVisible: Boolean = false
+    private lateinit var bankStatementTypeadapter: BankStatementTypeAdapter
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -111,6 +120,8 @@ class UploadBankDetailsActivity : BaseActivity() {
         }
         TrackingUtil.pushEvent(obj, getString(R.string.select_bank_page_landed))
 
+
+
         if (intent.extras != null) {
             if (intent.hasExtra("loansResponse")) {
                 val loansResponse = intent.getStringExtra("loansResponse")
@@ -125,9 +136,9 @@ class UploadBankDetailsActivity : BaseActivity() {
                 if (this.loansResponse != null && this.loansResponse!!.has("show_manual_statement")) {
                     val showManualUpload = this.loansResponse!!.getBoolean("show_manual_statement")
                     if (showManualUpload) {
-                        binding!!.llUploadBankStatement.visibility = View.VISIBLE
+                        //binding!!.llUploadBankStatement.visibility = View.VISIBLE
                     } else {
-                        binding!!.llUploadBankStatement.visibility = View.GONE
+                        //binding!!.llUploadBankStatement.visibility = View.GONE
                     }
                 }
                 if (this.loansResponse != null && this.loansResponse!!.has("monitoring_card_data")) {
@@ -138,7 +149,8 @@ class UploadBankDetailsActivity : BaseActivity() {
                     readonly = intent.getBooleanExtra("readonly", false)
                     binding?.etSelectBank!!.setText(bankName)
                     isBankSelected = true
-                    getAnalysisType()
+                    //getAnalysisType()
+                    getAnalysisList(false)
                 }
             }
             //dynamicText = intent.getStringExtra("bank_statement_upload_text")!!
@@ -162,12 +174,13 @@ class UploadBankDetailsActivity : BaseActivity() {
                 referrer = monitoring
                 binding?.etSelectBank!!.setText(bankName)
                 isBankSelected = true
-                getAnalysisType()
+                //getAnalysisType()
+                getAnalysisList(false)
             }
-            if(readonly){
+            if (readonly) {
                 !binding?.etSelectBank!!.isEnabled
                 !binding?.etSelectBank!!.isFocusable
-            }else {
+            } else {
                 binding?.etSelectBank!!.isEnabled
                 binding?.etSelectBank!!.isFocusable
             }
@@ -176,10 +189,10 @@ class UploadBankDetailsActivity : BaseActivity() {
         cnModel = CNModel(this, this, Constants.RequestFrom.HOME_PAGE)
         //(activity as DashboardActivity).isFinBit = true
         binding!!.etSelectBank.setOnClickListener {
-            if(readonly){
+            if (readonly) {
                 !binding?.etSelectBank!!.isEnabled
                 !binding?.etSelectBank!!.isFocusable
-            }else {
+            } else {
                 binding?.etSelectBank!!.isEnabled
                 binding?.etSelectBank!!.isFocusable
                 getBanksList()
@@ -211,23 +224,70 @@ class UploadBankDetailsActivity : BaseActivity() {
             }
             TrackingUtil.pushEvent(obj, getString(R.string.select_bank_page_interacted))
             if (isBankSelected) {
-                if (binding?.tilMobileNumber!!.visibility === VISIBLE) {
-                    if (selectedMobileNumber != null && selectedMobileNumber!!.isNotEmpty() && selectedMobileNumber?.length == 10) {
-                        if (binding?.cbConfrimBank!!.isChecked) {
-                            getBankLink()
-                        } else {
-                            displayToast("Please Check the consent")
+                typeList = getAnalysisListResponse?.data
+                if(selectedType == null) {
+                    Toast.makeText(
+                        activity, "Choose bank statement verification option.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }else {
+                    if(mobileVisible){
+                        if(selectedMobileNumber?.length == 10){
+                            if (binding?.tilMobileNumber!!.visibility === VISIBLE) {
+                                if (selectedMobileNumber != null && selectedMobileNumber!!.isNotEmpty() && selectedMobileNumber?.length == 10) {
+                                    if (binding?.cbConfrimBank!!.isChecked) {
+                                        //getBankLink()
+                                        getBankWebLinkType()
+                                    } else {
+                                        displayToast("Please Check the consent")
+                                    }
+                                } else {
+                                    displayToast("Please Enter Valid Mobile Number")
+                                }
+                            } else {
+                                if(selectedType != null) {
+                                    if (binding?.cbConfrimBank!!.isChecked) {
+                                        //getBankLink()
+                                        getBankWebLinkType()
+                                    } else {
+                                        displayToast("Please Check the consent")
+                                    }
+                                }else {
+                                    Toast.makeText(
+                                        activity, "Choose bank statement verification option.",
+                                        Toast.LENGTH_SHORT
+                                    ).show()
+                                }
+                            }
+                        }else{
+                            Toast.makeText(
+                                activity, "Please enter valid Mobile Number",
+                                Toast.LENGTH_SHORT
+                            ).show()
                         }
-                    } else {
-                        displayToast("Please Enter Valid Mobile Number")
-                    }
-                } else {
-                    if (binding?.cbConfrimBank!!.isChecked) {
-                        getBankLink()
-                    } else {
-                        displayToast("Please Check the consent")
+                    }else {
+                        if (binding?.tilMobileNumber!!.visibility === VISIBLE) {
+                            if (selectedMobileNumber != null && selectedMobileNumber!!.isNotEmpty() && selectedMobileNumber?.length == 10) {
+                                if (binding?.cbConfrimBank!!.isChecked) {
+                                    //getBankLink()
+                                    getBankWebLinkType()
+                                } else {
+                                    displayToast("Please Check the consent")
+                                }
+                            } else {
+                                displayToast("Please Enter Valid Mobile Number")
+                            }
+                        } else {
+                            if (binding?.cbConfrimBank!!.isChecked) {
+                                //getBankLink()
+                                getBankWebLinkType()
+                            } else {
+                                displayToast("Please Check the consent")
+                            }
+                        }
                     }
                 }
+
             } else {
                 displayToast("Select Bank")
             }
@@ -247,6 +307,124 @@ class UploadBankDetailsActivity : BaseActivity() {
                 }
             }*/
         }
+
+
+    }
+
+    private fun getAnalysisList(failedCase: Boolean) {
+        try {
+            CNProgressDialog.showProgressDialog(activity, Constants.LOADING_MESSAGE)
+            val genericAPIService = GenericAPIService(activity, 0)
+            val getAnalysisTypeReq = GetAnalysisTypeReq()
+            val token = userToken
+            getAnalysisTypeReq.bankCode = bankCode
+            getAnalysisTypeReq.referrer = referrer
+            genericAPIService.getAnalysisList(getAnalysisTypeReq, token)
+            genericAPIService.setOnDataListener { responseBody ->
+                CNProgressDialog.hideProgressDialog()
+                getAnalysisListResponse = Gson().fromJson(
+                    responseBody,
+                    GetAnalysisListResponse::class.java
+
+                )
+                if (getAnalysisListResponse != null && getAnalysisListResponse!!.status == true) {
+                    val typeList = getAnalysisListResponse!!.data
+                    setSelectedTypeData(typeList)
+                    if (failedCase) {
+                        CNAlertDialog.showAlertDialog(
+                            this,
+                            resources.getString(R.string.title_alert),
+                            "Bank Statement verification failed. Kindly retry."
+                        )
+                    }
+                } else {
+                    if (getAnalysisListResponse?.code == 5091) {
+                        showCustomAlertDialog5091(getAnalysisListResponse!!.message)
+                    } else if (getAnalysisListResponse?.code == 5092) {
+                        showCustomAlertDialog5092(getAnalysisListResponse!!.message)
+                    }
+
+                }
+            }
+            genericAPIService.setOnErrorListener {
+                fun errorData(throwable: Throwable?) {
+                    //Failure
+                    CNProgressDialog.hideProgressDialog()
+                }
+            }
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    @SuppressLint("MissingInflatedId")
+    private fun showCustomAlertDialog5091(message: String?) {
+        try {
+            val builder = AlertDialog.Builder(this)
+            val view = layoutInflater.inflate(R.layout.custom_alert, null)
+            builder.setView(view)
+            val tvTitle = view.findViewById<TextView>(R.id.tvTitle)
+            val tvMessage = view.findViewById<TextView>(R.id.tvMessage)
+            val tvOk = view.findViewById<TextView>(R.id.tvOk)
+            val dialog = builder.create()
+            /*if (intent.extras != null) {
+                val finalErrorMessage = intent.getStringExtra("errorMessage")!!
+                FirebaseCrashlytics.getInstance().recordException(Exception(finalErrorMessage))
+
+            }*/
+            tvTitle.text = "Alert"
+            tvMessage.text = message
+
+            tvOk.setOnClickListener {
+                dialog.dismiss()
+                val intent = Intent(this, DashboardActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or
+                        Intent.FLAG_ACTIVITY_CLEAR_TASK or
+                        Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(intent)
+            }
+            builder.setCancelable(true)
+            dialog?.show()
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    @SuppressLint("MissingInflatedId")
+    private fun showCustomAlertDialog5092(message: String?) {
+        try {
+            val builder = AlertDialog.Builder(this)
+            val view = layoutInflater.inflate(R.layout.custom_alert, null)
+            builder.setView(view)
+            val tvTitle = view.findViewById<TextView>(R.id.tvTitle)
+            val tvMessage = view.findViewById<TextView>(R.id.tvMessage)
+            val tvOk = view.findViewById<TextView>(R.id.tvOk)
+            val dialog = builder.create()
+            /*if (intent.extras != null) {
+                val finalErrorMessage = intent.getStringExtra("errorMessage")!!
+                FirebaseCrashlytics.getInstance().recordException(Exception(finalErrorMessage))
+
+            }*/
+            tvTitle.text = "Alert"
+            tvMessage.text = message
+
+            tvOk.setOnClickListener {
+                dialog.dismiss()
+                val intent = Intent(this, DashboardActivity::class.java)
+                intent.putExtra("from", "fromuploadfinbit")
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or
+                        Intent.FLAG_ACTIVITY_CLEAR_TASK or
+                        Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(intent)
+            }
+            builder.setCancelable(true)
+            dialog?.show()
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
     }
 
     private fun getAnalysisType() {
@@ -264,6 +442,7 @@ class UploadBankDetailsActivity : BaseActivity() {
                     GetAnalysisTypeResponse::class.java
                 )
                 if (getAnalysisTypeResponse != null && getAnalysisTypeResponse!!.status == true) {
+
                     if (getAnalysisTypeResponse!!.data!!.vendorType == "AA") {
                         binding?.tilMobileNumber!!.visibility = VISIBLE
                         binding?.tvCancel!!.visibility = VISIBLE
@@ -290,6 +469,25 @@ class UploadBankDetailsActivity : BaseActivity() {
         } catch (e: Exception) {
             e.printStackTrace()
         }
+    }
+
+    private fun setSelectedTypeData(typeList: List<AnalysisListData>?) {
+        try {
+            binding?.rvSelectType?.layoutManager = LinearLayoutManager(this)
+            bankStatementTypeadapter = BankStatementTypeAdapter(this, typeList, this)
+            binding?.rvSelectType?.adapter = bankStatementTypeadapter
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
+    }
+
+    override fun onItemClicked(value: String?, selectedMobileNo: String?, mobileVisible : Boolean) {
+        // Handle the value received from the adapter
+        selectedType = value
+        selectedMobileNumber = selectedMobileNo
+        this.mobileVisible = mobileVisible
     }
 
     private fun setMobileNumberList(mobNumbers: List<String>?) {
@@ -379,6 +577,13 @@ class UploadBankDetailsActivity : BaseActivity() {
     @SuppressLint("SetJavaScriptEnabled")
     private fun loadFinBit(weblink: String) {
         binding!!.wvFinBit.visibility = VISIBLE
+        if (binding!!.wvFinBit.visibility == VISIBLE) {
+            binding!!.llProceed.visibility = GONE
+            binding!!.llPageName.visibility = GONE
+        } else {
+            binding!!.llProceed.visibility = VISIBLE
+            binding!!.llPageName.visibility = VISIBLE
+        }
         binding!!.wvFinBit.settings.javaScriptEnabled = true
         binding!!.wvFinBit.settings.domStorageEnabled = true
         binding!!.wvFinBit.settings.allowContentAccess = true
@@ -410,7 +615,7 @@ class UploadBankDetailsActivity : BaseActivity() {
                         val obj = JSONObject()
                         try {
                             obj.put("cnid", (activity as BaseActivity).userDetails.qcId)
-                            obj.put("BankName", bankName )
+                            obj.put("BankName", bankName)
                             obj.put("bankDetailsTaken", "true")
                         } catch (e: JSONException) {
                             throw RuntimeException(e)
@@ -426,20 +631,31 @@ class UploadBankDetailsActivity : BaseActivity() {
                         )
                         startTimer()
                         binding!!.wvFinBit.visibility = GONE
+                        binding!!.llProceed.visibility = VISIBLE
+                        binding!!.llPageName.visibility = VISIBLE
                     }
 
                     url.contains("cnmobileapp/close?status=ERROR") -> {
-                        showSuccess(false, userId)
+                        //showSuccess(false, userId)
                         //displayToast("Bank statement uploaded failed")
                         BankProgressDialog.hideProgressDialog()
 
                         binding!!.wvFinBit.visibility = GONE
+                        binding!!.llProceed.visibility = VISIBLE
+                        binding!!.llPageName.visibility = VISIBLE
+                        binding?.cbConfrimBank?.isChecked = false
+                        selectedType = null
+                        getAnalysisList(true)
                     }
 
                     url.contains("cnmobileapp/close?status=CANCEL") -> {
                         showSuccess(false, userId)
                         //displayToast("Bank statement uploaded failed")
                         binding!!.wvFinBit.visibility = GONE
+                        binding!!.llProceed.visibility = VISIBLE
+                        binding!!.llPageName.visibility = VISIBLE
+                        binding?.cbConfrimBank?.isChecked = false
+                        selectedType = null
                     }
 
                     else -> {
@@ -503,7 +719,7 @@ class UploadBankDetailsActivity : BaseActivity() {
         } else {
             CNAlertDialog.showStatusWithCallback(
                 this,
-                "Bank statement upload failed",
+                "Bank Statement verification failed, kindly retry.",
                 getString(R.string.failure_retry),
                 R.drawable.failure_new, R.color.cb_errorRed
             )
@@ -520,6 +736,8 @@ class UploadBankDetailsActivity : BaseActivity() {
                     if (success) {
                         gotoDashBoard()
                         CNAlertDialog.dismiss()
+                    } else {
+
                     }
                 }
             }
@@ -809,17 +1027,18 @@ class UploadBankDetailsActivity : BaseActivity() {
                         val intent = Intent(this, DashboardActivity::class.java)
                         intent.putExtra("redirect", getString(R.string.request_bank_chnage))
                         //startActivity(intent)
-                        (activity as BaseActivity).sharedPreferences.putBoolean("fromuploaddocs", true)
+                        (activity as BaseActivity).sharedPreferences.putBoolean(
+                            "fromuploaddocs",
+                            true
+                        )
                         this.finish()
 
-                    }
-                    else if (referrer == Constants.FIN_BIT_REFERRER.Latest_Docs) {
+                    } else if (referrer == Constants.FIN_BIT_REFERRER.Latest_Docs) {
                         val intent = Intent(this, BankDetailsActivity::class.java)
                         intent.putExtra("bank_statement_upload_text", dynamicText)
                         intent.putExtra("latest_docs", latestDocs)
                         startActivity(intent)
-                    }
-                    else {
+                    } else {
                         val intent = Intent(this, BankDetailsActivity::class.java)
                         intent.putExtra("bank_statement_upload_text", dynamicText)
                         (activity as BaseActivity).sharedPreferences.putBoolean("fromDocs", true)
@@ -845,6 +1064,79 @@ class UploadBankDetailsActivity : BaseActivity() {
                 CNProgressDialog.hideProgressDialog()
             }
         }
+    }
+
+    private fun getBankWebLinkType() {
+        try {
+            CNProgressDialog.showProgressDialog(activity, Constants.LOADING_MESSAGE)
+            val genericAPIService = GenericAPIService(activity, 0)
+            val getBankLinkReq = GetBankLinkReq()
+            getBankLinkReq.userId = (activity as BaseActivity).userDetails.userId
+            getBankLinkReq.bankCode = bankCode
+            getBankLinkReq.referrer = referrer
+            getBankLinkReq.type = selectedType
+            getBankLinkReq.mobNo = selectedMobileNumber
+            val token = userToken
+            genericAPIService.getBankWebLinkType(getBankLinkReq, token)
+            genericAPIService.setOnDataListener { responseBody ->
+                CNProgressDialog.hideProgressDialog()
+                val webLinkRes = Gson().fromJson(
+                    responseBody,
+                    WebLinkRes::class.java
+                )
+                if (webLinkRes.status == Constants.STATUS_SUCCESS) {
+                    if (webLinkRes.weblink?.isNotEmpty() == true) {
+                        loadFinBit(webLinkRes.weblink!!)
+                    } else if (webLinkRes.weblink?.isEmpty() == true && webLinkRes.type == "manual") {
+                        if (referrer == Constants.FIN_BIT_REFERRER.Req_Bank_Change) {
+                            val intent = Intent(this, DashboardActivity::class.java)
+                            intent.putExtra("redirect", getString(R.string.request_bank_chnage))
+                            //startActivity(intent)
+                            (activity as BaseActivity).sharedPreferences.putBoolean(
+                                "fromuploaddocs",
+                                true
+                            )
+                            this.finish()
+
+                        } else if (referrer == Constants.FIN_BIT_REFERRER.Latest_Docs) {
+                            val intent = Intent(this, BankDetailsActivity::class.java)
+                            intent.putExtra("bank_statement_upload_text", dynamicText)
+                            intent.putExtra("latest_docs", latestDocs)
+                            startActivity(intent)
+                        } else {
+                            val intent = Intent(this, BankDetailsActivity::class.java)
+                            intent.putExtra("bank_statement_upload_text", dynamicText)
+                            (activity as BaseActivity).sharedPreferences.putBoolean(
+                                "fromDocs",
+                                true
+                            )
+                            startActivity(intent)
+                        }
+                    }
+                } else {
+                    CNProgressDialog.hideProgressDialog()
+                    CNAlertDialog.showAlertDialog(
+                        this,
+                        resources.getString(R.string.title_alert),
+                        webLinkRes.message
+                    )
+                }
+            }
+            genericAPIService.setOnErrorListener {
+                fun errorData(throwable: Throwable?) {
+                    //Failure
+                    CNAlertDialog.showAlertDialog(
+                        this,
+                        resources.getString(R.string.title_alert),
+                        "Something went wrong."
+                    )
+                    CNProgressDialog.hideProgressDialog()
+                }
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
     }
 
     private fun showBankDialog(banksList: List<BankDetails>) {
@@ -926,8 +1218,10 @@ class UploadBankDetailsActivity : BaseActivity() {
         bankCode = bank.bankCode
         isBankSelected = true
         binding!!.etSelectBank.setText(bank.bankName)
-        getAnalysisType()
+        //getAnalysisType()
+        getAnalysisList(false)
     }
+
 
     fun filterData(s: CharSequence, countryCodeArrayList: java.util.ArrayList<MasterData>) {
         val filterList: java.util.ArrayList<MasterData> = java.util.ArrayList<MasterData>()
@@ -944,10 +1238,16 @@ class UploadBankDetailsActivity : BaseActivity() {
 
         if (binding!!.wvFinBit.visibility == VISIBLE) {
             binding!!.wvFinBit.visibility = GONE
+            binding!!.llProceed.visibility = VISIBLE
+            binding!!.llPageName.visibility = VISIBLE
+            binding?.cbConfrimBank?.isChecked = false
+            selectedType = null
+            getAnalysisList(true)
         } else {
             super.onBackPressed()
         }
     }
+
     override fun onVolleyErrorResponse(error: VolleyError?) {
         if (CNProgressDialog.isProgressDialogShown) CNProgressDialog.hideProgressDialog()
         CNAlertDialog.showAlertDialog(

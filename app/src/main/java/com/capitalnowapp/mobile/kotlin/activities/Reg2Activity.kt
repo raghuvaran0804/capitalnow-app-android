@@ -210,7 +210,12 @@ class Reg2Activity : BaseActivity() {
                         alternateEmail!!
                     ).matches()
                 ) {
-                    verifyAlternateEmail(alternateEmail!!)
+                    if(userDetails.email == alternateEmail){
+                        displayToast("Secondary Mail cannot be same as Primary mail")
+                        binding?.etAlterEmail?.text?.clear()
+                    }else {
+                        verifyAlternateEmail(alternateEmail!!)
+                    }
                 } else {
                     if (binding?.cbAgreeTerms?.isChecked!!) {
                         Toast.makeText(

@@ -67,6 +67,10 @@ class SaveRegistrationOneReq : Serializable {
     @Expose
     var permanentPincode: String? = null
 
+    @SerializedName("off_pincode")
+    @Expose
+    var officePincode: String? = null
+
     @SerializedName("mode_of_pay")
     @Expose
     var modeOfPay: String? = null

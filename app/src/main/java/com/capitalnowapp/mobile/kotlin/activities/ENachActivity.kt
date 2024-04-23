@@ -147,7 +147,7 @@ class ENachActivity : BaseActivity(), LifecycleObserver {
             if (createMandateResponse != null && createMandateResponse.status == Constants.STATUS_SUCCESS && createMandateResponse.data?.webviewUrl != null) {
                 nachUrl = createMandateResponse.data.webviewUrl
                 if (nachUrl != null && nachUrl != "") {
-                    if (createMandateResponse?.data.mandateProvider == 1) {
+                    if (createMandateResponse?.data.mandateProvider == 1 || createMandateResponse?.data.mandateProvider == 3) {
                         loadNach(nachUrl!!)
                     }else if (createMandateResponse?.data.mandateProvider == 2){
                         loadRazorpay(nachUrl!!)

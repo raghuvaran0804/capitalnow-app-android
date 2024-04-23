@@ -41,6 +41,7 @@ import com.capitalnowapp.mobile.models.GenericRequest
 import com.capitalnowapp.mobile.models.GenericResponse
 import com.capitalnowapp.mobile.models.GetAdditionalDocReq
 import com.capitalnowapp.mobile.models.GetAdditionalDocResponse
+import com.capitalnowapp.mobile.models.GetAnalysisListResponse
 import com.capitalnowapp.mobile.models.GetAnalysisTypeReq
 import com.capitalnowapp.mobile.models.GetAnalysisTypeResponse
 import com.capitalnowapp.mobile.models.GetAreaListReq
@@ -399,6 +400,8 @@ interface ApiInterface {
 
     @POST("auth/get-bank-weblink-v3")
     fun getBankWeblink(@Body getBankLinkReq: GetBankLinkReq): Call<WebLinkRes?>?
+    @POST("auth/get-bank-weblink-by-type")
+    fun getBankWebLinkType(@Body getBankLinkReq: GetBankLinkReq): Call<WebLinkRes?>?
 
     @POST("analyse_capability")
     fun analyseCapability(@Body analyseCapabilityReq: AnalyseCapabilityReq?): Call<RegisterDeviceResponse?>?
@@ -477,7 +480,7 @@ interface ApiInterface {
 
     /* @POST("createMandate")
      fun createMandate(@Body createMandateReq: CreateMandateReq?): Call<CreateMandateResponse?>?*/
-    @POST("auth/authenticate-mandate-v2")
+    @POST("auth/authenticate-mandate-v3")
     fun createMandate(@Body createMandateReq: CreateMandateReq?): Call<CreateMandateResponse?>?
 
     @POST("submitMandate")
@@ -714,7 +717,7 @@ interface ApiInterface {
     @POST("apply_loan_service_data")
     fun applyLoanServiceData(@Body applyLoanServiceDataReq: ApplyLoanServiceDataReq?): Call<ApplyLoanServiceDataResponse?>?
 
-    @POST("user/save-registration-one")
+    @POST("user/save-registration-one-v2")
     fun saveRegistrationOne(@Body saveRegistrationOneReq: SaveRegistrationOneReq?): Call<SaveRegistrationOneResponse?>?
 
     @POST("user/save-registration-two")
@@ -785,6 +788,9 @@ interface ApiInterface {
 
     @POST("signzy/get-signzy-url")
     fun openDigiLocker(@Body openDigiLockerReq: OpenDigiLockerReq?): Call<OpenDigiLockerResponse?>?
+
+    @POST("auth/get-analysis-list")
+    fun getAnalysisList(@Body getAnalysisTypeReq: GetAnalysisTypeReq): Call<GetAnalysisListResponse?>?
 
 
 }
