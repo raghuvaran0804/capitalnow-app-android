@@ -717,7 +717,7 @@ interface ApiInterface {
     @POST("apply_loan_service_data")
     fun applyLoanServiceData(@Body applyLoanServiceDataReq: ApplyLoanServiceDataReq?): Call<ApplyLoanServiceDataResponse?>?
 
-    @POST("user/save-registration-one-v2")
+    @POST("user/save-registration-one")
     fun saveRegistrationOne(@Body saveRegistrationOneReq: SaveRegistrationOneReq?): Call<SaveRegistrationOneResponse?>?
 
     @POST("user/save-registration-two")

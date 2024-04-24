@@ -14,6 +14,7 @@ import com.capitalnowapp.mobile.kotlin.activities.UploadBankDetailsActivity
 import com.capitalnowapp.mobile.models.AnalysisListData
 
 class BankStatementTypeAdapter(
+    private val Listener: OnTextChangeListener,
     private val listener: AdapterItemClickListener,
     private val typeList: List<AnalysisListData>?,
     private val uploadBankDetailsActivity: UploadBankDetailsActivity
@@ -60,19 +61,22 @@ class BankStatementTypeAdapter(
                 if (listType?.caution == true && listType!!.checked == true) {
                     holder.tvFooter.visibility = View.VISIBLE
                 }
+
                 holder.llMain.setOnClickListener {
                     selectedType = if(typeList[holder.absoluteAdapterPosition].type != null){
                         typeList[holder.absoluteAdapterPosition].type
                     }else {
                         ""
                     }
-
-                    selectedMobileNo =
-                        if (typeList[holder.absoluteAdapterPosition].mobNumbers?.isNotEmpty()!!) {
-                            typeList.get(holder.absoluteAdapterPosition).mobNumbers!![0]
-                        } else {
-                            ""
+                    if (typeList[holder.absoluteAdapterPosition].mobNumbers?.isNotEmpty()!!) {
+                        if(selectedMobileNo == null) {
+                            selectedMobileNo =
+                                typeList[holder.absoluteAdapterPosition].mobNumbers!![0]
                         }
+                    } else {
+                        selectedMobileNo = ""
+                    }
+
                     mobileVisible = holder.tilMobileNumber.visibility === View.VISIBLE
                     listener.onItemClicked(selectedType, selectedMobileNo,mobileVisible)
                     fromClick = true
@@ -98,8 +102,18 @@ class BankStatementTypeAdapter(
                         count: Int
                     ) = Unit
 
+
                     override fun afterTextChanged(s: Editable?) {
-                        selectedMobileNo = s.toString()
+                        if (s != null) {
+                            if(s.length == 10) {
+                                selectedMobileNo = s.toString()
+                                typeList[holder.absoluteAdapterPosition].mobNumbers = listOf(
+                                    selectedMobileNo.toString()
+                                )
+                                Listener.onTextChanged(s.toString())
+                            }
+                        }
+
                     }
 
                 })
@@ -149,4 +163,8 @@ class BankStatementTypeAdapter(
 
 interface AdapterItemClickListener {
     fun onItemClicked(value: String?, selectedMobileNo: String?, mobileVisible: Boolean)
+}
+
+interface OnTextChangeListener {
+    fun onTextChanged(text: String)
 }

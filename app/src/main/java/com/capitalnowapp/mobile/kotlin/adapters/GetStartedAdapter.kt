@@ -43,7 +43,7 @@ class GetStartedAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder?>() {
                 binding?.tvTitle1?.text = "Quick . Digital . Safe"
             }
             if (position == 1) {
-                binding?.viewPagerImage?.setImageResource( R.drawable.cs_intro)
+                binding?.viewPagerImage?.setImageResource( R.drawable.cn_intro)
                 binding?.tvTitle1?.text = "Offerings"
 
             }

@@ -40,6 +40,7 @@ import com.capitalnowapp.mobile.kotlin.adapters.AdapterItemClickListener
 import com.capitalnowapp.mobile.kotlin.adapters.BankStatementTypeAdapter
 import com.capitalnowapp.mobile.kotlin.adapters.ListFilterAdapter
 import com.capitalnowapp.mobile.kotlin.adapters.LoanOptionsAdapter
+import com.capitalnowapp.mobile.kotlin.adapters.OnTextChangeListener
 import com.capitalnowapp.mobile.models.AnalyseCapabilityReq
 import com.capitalnowapp.mobile.models.AnalysisListData
 import com.capitalnowapp.mobile.models.BankDetails
@@ -70,7 +71,7 @@ import java.util.Locale
 
 
 @Suppress("DEPRECATED_IDENTITY_EQUALS")
-class UploadBankDetailsActivity : BaseActivity(), AdapterItemClickListener {
+class UploadBankDetailsActivity : BaseActivity(), AdapterItemClickListener, OnTextChangeListener {
     private var typeList: List<AnalysisListData>? = null
     private var selectedType: String? = null
     private var otherMobileNumber: String? = null
@@ -97,6 +98,7 @@ class UploadBankDetailsActivity : BaseActivity(), AdapterItemClickListener {
     private var readonly: Boolean = false
     private var monitoring: String? = null
     private var selectedMobileNumber: String? = null
+    private var selectedMobileNumberfromAdapter: String? = null
     private var mobileVisible: Boolean = false
     private lateinit var bankStatementTypeadapter: BankStatementTypeAdapter
 
@@ -225,14 +227,14 @@ class UploadBankDetailsActivity : BaseActivity(), AdapterItemClickListener {
             TrackingUtil.pushEvent(obj, getString(R.string.select_bank_page_interacted))
             if (isBankSelected) {
                 typeList = getAnalysisListResponse?.data
-                if(selectedType == null) {
+                if (selectedType == null) {
                     Toast.makeText(
                         activity, "Choose bank statement verification option.",
                         Toast.LENGTH_SHORT
                     ).show()
                 }else {
                     if(mobileVisible){
-                        if(selectedMobileNumber?.length == 10){
+                        if(selectedMobileNumberfromAdapter?.length == 10){
                             if (binding?.tilMobileNumber!!.visibility === VISIBLE) {
                                 if (selectedMobileNumber != null && selectedMobileNumber!!.isNotEmpty() && selectedMobileNumber?.length == 10) {
                                     if (binding?.cbConfrimBank!!.isChecked) {
@@ -334,7 +336,7 @@ class UploadBankDetailsActivity : BaseActivity(), AdapterItemClickListener {
                         CNAlertDialog.showAlertDialog(
                             this,
                             resources.getString(R.string.title_alert),
-                            "Bank Statement verification failed. Kindly retry."
+                            getAnalysisListResponse!!.message
                         )
                     }
                 } else {
@@ -474,7 +476,7 @@ class UploadBankDetailsActivity : BaseActivity(), AdapterItemClickListener {
     private fun setSelectedTypeData(typeList: List<AnalysisListData>?) {
         try {
             binding?.rvSelectType?.layoutManager = LinearLayoutManager(this)
-            bankStatementTypeadapter = BankStatementTypeAdapter(this, typeList, this)
+            bankStatementTypeadapter = BankStatementTypeAdapter(this,this, typeList, this)
             binding?.rvSelectType?.adapter = bankStatementTypeadapter
 
         } catch (e: Exception) {
@@ -483,10 +485,10 @@ class UploadBankDetailsActivity : BaseActivity(), AdapterItemClickListener {
 
     }
 
-    override fun onItemClicked(value: String?, selectedMobileNo: String?, mobileVisible : Boolean) {
+    override fun onItemClicked(value: String?, selectedMobileNo: String?, mobileVisible: Boolean) {
         // Handle the value received from the adapter
         selectedType = value
-        selectedMobileNumber = selectedMobileNo
+        selectedMobileNumberfromAdapter = selectedMobileNo
         this.mobileVisible = mobileVisible
     }
 
@@ -550,13 +552,14 @@ class UploadBankDetailsActivity : BaseActivity(), AdapterItemClickListener {
                 cnModel.saveStep2Registration(userId, req, token)
             } else {
 
-                CNAlertDialog.showStatusWithCallback(
+                /*CNAlertDialog.showStatusWithCallback(
                     this,
                     genericResponse.message,
                     getString(R.string.failure_retry),
                     R.drawable.failure_new, R.color.cb_errorRed
                 )
-                CNAlertDialog.setRequestCode(1)
+                CNAlertDialog.setRequestCode(1)*/
+                getAnalysisList(true)
             }
 
 
@@ -956,11 +959,12 @@ class UploadBankDetailsActivity : BaseActivity(), AdapterItemClickListener {
                 //(activity as DashboardActivity).getApplyLoanData(true)
                 gotoDashBoard()
             } else {
-                CNAlertDialog.showAlertDialog(
+                /*CNAlertDialog.showAlertDialog(
                     this,
                     resources.getString(R.string.title_alert),
                     submitBankChangeResponse.message
-                )
+                )*/
+                getAnalysisList(true)
             }
         }
         genericAPIService.setOnErrorListener {
@@ -987,11 +991,12 @@ class UploadBankDetailsActivity : BaseActivity(), AdapterItemClickListener {
             if (submitBankChangeResponse != null && submitBankChangeResponse.status == Constants.STATUS_SUCCESS) {
                 gotoDashBoard()
             } else {
-                CNAlertDialog.showAlertDialog(
+                /*CNAlertDialog.showAlertDialog(
                     this,
                     resources.getString(R.string.title_alert),
                     submitBankChangeResponse.message
-                )
+                )*/
+                getAnalysisList(true)
             }
         }
         genericAPIService.setOnErrorListener {
@@ -1075,7 +1080,7 @@ class UploadBankDetailsActivity : BaseActivity(), AdapterItemClickListener {
             getBankLinkReq.bankCode = bankCode
             getBankLinkReq.referrer = referrer
             getBankLinkReq.type = selectedType
-            getBankLinkReq.mobNo = selectedMobileNumber
+            getBankLinkReq.mobNo = selectedMobileNumberfromAdapter
             val token = userToken
             genericAPIService.getBankWebLinkType(getBankLinkReq, token)
             genericAPIService.setOnDataListener { responseBody ->
@@ -1297,5 +1302,9 @@ class UploadBankDetailsActivity : BaseActivity(), AdapterItemClickListener {
 
         sharedPreferences.putString(Constants.USER_DETAILS_DATA, Gson().toJson(ud))
         userDetails = ud;
+    }
+
+    override fun onTextChanged(text: String) {
+        selectedMobileNumberfromAdapter = text
     }
 }

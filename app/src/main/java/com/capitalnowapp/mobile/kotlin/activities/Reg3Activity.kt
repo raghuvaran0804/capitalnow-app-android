@@ -257,14 +257,14 @@ class Reg3Activity : BaseActivity() {
 
     private fun stateAndCityFromPinCode(pincode: String) {
         try{
-            CNProgressDialog.showProgressDialog(activity, Constants.LOADING_MESSAGE)
+
             val genericAPIService = GenericAPIService(activity,0)
             val pinCodeReq = PinCodeReq()
             pinCodeReq.pincode = pincode
             val token = userToken
             genericAPIService.stateAndCityFromPinCode(pinCodeReq, token)
             genericAPIService.setOnDataListener { responseBody ->
-                CNProgressDialog.hideProgressDialog()
+
                 pinCodeResponse = Gson().fromJson(
                     responseBody,
                     PinCodeResponse::class.java
@@ -290,7 +290,7 @@ class Reg3Activity : BaseActivity() {
             }
             genericAPIService.setOnErrorListener {
                 fun errorData(throwable: Throwable?) {
-                    CNProgressDialog.hideProgressDialog()
+
                 }
             }
 
@@ -300,55 +300,57 @@ class Reg3Activity : BaseActivity() {
     }
 
     override fun getProfile(userId: String?) {
-        this.userId = userId
-        CNProgressDialog.showProgressDialog(activityContext, Constants.LOADING_MESSAGE)
-        val genericAPIService = GenericAPIService(activityContext, 0)
-        val genericRequest = GenericRequest()
-        genericRequest.userId = userId
-        genericRequest.deviceUniqueId = Utility.getInstance().getDeviceUniqueId(this)
-        genericAPIService.getUserData(genericRequest)
-        genericAPIService.setOnDataListener { responseBody ->
-            CNProgressDialog.hideProgressDialog()
-            userDetailsResponse = Gson().fromJson(
-                responseBody,
-                UserDetailsResponse::class.java
-            )
-            if (userDetailsResponse != null && userDetailsResponse!!.statusCode == Constants.STATUS_CODE_UNAUTHORISED) {
-                logout()
-            } else {
-                if (userDetailsResponse?.userDetails != null && userDetailsResponse!!.userDetails!!.qcId != null && userDetailsResponse!!.userDetails!!.qcId != ""
-                ) {
-                    sharedPreferences.putString(
-                        Constants.RAZOR_PAY_API_KEY,
-                        userDetailsResponse!!.razorPayApiKey
-                    )
-                    sharedPreferences.putString(
-                        Constants.USER_DETAILS_DATA,
-                        Gson().toJson(userDetailsResponse!!.userDetails)
-                    )
-                    userDetails = userDetailsResponse!!.userDetails
-                    setData()
+        try{
+            this.userId = userId
+            val genericAPIService = GenericAPIService(activityContext, 0)
+            val genericRequest = GenericRequest()
+            genericRequest.userId = userId
+            genericRequest.deviceUniqueId = Utility.getInstance().getDeviceUniqueId(this)
+            genericAPIService.getUserData(genericRequest)
+            genericAPIService.setOnDataListener { responseBody ->
+                userDetailsResponse = Gson().fromJson(
+                    responseBody,
+                    UserDetailsResponse::class.java
+                )
+                if (userDetailsResponse != null && userDetailsResponse!!.statusCode == Constants.STATUS_CODE_UNAUTHORISED) {
+                    logout()
                 } else {
-                    Toast.makeText(
-                        applicationContext,
-                        getString(R.string.error_failure),
-                        Toast.LENGTH_SHORT
-                    ).show()
-                    userDetails = Gson().fromJson(
-                        sharedPreferences.getString(Constants.USER_DETAILS_DATA),
-                        UserDetails::class.java
-                    )
+                    if (userDetailsResponse?.userDetails != null && userDetailsResponse!!.userDetails!!.qcId != null && userDetailsResponse!!.userDetails!!.qcId != ""
+                    ) {
+                        sharedPreferences.putString(
+                            Constants.RAZOR_PAY_API_KEY,
+                            userDetailsResponse!!.razorPayApiKey
+                        )
+                        sharedPreferences.putString(
+                            Constants.USER_DETAILS_DATA,
+                            Gson().toJson(userDetailsResponse!!.userDetails)
+                        )
+                        userDetails = userDetailsResponse!!.userDetails
+                        setData()
+                    } else {
+                        Toast.makeText(
+                            applicationContext,
+                            getString(R.string.error_failure),
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        userDetails = Gson().fromJson(
+                            sharedPreferences.getString(Constants.USER_DETAILS_DATA),
+                            UserDetails::class.java
+                        )
+                    }
                 }
             }
+            genericAPIService.setOnErrorListener {
+                Toast.makeText(
+                    applicationContext,
+                    getString(R.string.error_failure),
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        }catch (e:Exception){
+            e.printStackTrace()
         }
-        genericAPIService.setOnErrorListener {
-            CNProgressDialog.hideProgressDialog()
-            Toast.makeText(
-                applicationContext,
-                getString(R.string.error_failure),
-                Toast.LENGTH_SHORT
-            ).show()
-        }
+
     }
 
     private fun setData() {

@@ -228,11 +228,11 @@ public class Constants {
 
     //Development & Production
     public static final String MAIN_URL = BuildConfig.DEBUG ?
-            "https://api.capitalnow.in/index.php/CNApp_Web_Services_1_1_2/" : "https://api.capitalnow.in/index.php/CNApp_Web_Services_1_1_2/";
-            //"https://api.staging.capitalnow.in/index.php/CNApp_Web_Services_1_1_2/" : "https://api.capitalnow.in/index.php/CNApp_Web_Services_1_1_1";
+            //"https://api.capitalnow.in/index.php/CNApp_Web_Services_1_1_2/" : "https://api.capitalnow.in/index.php/CNApp_Web_Services_1_1_2/";
+            "https://api.staging.capitalnow.in/index.php/CNApp_Web_Services_1_1_2/" : "https://api.capitalnow.in/index.php/CNApp_Web_Services_1_1_1";
     //Response Codes
-    public static final String MAIN_URL_1 = "https://api2.capitalnow.in";
-    //public static final String MAIN_URL_1 = "https://api2.staging.capitalnow.in";
+    //public static final String MAIN_URL_1 = "https://api2.capitalnow.in";
+    public static final String MAIN_URL_1 = "https://api2.staging.capitalnow.in";
     public static final String STATUS_SUCCESS = "success";
     public static final String STATUS_ERROR = "error";
     public static final String STATUS_FAILURE = "failure";

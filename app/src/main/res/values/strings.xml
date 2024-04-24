@@ -143,7 +143,7 @@
     <string name="pan_confirmation">I hereby declare that I am Indian National.\n I confirm that the PAN Number shared belongs to me and I authorize to pull my record from NSDL and run credit bureau checks on my behalf to obtain my credit report.</string>
     <string name="signature_confirmation">I confirm the above signature is correct and belong to me</string>
     <string name="aadhaar_confirmation">I authorise Capital Now to verify my Aadhar Details for processing my loan. I also confirm that the Aadhar details provided by me is correct.</string>
-    <string name="bank_confirmation">I authorise Capital Now to analyse my Bank Statement and to verify my Bank Account for further processing of my loan application.</string>
+    <string name="bank_confirmation">I authorize Capital Now and its partners to analyze my bank statement transactions for credit underwriting of my loan application.</string>
     <string name="facematch_discription">Hey there! we need your facial profile to establish a credit history kindly follow the instructions mentioned below to do KYC check.</string>
     <string name="facematch_info">Please follow on-screen instructions that you would receive on the next page</string>
     <string name="facematch_note">Please don’t put on any accessories like a hat, jewellery, or glasses because it will hamper our verification process.</string>

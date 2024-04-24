@@ -420,7 +420,8 @@ class BankDetailsActivity : BaseActivity() {
             alertDialog.setCanceledOnTouchOutside(true)
             val takePhoto =
                 alertDialog.findViewById<CNButton>(com.capitalnowapp.mobile.R.id.btnTakePhoto)
-            val gallery = alertDialog.findViewById<CNButton>(com.capitalnowapp.mobile.R.id.btnGallery)
+            val gallery =
+                alertDialog.findViewById<CNButton>(com.capitalnowapp.mobile.R.id.btnGallery)
             val cancel = alertDialog.findViewById<ImageView>(com.capitalnowapp.mobile.R.id.ivCancel)
 
             if (isBank) {
@@ -605,7 +606,7 @@ class BankDetailsActivity : BaseActivity() {
                         selectedDocumentUri.let { activity?.contentResolver?.getType(it) }
                         val fileType = Utility.getMimeType(this, selectedDocumentUri)
 
-                        if ( fileType.equals(
+                        if (fileType.equals(
                                 "PDF", ignoreCase = true
                             )
                         ) {
@@ -876,6 +877,7 @@ class BankDetailsActivity : BaseActivity() {
             null
         }
     }
+
     override fun onVolleyErrorResponse(error: VolleyError?) {
         if (CNProgressDialog.isProgressDialogShown) CNProgressDialog.hideProgressDialog()
         CNAlertDialog.showAlertDialog(
@@ -925,5 +927,11 @@ class BankDetailsActivity : BaseActivity() {
 
         sharedPreferences.putString(Constants.USER_DETAILS_DATA, Gson().toJson(ud))
         userDetails = ud;
+    }
+
+    override fun onBackPressed() {
+
+        super.onBackPressed()
+
     }
 }
