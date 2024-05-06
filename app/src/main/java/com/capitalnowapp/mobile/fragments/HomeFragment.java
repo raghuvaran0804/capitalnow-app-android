@@ -207,6 +207,7 @@ public class HomeFragment extends Fragment {
             userId = ((BaseActivity) currentActivity).userDetails.getUserId();
             cnModel = new CNModel(context, currentActivity, Constants.RequestFrom.PROFILE_PAGE);
             //((DashboardActivity) currentActivity).getApplyLoanData();
+            CNProgressDialog.hideProgressDialog();
 
             imageSlider = currentLayout.findViewById(R.id.imageSlider);
 
@@ -948,7 +949,7 @@ public class HomeFragment extends Fragment {
 
     private void saveCreditCardData() {
         try {
-            CNProgressDialog.showProgressDialog(context, Constants.LOADING_MESSAGE);
+            //CNProgressDialog.showProgressDialog(context, Constants.LOADING_MESSAGE);
             GenericAPIService genericAPIService = new GenericAPIService(getContext(), 0);
             GenericRequest genericRequest = new GenericRequest();
             String token = ((BaseActivity) currentActivity).getUserToken();

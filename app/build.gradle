@@ -35,49 +35,35 @@ android {
     }
     productFlavors {
     }
+    packagingOptions {
+        jniLibs {
+            excludes += ['*/res/**']
+        }
+        resources {
+            excludes += ['META-INF/DEPENDENCIES', 'META-INF/NOTICE', 'META-INF/LICENSE', 'META-INF/LICENSE.txt', 'META-INF/NOTICE.txt', '*/res/**', 'AndroidManifest.xml', 'META-INF/DEPENDENCIES.txt', 'META-INF/LICENSE.txt', 'META-INF/NOTICE.txt', 'META-INF/NOTICE', 'META-INF/LICENSE', 'META-INF/DEPENDENCIES', 'META-INF/notice.txt', 'META-INF/license.txt', 'META-INF/dependencies.txt', 'META-INF/LGPL2.1']
+        }
+    }
 
 // This is to fix the error : More than one file was found with OS independent path
-    packagingOptions {
-        exclude 'META-INF/DEPENDENCIES'
-        exclude 'META-INF/NOTICE'
-        exclude 'META-INF/LICENSE'
-        exclude 'META-INF/LICENSE.txt'
-        exclude 'META-INF/NOTICE.txt'
-        exclude '*/res/**'
-        exclude 'AndroidManifest.xml'
-    }
 
     dexOptions {
         javaMaxHeapSize "4g"
     }
 
 // To resolve Lint found fatal errors while assembling a release target
-    lintOptions {
-        checkReleaseBuilds false
-        // Or, if you prefer, you can continue to check for errors in release builds,
-        // but continue the build even when errors are found:
-        abortOnError false
-    }
 
 
-    packagingOptions {
-        exclude 'META-INF/DEPENDENCIES.txt'
-        exclude 'META-INF/LICENSE.txt'
-        exclude 'META-INF/NOTICE.txt'
-        exclude 'META-INF/NOTICE'
-        exclude 'META-INF/LICENSE'
-        exclude 'META-INF/DEPENDENCIES'
-        exclude 'META-INF/notice.txt'
-        exclude 'META-INF/license.txt'
-        exclude 'META-INF/dependencies.txt'
-        exclude 'META-INF/LGPL2.1'
-    }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    namespace 'com.capitalnowapp.mobile'
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
     }
 }
 
@@ -204,9 +190,9 @@ dependencies {
     //EasyBuzz
     implementation files('libs/peb-lib-android-x.aar')
     implementation 'com.squareup.okhttp:okhttp:2.4.0'
-    implementation 'androidx.multidex:multidex:2.0.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'com.squareup.okhttp:okhttp-urlconnection:2.2.0'
-    implementation 'com.google.android.gms:play-services-auth-api-phone:17.1.0'
+    implementation 'com.google.android.gms:play-services-auth-api-phone:18.0.2'
 }
 repositories {
     mavenCentral()

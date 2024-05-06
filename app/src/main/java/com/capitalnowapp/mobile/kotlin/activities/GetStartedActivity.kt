@@ -163,7 +163,7 @@ class GetStartedActivity : BaseActivity() {
                     Constants.SP_IS_GET_STARTED_SHOWN,
                     true
                 )
-            }, 2000)
+            }, 500)
         } catch (e: Exception) {
             e.printStackTrace()
         }

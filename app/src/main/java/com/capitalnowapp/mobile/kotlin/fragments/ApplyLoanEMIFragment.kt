@@ -858,7 +858,7 @@ class ApplyLoanEMIFragment : Fragment(), View.OnClickListener {
         val quotient: Int = amount / seekInterval
         binding?.llAmazon?.seekBar?.max = quotient
         binding?.llAmazon?.seekBar?.progress = quotient.minus(1)
-        if(amount ==8500) {
+        if (amount == 8500) {
             binding?.seekBar?.max = quotient.plus(1)
             binding?.seekBar?.progress = quotient.plus(1)
         } else {
@@ -964,10 +964,12 @@ class ApplyLoanEMIFragment : Fragment(), View.OnClickListener {
                 message1 = response.getString("message1")
                 tvmessage1.text = message1
             }
-            if (response.has("message2") && !response.getString("message2").equals(null) && !response.getString("message2").equals("")) {
+            if (response.has("message2") && !response.getString("message2")
+                    .equals(null) && !response.getString("message2").equals("")
+            ) {
                 message2 = response.getString("message2")
                 tvmessage2.text = message2
-            }else {
+            } else {
                 tvmessage2.visibility = View.GONE
             }
             if (response.has("message3")) {
@@ -984,7 +986,7 @@ class ApplyLoanEMIFragment : Fragment(), View.OnClickListener {
             }
             tvPayNow.setOnClickListener {
                 dialog?.dismiss()
-                if(popuploanType == "pl"){
+                if (popuploanType == "pl") {
                     (activity as DashboardActivity).replaceFrag(
                         ActiveLoansHomeFragment(),
                         "Active Personal Loan",
@@ -992,7 +994,7 @@ class ApplyLoanEMIFragment : Fragment(), View.OnClickListener {
                     )
 
                 }
-                if(popuploanType == "twl"){
+                if (popuploanType == "twl") {
                     (activity as DashboardActivity).replaceFrag(
                         TwlActiveLoansFragment(),
                         "Active Two Wheeler Loan",
@@ -1101,8 +1103,9 @@ class ApplyLoanEMIFragment : Fragment(), View.OnClickListener {
         }
         return rateOfInterest
     }
-    private fun checkCanApply(){
-        try{
+
+    private fun checkCanApply() {
+        try {
             if (loanType != AppConstants.LoanTypes.BankTransfer) {
                 CNProgressDialog.showProgressDialogText(
                     activity,
@@ -1148,13 +1151,13 @@ class ApplyLoanEMIFragment : Fragment(), View.OnClickListener {
             )
 
 
-        }catch (e: Exception){
+        } catch (e: Exception) {
             e.printStackTrace()
         }
     }
 
 
-     fun takeConfirmationToApplyForLoan(isBorrower: Boolean) {
+    fun takeConfirmationToApplyForLoan(isBorrower: Boolean) {
         try {
             var msg = ""
             var cancelText = ""
@@ -1220,8 +1223,6 @@ class ApplyLoanEMIFragment : Fragment(), View.OnClickListener {
                 activity,
                 getString(R.string.verifying_amazon_number)
             )
-        } else {
-            CNProgressDialog.showProgressDialog(activity, Constants.LOADING_MESSAGE)
         }
 
         newProcessingCharges = if (processingCharges == 100) {
@@ -1335,6 +1336,7 @@ class ApplyLoanEMIFragment : Fragment(), View.OnClickListener {
                     }
                     (activity as DashboardActivity).onBackPressed()
                     CNAlertDialog.dismiss()
+                    CNProgressDialog.hideProgressDialog()
                 }
             }
         })

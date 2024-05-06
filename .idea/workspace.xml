@@ -10,6 +10,11 @@
           <theme>@style/MyMaterialTheme</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_aadhar_otp.xml">
+        <config>
+          <theme>@style/MyMaterialTheme</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_aadhar_verification.xml">
         <config>
           <theme>@style/MyMaterialTheme</theme>
@@ -260,6 +265,11 @@
           <theme>@style/MyMaterialTheme</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_reward_points_new.xml">
+        <config>
+          <theme>@style/MyMaterialTheme</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_transactions.xml">
         <config>
           <theme>@style/MyMaterialTheme</theme>
@@ -357,6 +367,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3bd8437-2536-419a-a613-508fe0a64e47" name="Changes" comment="Apply loan change and import optimize">
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -366,106 +379,17 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/activities/BaseActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/activities/BaseActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/constants/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/BankDetailsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/BankDetailsActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/fragments/HomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/fragments/HomeFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/DashboardActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/DashboardActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/DeepLink2Activity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/DeepLink2Activity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/Reg3Activity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/Reg3Activity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/UploadBankDetailsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/UploadBankDetailsActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/offer/AadharVerificationActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/offer/ApplyLoanAmountActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/offer/BestOfferActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/offer/EMandateActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/offer/ESignActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/offer/FinalOfferActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/offer/OfferReferencesActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/offer/OfflineAadharActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/offer/OfflineUploadBankDetailsActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/offer/ProgressActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/offer/RegistrationBankDetailsActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/offer/RegistrationForm1Activity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/offer/RegistrationForm2Activity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/offer/RegistrationForm3Activity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/offer/RegistrationPanActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/offer/SalarySlipActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/offer/SelfieActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/offer/StatusActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/offer/UnderReviewActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/offer/VerifyBankDetailsActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/adapters/BankStatementTypeAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/adapters/BankStatementTypeAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/adapters/GetStartedAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/adapters/GetStartedAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/GetStartedActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/GetStartedActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ApplyLoanEMIFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ApplyLoanEMIFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/RewardPointsNewFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/RewardPointsNewFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/retrofit/ApiInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/retrofit/ApiInterface.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/cs_data_secure.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/cs_denied.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/cs_generateoffers.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/cs_hold.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/cs_intro.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/cs_message_icon.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/cs_offerbg.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/cs_representative.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/cs_thankyou.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/cs_uploadaselfie.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/cs_uploadpan.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/cs_data_secure.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/cs_denied.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/cs_generateoffers.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/cs_hold.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/cs_intro.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/cs_message_icon.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/cs_offerbg.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/cs_representative.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/cs_thankyou.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/cs_uploadaselfie.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/cs_uploadpan.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/cs_data_secure.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/cs_denied.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/cs_generateoffers.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/cs_hold.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/cs_intro.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/cs_message_icon.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/cs_offerbg.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/cs_representative.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/cs_thankyou.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/cs_uploadaselfie.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/cs_uploadpan.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/cs_data_secure.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/cs_denied.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/cs_generateoffers.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/cs_hold.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/cs_intro.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/cs_message_icon.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/cs_offerbg.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/cs_representative.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/cs_thankyou.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/cs_uploadaselfie.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/cs_uploadpan.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/cs_progress.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/cs_progress_line.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_aadhar_verification2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_apply_loan_amount.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_best_offer.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_emandate.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_esign.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_final_offer.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_offer_references.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_offline_aadhar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_offline_upload_bank_details.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_progress.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_basic.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_pan.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_personal.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_professional.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_registration_work.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_salary_slip.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_selfie.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_status.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_under_review.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_verify_bank_details.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/retrofit/GenericAPIService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/retrofit/GenericAPIService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home_new.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -478,7 +402,7 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\Admin\.android\avd\Pixel_6a_API_32.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\Admin\.android\avd\Pixel_7a_API_32.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -503,10 +427,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Kotlin Class" />
         <option value="layoutResourceFile" />
         <option value="resourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -514,7 +438,6 @@
     <option name="KEY_STORE_PATH" value="C:\Users\Admin\Desktop\Raghu\capitanow-new\capitanow-new\keystore\capitalnow.jks" />
     <option name="KEY_ALIAS" value="capitalnow" />
     <option name="REMEMBER_PASSWORDS" value="true" />
-    <option name="BUILD_TARGET_KEY" value="apk" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -539,7 +462,7 @@
   &quot;keyToString&quot;: {
     &quot;ApkExportedModule&quot;: &quot;capitalnow-app.app&quot;,
     &quot;BundleExportedModule&quot;: &quot;capitalnow-app.app&quot;,
-    &quot;DEBUGGABLE_DEVICE&quot;: &quot;Pixel_6a_API_32 [emulator-5554]&quot;,
+    &quot;DEBUGGABLE_DEVICE&quot;: &quot;Pixel_7a_API_32 [emulator-5554]&quot;,
     &quot;DEBUGGABLE_PROCESS&quot;: &quot;com.capitalnowapp.mobile&quot;,
     &quot;DEBUGGER_ID&quot;: &quot;Auto&quot;,
     &quot;ExportApk.ApkPathForcapitalnow-app.app&quot;: &quot;C:\\Users\\Admin\\Desktop\\AndProj\\capitalnow\\app\\release&quot;,
@@ -563,10 +486,10 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Desktop/AndProj/capitalnow/app/release&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Build Variants&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDK Location&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -767,11 +690,6 @@
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/DashboardActivity.kt</url>
-          <line>2104</line>
-          <option name="timeStamp" value="94" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/NewLoanActivity.kt</url>
           <line>141</line>
           <option name="timeStamp" value="155" />
@@ -787,31 +705,6 @@
           <option name="timeStamp" value="157" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/UploadBankDetailsActivity.kt</url>
-          <line>704</line>
-          <option name="timeStamp" value="167" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/UploadBankDetailsActivity.kt</url>
-          <line>535</line>
-          <option name="timeStamp" value="171" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/UploadBankDetailsActivity.kt</url>
-          <line>551</line>
-          <option name="timeStamp" value="172" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/UploadBankDetailsActivity.kt</url>
-          <line>540</line>
-          <option name="timeStamp" value="173" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/UploadBankDetailsActivity.kt</url>
-          <line>765</line>
-          <option name="timeStamp" value="176" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/EaseBuzzWebViewActivity.kt</url>
           <line>30</line>
           <option name="timeStamp" value="181" />
@@ -825,26 +718,6 @@
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/EaseBuzzWebViewActivity.kt</url>
           <line>31</line>
           <option name="timeStamp" value="203" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/DashboardActivity.kt</url>
-          <line>2317</line>
-          <option name="timeStamp" value="230" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/UploadBankDetailsActivity.kt</url>
-          <line>471</line>
-          <option name="timeStamp" value="235" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/UploadBankDetailsActivity.kt</url>
-          <line>696</line>
-          <option name="timeStamp" value="252" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/UploadBankDetailsActivity.kt</url>
-          <line>764</line>
-          <option name="timeStamp" value="253" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/TransactionsFragment.kt</url>
@@ -883,63 +756,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/DashboardActivity.kt</url>
-          <line>3659</line>
+          <line>3655</line>
           <option name="timeStamp" value="314" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/DashboardActivity.kt</url>
-          <line>1969</line>
-          <option name="timeStamp" value="319" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/DashboardActivity.kt</url>
-          <line>1873</line>
-          <option name="timeStamp" value="324" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/DashboardActivity.kt</url>
-          <line>2411</line>
+          <line>2407</line>
           <option name="timeStamp" value="344" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/DigiLockerActivity.kt</url>
           <line>98</line>
           <option name="timeStamp" value="348" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ApplyLoanEMIFragment.kt</url>
-          <line>1174</line>
-          <option name="timeStamp" value="359" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ApplyLoanEMIFragment.kt</url>
-          <line>1282</line>
-          <option name="timeStamp" value="361" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ApplyLoanEMIFragment.kt</url>
-          <line>1285</line>
-          <option name="timeStamp" value="362" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ApplyLoanEMIFragment.kt</url>
-          <line>1284</line>
-          <option name="timeStamp" value="363" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ApplyLoanEMIFragment.kt</url>
-          <line>949</line>
-          <option name="timeStamp" value="381" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ApplyLoanEMIFragment.kt</url>
-          <line>968</line>
-          <option name="timeStamp" value="383" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ApplyLoanEMIFragment.kt</url>
-          <line>1022</line>
-          <option name="timeStamp" value="384" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/adapters/ActiveLoanInsAdapter.kt</url>
@@ -950,36 +778,6 @@
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/adapters/ActiveLoanInsAdapter.kt</url>
           <line>144</line>
           <option name="timeStamp" value="390" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ApplyLoanEMIFragment.kt</url>
-          <line>966</line>
-          <option name="timeStamp" value="391" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ActiveLoansFragment.kt</url>
-          <line>189</line>
-          <option name="timeStamp" value="402" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ActiveLoansFragment.kt</url>
-          <line>160</line>
-          <option name="timeStamp" value="403" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ActiveLoansFragment.kt</url>
-          <line>191</line>
-          <option name="timeStamp" value="407" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ActiveLoansFragment.kt</url>
-          <line>195</line>
-          <option name="timeStamp" value="408" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ActiveLoansFragment.kt</url>
-          <line>118</line>
-          <option name="timeStamp" value="410" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/Reg2Activity.kt</url>
@@ -1033,41 +831,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ApplyLoanEMIFragment.kt</url>
-          <line>1105</line>
-          <option name="timeStamp" value="458" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ApplyLoanEMIFragment.kt</url>
-          <line>1141</line>
-          <option name="timeStamp" value="459" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ApplyLoanEMIFragment.kt</url>
-          <line>1201</line>
-          <option name="timeStamp" value="461" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ApplyLoanEMIFragment.kt</url>
-          <line>1203</line>
-          <option name="timeStamp" value="462" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ApplyLoanEMIFragment.kt</url>
-          <line>1255</line>
-          <option name="timeStamp" value="463" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ApplyLoanEMIFragment.kt</url>
-          <line>1158</line>
-          <option name="timeStamp" value="467" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ApplyLoanEMIFragment.kt</url>
-          <line>1140</line>
-          <option name="timeStamp" value="468" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ApplyLoanEMIFragment.kt</url>
           <line>477</line>
           <option name="timeStamp" value="472" />
         </line-breakpoint>
@@ -1082,39 +845,9 @@
           <option name="timeStamp" value="475" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ApplyLoanEMIFragment.kt</url>
-          <line>858</line>
-          <option name="timeStamp" value="476" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ApplyLoanEMIFragment.kt</url>
-          <line>861</line>
-          <option name="timeStamp" value="477" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ApplyLoanEMIFragment.kt</url>
-          <line>1162</line>
-          <option name="timeStamp" value="478" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/UploadBankDetailsActivity.kt</url>
-          <line>446</line>
-          <option name="timeStamp" value="479" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/UploadBankDetailsActivity.kt</url>
-          <line>433</line>
-          <option name="timeStamp" value="482" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/UploadBankDetailsActivity.kt</url>
           <line>1016</line>
           <option name="timeStamp" value="501" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/UploadBankDetailsActivity.kt</url>
-          <line>489</line>
-          <option name="timeStamp" value="503" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/UploadBankDetailsActivity.kt</url>
@@ -1125,16 +858,6 @@
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/UploadBankDetailsActivity.kt</url>
           <line>1095</line>
           <option name="timeStamp" value="513" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/UploadBankDetailsActivity.kt</url>
-          <line>227</line>
-          <option name="timeStamp" value="524" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/UploadBankDetailsActivity.kt</url>
-          <line>229</line>
-          <option name="timeStamp" value="527" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/Reg3Activity.kt</url>
@@ -1171,6 +894,36 @@
           <line>1307</line>
           <option name="timeStamp" value="551" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/RewardPointsNewFragment.kt</url>
+          <line>61</line>
+          <option name="timeStamp" value="553" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/RewardPointsNewFragment.kt</url>
+          <line>89</line>
+          <option name="timeStamp" value="566" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ApplyLoanEMIFragment.kt</url>
+          <line>1266</line>
+          <option name="timeStamp" value="581" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ApplyLoanEMIFragment.kt</url>
+          <line>1320</line>
+          <option name="timeStamp" value="584" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/fragments/ApplyLoanEMIFragment.kt</url>
+          <line>1334</line>
+          <option name="timeStamp" value="585" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/kotlin/activities/DashboardActivity.kt</url>
+          <line>1853</line>
+          <option name="timeStamp" value="588" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/models/CNModel.java</url>
           <line>627</line>
@@ -1203,22 +956,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/retrofit/GenericAPIService.java</url>
-          <line>3332</line>
+          <line>2944</line>
           <option name="timeStamp" value="179" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/retrofit/GenericAPIService.java</url>
-          <line>3326</line>
+          <line>2938</line>
           <option name="timeStamp" value="185" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/retrofit/GenericAPIService.java</url>
-          <line>3338</line>
+          <line>2950</line>
           <option name="timeStamp" value="186" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/retrofit/GenericAPIService.java</url>
-          <line>3343</line>
+          <line>2955</line>
           <option name="timeStamp" value="189" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -1253,21 +1006,21 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/retrofit/GenericAPIService.java</url>
-          <line>2711</line>
+          <line>2323</line>
           <option name="timeStamp" value="236" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/retrofit/GenericAPIService.java</url>
-          <line>2718</line>
+          <line>2330</line>
           <option name="timeStamp" value="237" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/retrofit/GenericAPIService.java</url>
-          <line>2721</line>
+          <line>2333</line>
           <option name="timeStamp" value="238" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/fragments/HomeFragment.java</url>
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/fragments/HomeFragment.kt</url>
           <line>622</line>
           <option name="timeStamp" value="273" />
         </line-breakpoint>
@@ -1293,17 +1046,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/retrofit/GenericAPIService.java</url>
-          <line>3355</line>
+          <line>2967</line>
           <option name="timeStamp" value="297" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/retrofit/GenericAPIService.java</url>
-          <line>3361</line>
+          <line>2973</line>
           <option name="timeStamp" value="298" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/retrofit/GenericAPIService.java</url>
-          <line>3366</line>
+          <line>2978</line>
           <option name="timeStamp" value="299" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -1337,28 +1090,18 @@
           <option name="timeStamp" value="313" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/fragments/HomeFragment.java</url>
-          <line>495</line>
-          <option name="timeStamp" value="316" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/fragments/HomeFragment.java</url>
-          <line>500</line>
-          <option name="timeStamp" value="317" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/retrofit/GenericAPIService.java</url>
-          <line>3373</line>
+          <line>2985</line>
           <option name="timeStamp" value="331" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/retrofit/GenericAPIService.java</url>
-          <line>3379</line>
+          <line>2991</line>
           <option name="timeStamp" value="332" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/retrofit/GenericAPIService.java</url>
-          <line>3385</line>
+          <line>2997</line>
           <option name="timeStamp" value="333" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -1428,7 +1171,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/retrofit/GenericAPIService.java</url>
-          <line>3414</line>
+          <line>3026</line>
           <option name="timeStamp" value="494" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -1455,6 +1198,56 @@
           <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/retrofit/GenericAPIService.java</url>
           <line>258</line>
           <option name="timeStamp" value="529" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/fragments/HomeFragment.java</url>
+          <line>709</line>
+          <option name="timeStamp" value="567" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/fragments/HomeFragment.java</url>
+          <line>710</line>
+          <option name="timeStamp" value="568" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/fragments/HomeFragment.java</url>
+          <line>711</line>
+          <option name="timeStamp" value="569" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/fragments/HomeFragment.java</url>
+          <line>712</line>
+          <option name="timeStamp" value="570" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/fragments/HomeFragment.java</url>
+          <line>713</line>
+          <option name="timeStamp" value="571" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/fragments/HomeFragment.java</url>
+          <line>827</line>
+          <option name="timeStamp" value="573" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/fragments/HomeFragment.java</url>
+          <line>800</line>
+          <option name="timeStamp" value="574" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/fragments/HomeFragment.java</url>
+          <line>1114</line>
+          <option name="timeStamp" value="575" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/fragments/HomeFragment.java</url>
+          <line>1152</line>
+          <option name="timeStamp" value="576" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/capitalnowapp/mobile/fragments/HomeFragment.java</url>
+          <line>997</line>
+          <option name="timeStamp" value="577" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -39,6 +39,9 @@ import kotlinx.android.synthetic.main.content_main.toolbar
 
 
 class RewardPointsNewFragment : Fragment() {
+    private var selectedCouponCat: String? = null
+    private var getCouponCategoriesResponse: GetCouponCategoriesResponse? = null
+    private var getCouponsResponse: GetCouponsResponse? = null
     private var tabPosition: Int = -1
     private lateinit var mActivityRef: BaseActivity
     private var binding: FragmentRewardPointsNewBinding? = null
@@ -79,22 +82,22 @@ class RewardPointsNewFragment : Fragment() {
 
     private fun getCoupons(getCouponCategoriesResponse: GetCouponCategoriesResponse) {
         try {
-            CNProgressDialog.showProgressDialog(activity, Constants.LOADING_MESSAGE)
+            //CNProgressDialog.showProgressDialog(activity, Constants.LOADING_MESSAGE)
             val genericAPIService = GenericAPIService(activity, 0)
             val getCouponsReq = GetCouponsReq()
             getCouponsReq.pageNo = "1"
-            getCouponsReq.category = cupCategory
+            getCouponsReq.category = selectedCouponCat
             getCouponsReq.limit = "1000"
             val token = (activity as BaseActivity).userToken
             genericAPIService.getCoupons(getCouponsReq, token)
             genericAPIService.setOnDataListener { responseBody ->
                 CNProgressDialog.hideProgressDialog()
-                val getCouponsResponse =
+                getCouponsResponse =
                     Gson().fromJson(responseBody, GetCouponsResponse::class.java)
-                if (getCouponsResponse != null && getCouponsResponse.status == true) {
-                    if (!getCouponsResponse.couponsData?.couponsList.isNullOrEmpty()) {
+                if (getCouponsResponse != null && getCouponsResponse!!.status == true) {
+                    if (!getCouponsResponse!!.couponsData?.couponsList.isNullOrEmpty()) {
                         setCouponData(
-                            getCouponsResponse.couponsData,
+                            getCouponsResponse!!.couponsData,
                             getCouponCategoriesResponse.couponData
                         )
                     } else {
@@ -127,16 +130,16 @@ class RewardPointsNewFragment : Fragment() {
             val token = (activity as BaseActivity).userToken
             genericAPIService.getCouponCategories(getCouponCategoriesReq, token)
             genericAPIService.setOnDataListener { responseBody ->
-                val getCouponCategoriesResponse =
+                getCouponCategoriesResponse =
                     Gson().fromJson(responseBody, GetCouponCategoriesResponse::class.java)
-                if (getCouponCategoriesResponse != null && getCouponCategoriesResponse.status == true) {
-                    if (!getCouponCategoriesResponse.couponData?.couponCategories.isNullOrEmpty()) {
+                if (getCouponCategoriesResponse != null && getCouponCategoriesResponse!!.status == true) {
+                    if (!getCouponCategoriesResponse!!.couponData?.couponCategories.isNullOrEmpty()) {
                         binding?.llData?.visibility = View.VISIBLE
                         binding?.llNoLoan?.visibility = View.GONE
                         setCouponCategoryData(getCouponCategoriesResponse)
                         cupCategory =
-                            getCouponCategoriesResponse.couponData?.couponCategories?.get(0)?.cupCategory
-                        getCoupons(getCouponCategoriesResponse)
+                            getCouponCategoriesResponse!!.couponData?.couponCategories?.get(0)?.cupCategory
+                        getCoupons(getCouponCategoriesResponse!!)
                     } else {
                         binding?.llData?.visibility = View.GONE
                         binding?.llNoLoan?.visibility = View.VISIBLE
@@ -253,11 +256,13 @@ class RewardPointsNewFragment : Fragment() {
             binding?.tabs?.addOnTabSelectedListener(object : OnTabSelectedListener {
                 override fun onTabSelected(tab: TabLayout.Tab) {
                     tabPosition = tab.position
+                    selectedCouponCat = couponData.couponCategories!![tabPosition].cupCategory
                     val data = filterCouponsData(tab.text.toString(), couponsData.couponsList!!)
                     adapter =
                         RewardPointsNewAdapter(data, activity, couponData.rewardPointsAvailable)
                     binding?.recyclerView?.layoutManager = LinearLayoutManager(activity)
                     binding?.recyclerView?.adapter = adapter
+                    //getCoupons(getCouponCategoriesResponse!!)
 
                 }
 

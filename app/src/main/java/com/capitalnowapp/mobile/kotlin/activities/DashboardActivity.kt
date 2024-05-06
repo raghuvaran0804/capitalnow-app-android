@@ -1891,7 +1891,7 @@ open class DashboardActivity : BaseActivity(), PaymentResultWithDataListener {
                             updateToggle(this, R.drawable.ic_custom_hamburger)
                         }
 
-                        Constants.`STATUS_REDIRECT_CODE_FIVE_REFERENCES`, Constants.STATUS_REDIRECT_CODE_LATEST_DOCUMENTS -> { // Five References
+                        Constants.STATUS_REDIRECT_CODE_FIVE_REFERENCES, Constants.STATUS_REDIRECT_CODE_LATEST_DOCUMENTS -> { // Five References
                             if (canredirect) {
                                 if (response.has("apply_loan_message")) {
                                     docsApplyLoanMsg = response.getString("apply_loan_message")
@@ -2299,10 +2299,6 @@ open class DashboardActivity : BaseActivity(), PaymentResultWithDataListener {
         finish()
     }
 
-    private fun launchDashBoard() {
-        val intent = Intent(this, DashboardActivity::class.java)
-        startActivity(intent)
-    }
     private fun setConsentData(
         loanAgreementConsentData: LoanAgreementConsent?,
         currentFrag: HomeFragment
