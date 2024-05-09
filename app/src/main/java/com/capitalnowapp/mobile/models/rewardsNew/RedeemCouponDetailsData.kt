@@ -70,4 +70,12 @@ class RedeemCouponDetailsData : Serializable{
     @SerializedName("cup_description")
     @Expose
     var cupDescription: String? = null
+
+    @SerializedName("cup_text")
+    @Expose
+    var cupText: String? = null
+
+    @SerializedName("is_share_required")
+    @Expose
+    var isShareRequired: Boolean? = null
 }

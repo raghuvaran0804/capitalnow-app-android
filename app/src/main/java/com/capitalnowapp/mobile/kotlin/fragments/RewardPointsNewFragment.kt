@@ -280,15 +280,15 @@ class RewardPointsNewFragment : Fragment() {
         couponsList: List<CouponsList>
     ): List<CouponsList> {
         val list = ArrayList<CouponsList>()
-        if (cat?.lowercase() == "all") {
+        /*if (cat?.lowercase() == "all") {
             return couponsList
-        } else {
+        } else {*/
             for (data in couponsList) {
                 if (data.cupCategory.toString() == cat) {
                     list.add(data)
                 }
             }
-        }
+        //}
         return list
     }
 

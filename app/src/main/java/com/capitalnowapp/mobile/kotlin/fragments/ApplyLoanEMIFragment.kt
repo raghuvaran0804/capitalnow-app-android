@@ -65,9 +65,7 @@ import com.capitalnowapp.mobile.kotlin.activities.DashboardActivity
 import com.capitalnowapp.mobile.kotlin.adapters.LoanEmiAdapter
 import com.capitalnowapp.mobile.kotlin.adapters.LoanInstallmentAdapter
 import com.capitalnowapp.mobile.kotlin.utils.AppConstants
-import com.capitalnowapp.mobile.models.AadharOtpResponse
 import com.capitalnowapp.mobile.models.CNModel
-import com.capitalnowapp.mobile.models.CheckCanApplyResponse
 import com.capitalnowapp.mobile.models.CheckPromoCodeReq
 import com.capitalnowapp.mobile.models.CheckPromoCodeResponse
 import com.capitalnowapp.mobile.models.MasterJsonResponse

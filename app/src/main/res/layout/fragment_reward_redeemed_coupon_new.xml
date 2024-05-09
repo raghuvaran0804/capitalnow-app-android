@@ -97,7 +97,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="1000dp"
+                    android:layout_height="900dp"
                     android:orientation="vertical">
 
                     <com.capitalnowapp.mobile.customviews.CNTextView
@@ -114,7 +114,7 @@
                         android:textStyle="bold" />
 
                     <com.capitalnowapp.mobile.customviews.CNTextView
-                        android:id="@+id/tvVoucherWorth"
+                        android:id="@+id/tvCouponText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -144,6 +144,7 @@
                             android:layout_marginTop="@dimen/margin_8"
                             android:layout_marginBottom="@dimen/margin_8"
                             android:layout_weight="2"
+                            android:maxLines="1"
                             android:text=""
                             android:textAlignment="center"
                             android:textColor="@color/white"
@@ -377,7 +378,7 @@
 
 
                     <LinearLayout
-
+                        android:id="@+id/llShareEmail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/margin_32"
@@ -386,7 +387,8 @@
                         android:layout_marginBottom="@dimen/margin_16"
                         android:background="@drawable/rounded_corner_stroke_green"
                         android:backgroundTint="@color/Secondary1"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:visibility="gone">
 
                         <com.capitalnowapp.mobile.customviews.CNTextView
                             android:layout_width="wrap_content"

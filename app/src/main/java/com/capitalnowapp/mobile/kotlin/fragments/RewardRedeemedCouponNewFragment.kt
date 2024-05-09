@@ -46,7 +46,7 @@ class RewardRedeemedCouponNewFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentRewardRedeemedCouponNewBinding.inflate(inflater, container, false)
         activity = getActivity()
         return binding!!.root
@@ -79,8 +79,9 @@ class RewardRedeemedCouponNewFragment : Fragment() {
     private fun copyText() {
         val myClip1 = ClipData.newPlainText("text", binding?.tvVoucherCode?.text.toString())
         myClipboard?.setPrimaryClip(myClip1)
-        Toast.makeText(context, "Coupon Code Copied",
-            Toast.LENGTH_LONG).show()
+        Toast.makeText(
+            context, "Copied", Toast.LENGTH_LONG
+        ).show()
 
     }
 
@@ -125,7 +126,7 @@ class RewardRedeemedCouponNewFragment : Fragment() {
                 }
             }
         } catch (e: Exception) {
-
+            e.printStackTrace()
         }
     }
 
@@ -177,7 +178,7 @@ class RewardRedeemedCouponNewFragment : Fragment() {
 
             binding?.tvEmail?.setText(redeemCouponDetailsResponse?.redeemCouponDetailsData?.userEmail)
             binding?.tvDetailsText?.text = redeemCouponDetailsResponse?.redeemCouponDetailsData?.cupDescription
-
+            binding?.tvCouponText?.text = redeemCouponDetailsResponse?.redeemCouponDetailsData?.cupText
             binding?.tvTerms?.setOnClickListener {
                 val termsData =
                     redeemCouponDetailsResponse?.redeemCouponDetailsData?.termsAndConditionUrl
@@ -188,24 +189,29 @@ class RewardRedeemedCouponNewFragment : Fragment() {
                 showActivationUrl(activationUrl)
 
             }
+            if(redeemCouponDetailsResponse?.redeemCouponDetailsData?.isShareRequired == true){
+                binding?.llShareEmail?.visibility = View.VISIBLE
+            }else {
+                binding?.llShareEmail?.visibility = View.GONE
+            }
             if(redeemCouponDetailsResponse?.redeemCouponDetailsData?.reedemedAt!!.contains("WEBSITE")){
                 binding?.tvWebsite?.visibility = View.VISIBLE
             } else {
                 binding?.tvWebsite?.visibility = View.GONE
             }
-            if(redeemCouponDetailsResponse?.redeemCouponDetailsData?.reedemedAt!!.contains("STORE")){
+            if(redeemCouponDetailsResponse.redeemCouponDetailsData?.reedemedAt!!.contains("STORE")){
                 binding?.tvStore?.visibility = View.VISIBLE
             }else {
                 binding?.tvStore?.visibility = View.GONE
             }
-            if(redeemCouponDetailsResponse?.redeemCouponDetailsData?.activationUrl == null || redeemCouponDetailsResponse?.redeemCouponDetailsData?.activationUrl.equals("")){
+            if(redeemCouponDetailsResponse.redeemCouponDetailsData?.activationUrl == null || redeemCouponDetailsResponse.redeemCouponDetailsData?.activationUrl.equals("")){
                 binding?.tvActivationUrl?.visibility = View.GONE
                 binding?.tvActivationUrlText?.visibility = View.GONE
             } else {
                 binding?.tvActivationUrl?.visibility = View.VISIBLE
                 binding?.tvActivationUrlText?.visibility = View.VISIBLE
             }
-            if (redeemCouponDetailsResponse?.redeemCouponDetailsData?.activationCode == null || redeemCouponDetailsResponse?.redeemCouponDetailsData?.activationCode.equals("")){
+            if (redeemCouponDetailsResponse.redeemCouponDetailsData?.activationCode == null || redeemCouponDetailsResponse.redeemCouponDetailsData?.activationCode.equals("")){
                 binding?.tvActivationCode?.visibility = View.GONE
                 binding?.tvActivationCodeText?.visibility = View.GONE
             } else {
@@ -213,7 +219,7 @@ class RewardRedeemedCouponNewFragment : Fragment() {
                 binding?.tvActivationCodeText?.visibility = View.VISIBLE
             }
 
-            if (redeemCouponDetailsResponse?.redeemCouponDetailsData?.isEmailSent == true) {
+            if (redeemCouponDetailsResponse.redeemCouponDetailsData?.isEmailSent == true) {
                 binding?.tvEmail?.isEnabled = false
                 binding?.tvSendEmail?.isEnabled = false
             } else {

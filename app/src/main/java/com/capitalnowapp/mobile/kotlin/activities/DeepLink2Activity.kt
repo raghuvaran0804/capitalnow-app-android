@@ -1,6 +1,5 @@
 package com.capitalnowapp.mobile.kotlin.activities
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.capitalnowapp.mobile.databinding.ActivityDeepLink2Binding
